@@ -37,3 +37,9 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Added horizontal breathing room around the Rogo investment logo
 - Reworked Media into one tagged, filterable archive
 - Added invitation copy and a Contact CTA for speaking and media inquiries
+
+
+## Revision 7
+- Replaced public-facing “Founder Projects” language with “Companies Built”
+- Added SweatVida to the built-company directory
+- Added a full SweatVida case study at `/ventures/sweatvida`

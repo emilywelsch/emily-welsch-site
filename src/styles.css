@@ -932,3 +932,460 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
     display: none;
   }
 }
+
+
+/* Release v7: Companies Built language and SweatVida case study */
+.project-card.sweatvida:hover {
+  background: #ddd1f0;
+}
+
+.sweatvida-hero {
+  padding-block: 92px 110px;
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+.sweatvida-hero .eyebrow {
+  color: #ad78ff;
+}
+
+.sweatvida-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+  gap: clamp(65px, 9vw, 130px);
+  align-items: end;
+}
+
+.sweatvida-hero .back-link {
+  color: rgba(231,230,226,.72);
+}
+
+.sweatvida-wordmark {
+  width: min(450px, 70%);
+  height: auto;
+  margin: 38px 0 42px;
+  filter: brightness(0) invert(1);
+}
+
+.sweatvida-wordmark {
+  filter: none;
+}
+
+.sweatvida-hero-copy h1 {
+  max-width: 880px;
+  margin: 0 0 30px;
+  font-size: clamp(3.7rem, 7.2vw, 7.8rem);
+  line-height: .92;
+  letter-spacing: -.075em;
+}
+
+.sweatvida-hero-copy > p {
+  max-width: 710px;
+  color: rgba(231,230,226,.72);
+  font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.sweatvida-hero .arrow-link {
+  margin-top: 18px;
+  color: var(--ivory);
+}
+
+.sweatvida-facts {
+  border-top: 1px solid rgba(231,230,226,.32);
+}
+
+.sweatvida-facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(231,230,226,.32);
+}
+
+.sweatvida-facts span {
+  color: rgba(231,230,226,.55);
+}
+
+.sweatvida-facts strong {
+  max-width: 210px;
+  text-align: right;
+  font-family: 'Manrope', sans-serif;
+}
+
+.sweatvida-product {
+  padding-block: 110px 125px;
+}
+
+.browser-frame {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 35px 90px rgba(50,49,45,.14);
+}
+
+.browser-bar {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 18px;
+  background: #f4f2ee;
+  border-bottom: 1px solid rgba(50,49,45,.12);
+}
+
+.browser-bar > span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c6c1ba;
+}
+
+.browser-bar > div {
+  min-width: 240px;
+  margin-left: 15px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: .74rem;
+}
+
+.browser-frame > img {
+  aspect-ratio: 1.84 / 1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.sweatvida-story {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: clamp(65px, 10vw, 145px);
+  padding-bottom: 135px;
+}
+
+.sweatvida-story-heading {
+  align-self: start;
+  position: sticky;
+  top: 125px;
+}
+
+.sweatvida-story h2,
+.sweatvida-section-heading h2,
+.sweatvida-seo h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.6rem, 4.9vw, 5.2rem);
+  line-height: 1.01;
+  letter-spacing: -.06em;
+}
+
+.sweatvida-story-copy {
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.sweatvida-story-copy p {
+  color: var(--muted);
+  font-size: clamp(1.06rem, 1.35vw, 1.2rem);
+  line-height: 1.82;
+}
+
+.sweatvida-build {
+  padding-block: 125px 145px;
+  background: var(--sand);
+}
+
+.sweatvida-section-heading {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.sweatvida-section-heading > p {
+  max-width: 580px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.sweatvida-build-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid rgba(50,49,45,.24);
+  border-left: 1px solid rgba(50,49,45,.24);
+}
+
+.sweatvida-build-grid article {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 48px);
+  border-right: 1px solid rgba(50,49,45,.24);
+  border-bottom: 1px solid rgba(50,49,45,.24);
+}
+
+.sweatvida-build-grid article > span {
+  color: var(--red);
+  font-size: .72rem;
+  letter-spacing: .15em;
+}
+
+.sweatvida-build-grid h3 {
+  margin: auto 0 16px;
+  font-size: clamp(1.7rem, 2.7vw, 2.8rem);
+  letter-spacing: -.05em;
+}
+
+.sweatvida-build-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.sweatvida-seo {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: clamp(70px, 10vw, 150px);
+  padding-block: 135px;
+}
+
+.sweatvida-seo blockquote {
+  margin: 0 0 35px;
+  color: var(--red);
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.4vw, 3.65rem);
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -.052em;
+}
+
+.sweatvida-seo p {
+  color: var(--muted);
+  line-height: 1.78;
+}
+
+.sweatvida-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 32px;
+}
+
+.sweatvida-keywords span {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .72rem;
+}
+
+.sweatvida-visuals {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 22px;
+  padding-bottom: 135px;
+}
+
+.sweatvida-visuals figure {
+  margin: 0;
+}
+
+.sweatvida-filter-figure img {
+  min-height: 590px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sweatvida-page-figure {
+  padding: 24px;
+  background: var(--indigo);
+  color: var(--ivory);
+}
+
+.sweatvida-page-scroll {
+  height: 680px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.sweatvida-page-scroll img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sweatvida-visuals figcaption {
+  display: grid;
+  gap: 7px;
+  padding-top: 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sweatvida-page-figure figcaption {
+  color: rgba(231,230,226,.72);
+}
+
+.sweatvida-visuals figcaption span {
+  color: currentColor;
+  font-size: .67rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.sweatvida-outcomes {
+  padding-block: 125px 140px;
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+.sweatvida-outcomes .eyebrow {
+  color: #ad78ff;
+}
+
+.sweatvida-outcomes .sweatvida-section-heading > p {
+  color: rgba(231,230,226,.65);
+}
+
+.sweatvida-outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(231,230,226,.26);
+  border-left: 1px solid rgba(231,230,226,.26);
+}
+
+.sweatvida-outcome-grid div {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26px;
+  border-right: 1px solid rgba(231,230,226,.26);
+  border-bottom: 1px solid rgba(231,230,226,.26);
+}
+
+.sweatvida-outcome-grid strong {
+  color: #ad78ff;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -.045em;
+}
+
+.sweatvida-outcome-grid span {
+  color: rgba(231,230,226,.6);
+  font-size: .77rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.sweatvida-reflection {
+  max-width: 920px;
+  margin: 75px 0 0 auto;
+  padding-left: 45px;
+  border-left: 2px solid #8e16ff;
+}
+
+.sweatvida-reflection p {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.65rem, 2.8vw, 3rem);
+  line-height: 1.28;
+  letter-spacing: -.04em;
+}
+
+@media (max-width: 980px) {
+  .sweatvida-hero-grid,
+  .sweatvida-story,
+  .sweatvida-section-heading,
+  .sweatvida-seo,
+  .sweatvida-visuals {
+    grid-template-columns: 1fr;
+  }
+
+  .sweatvida-story-heading {
+    position: static;
+  }
+
+  .sweatvida-wordmark {
+    width: min(530px, 88%);
+  }
+
+  .sweatvida-filter-figure img {
+    min-height: auto;
+  }
+
+  .sweatvida-page-scroll {
+    height: 780px;
+  }
+
+  .sweatvida-outcome-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .sweatvida-hero {
+    padding-block: 70px 85px;
+  }
+
+  .sweatvida-hero-copy h1 {
+    font-size: clamp(3.25rem, 14.5vw, 5.2rem);
+  }
+
+  .sweatvida-facts strong {
+    max-width: 160px;
+  }
+
+  .sweatvida-product {
+    padding-block: 70px 90px;
+  }
+
+  .browser-bar > div {
+    min-width: 150px;
+  }
+
+  .browser-frame > img {
+    min-height: 390px;
+    aspect-ratio: auto;
+    object-position: 53% top;
+  }
+
+  .sweatvida-story,
+  .sweatvida-build,
+  .sweatvida-seo,
+  .sweatvida-outcomes {
+    padding-block: 90px;
+  }
+
+  .sweatvida-build-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sweatvida-build-grid article {
+    min-height: 265px;
+  }
+
+  .sweatvida-page-scroll {
+    height: 600px;
+  }
+
+  .sweatvida-outcome-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sweatvida-outcome-grid div {
+    min-height: 145px;
+  }
+
+  .sweatvida-reflection {
+    margin-top: 55px;
+    padding-left: 25px;
+  }
+}

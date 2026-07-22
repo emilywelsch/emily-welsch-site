@@ -38,3 +38,10 @@ Open `/release.json` on the Vercel URL. It should report:
 - Media hero includes the inquiry invitation and Contact button
 - Media content appears in one list
 - All, Podcast, Video and Press filters work
+
+
+## Revision 7 verification
+- Ventures page says `Companies I’ve Built`
+- No public-facing `Founder Projects` language remains
+- SweatVida card opens `/ventures/sweatvida`
+- SweatVida case study includes logo, product screenshots, SEO strategy, and founder reflection

@@ -1,14 +1,13 @@
 {
-  "release": "v6-media-filters",
-  "generated_at": "2026-07-22T22:39:55.228270+00:00",
+  "release": "v7-sweatvida-case-study",
+  "generated_at": "2026-07-22T23:06:41.610653+00:00",
   "includes": [
-    "All v5 cumulative advisory, contact, navigation, media and investment updates",
-    "Additional horizontal padding around the Rogo investment logo",
-    "Media subtitle: Speaking \u00b7 Podcasts \u00b7 Video \u00b7 Press",
-    "Media invitation copy referencing 75+ events and university/accelerator experience",
-    "Media and speaking inquiry button linked to Contact",
-    "One unified media archive",
-    "All, Podcast, Video and Press filters",
-    "Visible content-type tags and live item counts"
+    "All v6 cumulative site changes",
+    "Founder Projects renamed to Companies Built",
+    "Projects language removed from the public Ventures experience",
+    "SweatVida added to Companies I\u2019ve Built",
+    "Dedicated SweatVida company case study",
+    "SweatVida logo and product screenshots",
+    "Product, taxonomy, SEO, partnership, outcome and reflection sections"
   ]
 }

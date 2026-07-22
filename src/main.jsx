@@ -17,7 +17,7 @@ const projects = [
   {
     slug: 'clinbook',
     name: 'Clinbook',
-    eyebrow: 'Founder project · Healthcare technology',
+    eyebrow: 'Founder-built company · Healthcare technology',
     summary: 'A platform designed to make clinical study startup faster and more informed.',
     role: 'Founder & CEO',
     status: 'Active',
@@ -33,10 +33,31 @@ const projects = [
       'Product design, partnerships, and company building',
     ],
   },
+
+  {
+    slug: 'sweatvida',
+    name: 'SweatVida',
+    eyebrow: 'Founder-built company · Digital fitness',
+    summary: 'A search-led directory that made high-quality, free at-home workouts easier to discover.',
+    role: 'Founder & CEO',
+    status: 'Archived company',
+    year: 'Apr 2020–May 2023',
+    url: 'https://sweatvida.com',
+    accent: 'sweatvida',
+    logo: '/ventures/sweatvida/sweatvida-logo.png',
+    overview:
+      'SweatVida organized the internet’s best free at-home workouts into a searchable experience built around category, duration, instructor, and channel.',
+    work: [
+      'Company concept, positioning, brand, and product direction',
+      'Search taxonomy and discovery experience',
+      'Long-tail SEO and editorial content strategy',
+      'Instructor, brand, sponsor, and media relationships',
+    ],
+  },
   {
     slug: 'uncluttered-soul',
     name: 'Uncluttered Soul',
-    eyebrow: 'Founder project · Personal growth',
+    eyebrow: 'Founder-built brand · Personal growth',
     summary: 'A founder-led platform exploring clarity, mindfulness, and intentional living.',
     role: 'Founder',
     status: 'Selected work',
@@ -55,34 +76,34 @@ const projects = [
   {
     slug: 'yumyummy',
     name: 'YumYummy',
-    eyebrow: 'Founder project · Consumer',
+    eyebrow: 'Founder-built company · Consumer',
     summary: 'A consumer venture with room for the full story, imagery, and links.',
     role: 'Owner',
     status: 'Selected work',
-    year: 'Project archive',
+    year: 'Company archive',
     url: '#',
     accent: 'gold',
     overview:
-      'This project page is intentionally structured as a case-study template so you can add the original challenge, what you created, and the results.',
+      'This company page is structured as a case study for its original opportunity, what I created, and the results.',
     work: [
       'Concept and business development',
       'Brand and customer experience',
       'Operations and commercialization',
-      'Project leadership',
+      'Company leadership',
     ],
   },
   {
     slug: 'pixi-cycling',
     name: 'Pixi Cycling',
-    eyebrow: 'Founder project · Consumer brand',
-    summary: 'An earlier entrepreneurial project and a useful chapter in the founder story.',
+    eyebrow: 'Founder-built company · Consumer brand',
+    summary: 'An earlier consumer company and an important chapter in my founder story.',
     role: 'Founder',
-    status: 'Past project',
-    year: 'Project archive',
+    status: 'Past company',
+    year: 'Company archive',
     url: '#',
     accent: 'ink',
     overview:
-      'A dedicated archive for the project’s origin, product or brand work, imagery, and the lessons that shaped later ventures.',
+      'A dedicated archive for the company’s origin, product and brand work, imagery, and the lessons that shaped later ventures.',
     work: [
       'Early-stage company building',
       'Product and brand development',
@@ -432,9 +453,9 @@ function Home() {
         <div className="intro-grid">
           <motion.article className="feature-card coral" whileHover={{ y: -8 }} transition={{ duration: .25 }}>
             <span>01</span>
-            <h3>Founder Projects</h3>
+            <h3>Companies Built</h3>
             <p>Companies and creative ventures I have built, led, or developed from the ground up.</p>
-            <ArrowLink to="/ventures?view=built">View projects</ArrowLink>
+            <ArrowLink to="/ventures?view=built">View companies</ArrowLink>
           </motion.article>
           <motion.article className="feature-card teal" whileHover={{ y: -8 }} transition={{ duration: .25 }}>
             <span>02</span>
@@ -473,7 +494,7 @@ function Ventures() {
       <section className="page-hero section-shell">
         <Eyebrow>Ventures</Eyebrow>
         <h1>Companies I’ve built and backed.</h1>
-        <p>This page brings the full portfolio together while preserving a clear distinction between founder projects and angel investments.</p>
+        <p>This page brings together the companies I’ve built and the early-stage teams I’ve backed as an angel investor.</p>
       </section>
 
       <section className="venture-directory section-shell">
@@ -488,8 +509,8 @@ function Ventures() {
         {(view === 'all' || view === 'built') && (
           <div className="directory-section">
             <div className="directory-title">
-              <div><Eyebrow>Built</Eyebrow><h2>Founder Projects</h2></div>
-              <p>Each project opens into a dedicated case-study page with imagery, context, my role, and links.</p>
+              <div><Eyebrow>Built</Eyebrow><h2>Companies I’ve Built</h2></div>
+              <p>Each company opens into a dedicated case study with its story, the work I led, imagery, and links.</p>
             </div>
             <div className="project-grid">
               {projects.map((project, i) => (
@@ -556,10 +577,220 @@ function Ventures() {
   )
 }
 
+
+function SweatVidaCaseStudy({ project }) {
+  const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
+
+  return (
+    <PageTransition>
+      <section className="sweatvida-hero">
+        <div className="section-shell sweatvida-hero-grid">
+          <motion.div
+            className="sweatvida-hero-copy"
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .55 }}
+          >
+            <Link className="back-link" to="/ventures">← All ventures</Link>
+            <Eyebrow>Company case study · Digital fitness</Eyebrow>
+            <img className="sweatvida-wordmark" src={project.logo} alt="SweatVida" />
+            <h1>A search-led directory for the best free at-home workouts.</h1>
+            <p>
+              Founded during the shift to home fitness, SweatVida curated high-quality workouts
+              and made them discoverable by workout type, duration, instructor, and channel.
+            </p>
+            <ArrowLink to={project.url} external>Visit SweatVida</ArrowLink>
+          </motion.div>
+
+          <motion.aside
+            className="sweatvida-facts"
+            initial={{ opacity: 0, x: 22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .55, delay: .08 }}
+          >
+            <div><span>Role</span><strong>Founder & CEO</strong></div>
+            <div><span>Timeline</span><strong>Apr 2020–May 2023</strong></div>
+            <div><span>Model</span><strong>Non-monetized digital product</strong></div>
+            <div><span>Growth</span><strong>Organic search</strong></div>
+          </motion.aside>
+        </div>
+      </section>
+
+      <section className="sweatvida-product section-shell">
+        <motion.div
+          className="browser-frame"
+          initial={{ opacity: 0, y: 26 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: .18 }}
+        >
+          <div className="browser-bar">
+            <span></span><span></span><span></span>
+            <div>sweatvida.com</div>
+          </div>
+          <img src="/ventures/sweatvida/sweatvida-home.jpg" alt="SweatVida workout search experience" />
+        </motion.div>
+      </section>
+
+      <section className="sweatvida-story section-shell">
+        <div className="sweatvida-story-heading">
+          <Eyebrow>The opportunity</Eyebrow>
+          <h2>The internet had plenty of workouts. Discovery was the problem.</h2>
+        </div>
+        <div className="sweatvida-story-copy">
+          <p>
+            Free workout content was abundant, but fragmented across instructors, channels,
+            formats, and platforms. Finding the right class often required knowing exactly
+            where to look.
+          </p>
+          <p>
+            SweatVida turned that fragmented supply into a structured discovery experience.
+            Visitors could browse and filter across yoga, HIIT, Pilates, barre, cardio dance,
+            indoor cycling, meditation, and prenatal and postpartum fitness.
+          </p>
+          <p>
+            The company’s role was not to create another workout subscription. It was to make
+            the best existing free content easier to find and to introduce audiences to new
+            instructors and formats.
+          </p>
+        </div>
+      </section>
+
+      <section className="sweatvida-build">
+        <div className="section-shell">
+          <div className="sweatvida-section-heading">
+            <div>
+              <Eyebrow>What I built</Eyebrow>
+              <h2>A real digital product, brand, and distribution engine.</h2>
+            </div>
+            <p>
+              I led the full company experience from concept and positioning through information
+              architecture, content operations, partnerships, and organic acquisition.
+            </p>
+          </div>
+
+          <div className="sweatvida-build-grid">
+            {[
+              ['01', 'Product & taxonomy', 'Designed a directory structured around category, duration, instructor, and channel so visitors could quickly narrow a large content universe.'],
+              ['02', 'SEO & content strategy', 'Built pages around high-intent, long-tail searches tied to popular instructors, workout formats, durations, and audience needs.'],
+              ['03', 'Brand & experience', 'Created an inclusive digital athletics brand focused on accessible movement, discovery, and supportive community.'],
+              ['04', 'Partnership ecosystem', 'Developed relationships with instructors, brands, sponsors, and media partners around the platform and its audience.'],
+            ].map(([number, title, copy]) => (
+              <motion.article
+                key={number}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: .2 }}
+              >
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="sweatvida-seo section-shell">
+        <div>
+          <Eyebrow>Core learning</Eyebrow>
+          <h2>SEO became the distribution strategy.</h2>
+        </div>
+        <div>
+          <blockquote>
+            Long-tail search allowed SweatVida to reach specific audiences already looking for
+            workouts from the instructors and formats they loved.
+          </blockquote>
+          <p>
+            Rather than competing only for broad terms such as “home workouts,” the content
+            architecture created highly specific entry points. Instructor names, workout type,
+            duration, intensity, and audience need became a compounding organic acquisition system.
+          </p>
+          <div className="sweatvida-keywords">
+            <span>Instructor-led search</span>
+            <span>Workout type</span>
+            <span>Duration</span>
+            <span>Audience need</span>
+            <span>Organic discovery</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="sweatvida-visuals section-shell">
+        <motion.figure
+          className="sweatvida-filter-figure"
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: .18 }}
+        >
+          <img src="/ventures/sweatvida/sweatvida-filter-detail.jpg" alt="SweatVida search filters" />
+          <figcaption>
+            <span>Discovery architecture</span>
+            Search and filters transformed a large workout library into a usable product.
+          </figcaption>
+        </motion.figure>
+
+        <motion.figure
+          className="sweatvida-page-figure"
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: .12 }}
+        >
+          <div className="sweatvida-page-scroll">
+            <img src="/ventures/sweatvida/sweatvida-full-page.jpg" alt="SweatVida full directory page" />
+          </div>
+          <figcaption>
+            <span>Content depth</span>
+            A broad directory organized across workout categories and featured instructors.
+          </figcaption>
+        </motion.figure>
+      </section>
+
+      <section className="sweatvida-outcomes">
+        <div className="section-shell">
+          <div className="sweatvida-section-heading">
+            <div>
+              <Eyebrow>Outcome & reflection</Eyebrow>
+              <h2>Serious company-building lessons without forcing monetization.</h2>
+            </div>
+            <p>
+              SweatVida remained a non-monetized product, but it was operated as a real company:
+              with an audience, differentiated experience, editorial engine, partnerships, and
+              a repeatable acquisition strategy.
+            </p>
+          </div>
+
+          <div className="sweatvida-outcome-grid">
+            <div><strong>2020–2023</strong><span>Company timeline</span></div>
+            <div><strong>8</strong><span>Core workout categories</span></div>
+            <div><strong>4</strong><span>Primary filter dimensions</span></div>
+            <div><strong>Organic-first</strong><span>Growth strategy</span></div>
+          </div>
+
+          <div className="sweatvida-reflection">
+            <p>
+              The most durable takeaway was that distribution can be designed into the product.
+              SweatVida showed me how a thoughtful taxonomy and long-tail keyword strategy could
+              generate substantial traffic from precise, high-intent audiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="next-project section-shell">
+        <p>Next company</p>
+        <Link to={`/ventures/${nextProject.slug}`}>
+          {nextProject.name}<ArrowRight />
+        </Link>
+      </section>
+    </PageTransition>
+  )
+}
+
 function ProjectDetail() {
   const { slug } = useParams()
   const project = projects.find(p => p.slug === slug)
   if (!project) return <NotFound />
+  if (project.slug === 'sweatvida') return <SweatVidaCaseStudy project={project} />
   return (
     <PageTransition>
       <section className={`project-detail-hero ${project.accent}`}>
@@ -579,18 +810,18 @@ function ProjectDetail() {
       </section>
       <section className="project-body section-shell">
         <div className="project-overview">
-          <Eyebrow>Overview</Eyebrow>
+          <Eyebrow>Company overview</Eyebrow>
           <h2>{project.overview}</h2>
           {project.url !== '#' && <ArrowLink to={project.url} external>Visit website</ArrowLink>}
         </div>
         <div className="work-list">
-          <Eyebrow>My work</Eyebrow>
+          <Eyebrow>What I built</Eyebrow>
           {project.work.map((item, i) => <div key={item}><span>0{i + 1}</span><p>{item}</p></div>)}
         </div>
       </section>
       <section className="gallery-shell section-shell">
-        <div className="gallery-placeholder wide"><span>Project image / product screenshot</span></div>
-        <div className="gallery-placeholder"><span>Brand or process image</span></div>
+        <div className="gallery-placeholder wide"><span>Company image / product screenshot</span></div>
+        <div className="gallery-placeholder"><span>Brand or company-building image</span></div>
         <div className="gallery-placeholder"><span>Outcome, launch, or press image</span></div>
       </section>
       <section className="next-project section-shell">
