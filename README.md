@@ -31,3 +31,9 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Updated Electric Runway podcast link to Spotify
 - Added supplied Rogo logo and changed its label to Seed round
 - Added a square-fitted Guava investment logo asset
+
+
+## Revision 6
+- Added horizontal breathing room around the Rogo investment logo
+- Reworked Media into one tagged, filterable archive
+- Added invitation copy and a Contact CTA for speaking and media inquiries

@@ -106,6 +106,7 @@ const investments = [
     name: 'Rogo',
     logo: '/logos/rogo-logo.jpg',
     logoShape: 'wide',
+    logoClass: 'rogo-logo',
     sector: 'Enterprise AI for finance',
     round: 'Seed round',
     note: 'Participated through an SPV with ScOp VC in a round led by Khosla Ventures.',
@@ -535,7 +536,7 @@ function Ventures() {
                   viewport={{ once: true, amount: .2 }}
                   transition={{ delay: i * .035 }}
                 >
-                  <div className={`investment-logo ${company.logo ? 'image' : 'wordmark'} ${company.logoShape || ''}`}>
+                  <div className={`investment-logo ${company.logo ? 'image' : 'wordmark'} ${company.logoShape || ''} ${company.logoClass || ''}`}>
                     {company.logo ? <img src={company.logo} alt={`${company.name} logo`} /> : <span>{company.logoText}</span>}
                   </div>
                   <div className="investment-card-copy">
@@ -785,68 +786,100 @@ function Advisory() {
   )
 }
 
-function Media() {
-  const podcasts = mediaItems.filter(item => item.type === 'Podcast' || item.type === 'Video')
-  const press = mediaItems.filter(item => item.type === 'Press')
 
-  const renderMediaGroup = (items, startIndex = 0) => (
-    <div className="media-list">
-      {items.map((item, index) => {
-        const Icon = item.icon
-        return (
-          <motion.a
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            key={item.title}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="media-index">{String(startIndex + index + 1).padStart(2, '0')}</div>
-            <Icon />
-            <div className="media-main">
-              <span>{item.type}</span>
-              <h2>{item.title}</h2>
-              <p>{item.outlet}{item.description ? ` · ${item.description}` : ''}</p>
-            </div>
-            <div className="media-year">{item.date}</div>
-            <ArrowRight />
-          </motion.a>
-        )
-      })}
-    </div>
-  )
+function Media() {
+  const [mediaFilter, setMediaFilter] = useState('All')
+  const mediaFilters = ['All', 'Podcast', 'Video', 'Press']
+  const visibleMediaItems =
+    mediaFilter === 'All'
+      ? mediaItems
+      : mediaItems.filter(item => item.type === mediaFilter)
 
   return (
     <PageTransition>
       <section className="media-hero section-shell">
-        <div>
-          <Eyebrow>Podcasts · Video · Press</Eyebrow>
+        <div className="media-hero-copy">
+          <Eyebrow>Speaking · Podcasts · Video · Press</Eyebrow>
           <h1>Ideas shared in public.</h1>
-          <p>A single archive of conversations, interviews, and press coverage spanning entrepreneurship, product design, marketing, and company building.</p>
+          <p>
+            Emily welcomes speaking engagements, workshops, podcast and video interviews,
+            and press conversations on entrepreneurship, business strategy, company building,
+            and clinical research. Her experience spans 75+ industry events and founder programs
+            at leading universities and accelerators.
+          </p>
+          <Link className="button button-dark media-inquiry-button" to="/contact">
+            Media & speaking inquiries <ArrowRight size={18} />
+          </Link>
         </div>
         <img src="/images/059.jpg" alt="Emily Welsch seated in a bright living room" />
       </section>
 
-      <section className="media-group section-shell">
-        <div className="media-group-heading">
-          <Eyebrow>Listen & watch</Eyebrow>
-          <h2>Podcasts and video</h2>
-        </div>
-        {renderMediaGroup(podcasts)}
-      </section>
+      <section className="media-archive section-shell">
+        <div className="media-filter-bar">
+          <div>
+            <Eyebrow>Explore the archive</Eyebrow>
+            <div className="media-filter-buttons" role="group" aria-label="Filter media appearances">
+              {mediaFilters.map(filter => {
+                const count =
+                  filter === 'All'
+                    ? mediaItems.length
+                    : mediaItems.filter(item => item.type === filter).length
 
-      <section className="media-group section-shell">
-        <div className="media-group-heading">
-          <Eyebrow>Coverage</Eyebrow>
-          <h2>Press</h2>
+                return (
+                  <button
+                    type="button"
+                    key={filter}
+                    className={`media-filter ${mediaFilter === filter ? 'active' : ''}`}
+                    onClick={() => setMediaFilter(filter)}
+                    aria-pressed={mediaFilter === filter}
+                  >
+                    <span>{filter}</span>
+                    <small>{count}</small>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+          <div className="media-filter-status" aria-live="polite">
+            Showing {visibleMediaItems.length} {visibleMediaItems.length === 1 ? 'item' : 'items'}
+          </div>
         </div>
-        {renderMediaGroup(press, podcasts.length)}
+
+        <div className="media-list">
+          <AnimatePresence mode="popLayout">
+            {visibleMediaItems.map((item, index) => {
+              const Icon = item.icon
+              return (
+                <motion.a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={item.title}
+                  layout
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: .3, delay: index * .035 }}
+                >
+                  <div className="media-index">{String(index + 1).padStart(2, '0')}</div>
+                  <Icon className="media-icon" />
+                  <div className="media-main">
+                    <span className={`media-type media-type-${item.type.toLowerCase()}`}>{item.type}</span>
+                    <h2>{item.title}</h2>
+                    <p>{item.outlet}{item.description ? ` · ${item.description}` : ''}</p>
+                  </div>
+                  <div className="media-year">{item.date}</div>
+                  <ArrowRight />
+                </motion.a>
+              )
+            })}
+          </AnimatePresence>
+        </div>
       </section>
     </PageTransition>
   )
 }
+
 
 function Contact() {
   return (

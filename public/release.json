@@ -1,17 +1,14 @@
 {
-  "release": "v5-cumulative",
-  "generated_at": "2026-07-22T22:18:34.917000+00:00",
+  "release": "v6-media-filters",
+  "generated_at": "2026-07-22T22:39:55.228270+00:00",
   "includes": [
-    "Approved advisory page with 11 clients, filters, testimonials and Italian Countryside palette",
-    "Simi Valley Birth Center testimonial logo centered",
-    "Contact email set to emily@emilywelsch.co",
-    "Contact page image removed",
-    "Home removed from navigation; Emily Welsch wordmark links home",
-    "Single media page with existing podcast, video and press entries",
-    "Electric Runway entry links to supplied Spotify episode",
-    "Guava Health and Rogo shown under backed investments",
-    "Rogo supplied logo and Seed round label",
-    "Guava logo fitted inside investment card",
-    "Post-revenue software and technology investment thesis"
+    "All v5 cumulative advisory, contact, navigation, media and investment updates",
+    "Additional horizontal padding around the Rogo investment logo",
+    "Media subtitle: Speaking \u00b7 Podcasts \u00b7 Video \u00b7 Press",
+    "Media invitation copy referencing 75+ events and university/accelerator experience",
+    "Media and speaking inquiry button linked to Contact",
+    "One unified media archive",
+    "All, Podcast, Video and Press filters",
+    "Visible content-type tags and live item counts"
   ]
 }

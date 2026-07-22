@@ -30,3 +30,11 @@ This release is intended to replace the current GitHub project files as one comp
 Open `/release.json` on the Vercel URL. It should report:
 
 `"release": "v5-cumulative"`
+
+
+## Revision 6 verification
+- Rogo logo has visible left and right padding
+- Media eyebrow reads `Speaking · Podcasts · Video · Press`
+- Media hero includes the inquiry invitation and Contact button
+- Media content appears in one list
+- All, Podcast, Video and Press filters work

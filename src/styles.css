@@ -768,3 +768,167 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   object-fit: contain;
   object-position: center;
 }
+
+
+/* Release v6: Ventures logo spacing and unified Media archive */
+.investment-logo.rogo-logo {
+  padding-inline: 12px;
+}
+
+.media-hero-copy .media-inquiry-button {
+  margin-top: 10px;
+}
+
+.media-archive {
+  padding-bottom: 130px;
+}
+
+.media-filter-bar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 24px 0 28px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.media-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.media-filter {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    color .22s ease,
+    background .22s ease,
+    border-color .22s ease,
+    transform .22s ease;
+}
+
+.media-filter:hover {
+  color: var(--red);
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.media-filter.active {
+  color: var(--ivory);
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.media-filter small {
+  min-width: 22px;
+  height: 22px;
+  display: inline-grid;
+  place-items: center;
+  padding-inline: 6px;
+  border-radius: 999px;
+  background: rgba(50,49,45,.09);
+  font-size: .67rem;
+  line-height: 1;
+}
+
+.media-filter.active small {
+  background: rgba(231,230,226,.18);
+}
+
+.media-filter-status {
+  flex: 0 0 auto;
+  padding-bottom: 7px;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.media-archive .media-list {
+  padding-bottom: 0;
+  border-top: 0;
+}
+
+.media-archive .media-list > a {
+  grid-template-columns: 60px 42px minmax(0,1fr) 125px 40px;
+}
+
+.media-icon {
+  color: var(--red);
+}
+
+.media-type {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  min-height: 27px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--ivory);
+  color: var(--ink) !important;
+  font-size: .66rem !important;
+  letter-spacing: .08em !important;
+}
+
+.media-type-podcast {
+  border-color: rgba(106,12,4,.35);
+  color: var(--red) !important;
+}
+
+.media-type-video {
+  border-color: rgba(58,63,95,.4);
+  color: var(--indigo) !important;
+}
+
+.media-type-press {
+  border-color: rgba(170,123,79,.5);
+  color: #76502e !important;
+}
+
+@media (max-width: 720px) {
+  .investment-logo.rogo-logo {
+    padding-inline: 8px;
+  }
+
+  .media-filter-bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .media-filter-buttons {
+    width: calc(100vw - 30px);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+  }
+
+  .media-filter {
+    flex: 0 0 auto;
+  }
+
+  .media-filter-status {
+    padding-bottom: 0;
+  }
+
+  .media-archive .media-list > a {
+    grid-template-columns: 35px minmax(0,1fr) 25px;
+  }
+
+  .media-archive .media-list > a .media-icon,
+  .media-archive .media-list > a .media-year {
+    display: none;
+  }
+}
