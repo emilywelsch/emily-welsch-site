@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Link, NavLink, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -9,7 +9,6 @@ import {
   X,
   Mic2,
   Newspaper,
-  BookOpen,
   Mail,
 } from 'lucide-react'
 import './styles.css'
@@ -94,12 +93,24 @@ const projects = [
 ]
 
 const investments = [
-  { name: 'Investment One', initials: 'I1', sector: 'Digital health', url: 'https://example.com' },
-  { name: 'Investment Two', initials: 'I2', sector: 'Enterprise AI', url: 'https://example.com' },
-  { name: 'Investment Three', initials: 'I3', sector: 'Consumer', url: 'https://example.com' },
-  { name: 'Investment Four', initials: 'I4', sector: 'Life sciences', url: 'https://example.com' },
-  { name: 'Investment Five', initials: 'I5', sector: 'Marketplace', url: 'https://example.com' },
-  { name: 'Investment Six', initials: 'I6', sector: 'SaaS', url: 'https://example.com' },
+  {
+    name: 'Guava Health',
+    logo: '/logos/guava-health-investment.png',
+    logoShape: 'square',
+    sector: 'Consumer health technology',
+    round: 'Seed round',
+    note: 'Participated in the company’s seed round.',
+    url: 'https://guavahealth.com',
+  },
+  {
+    name: 'Rogo',
+    logo: '/logos/rogo-logo.jpg',
+    logoShape: 'wide',
+    sector: 'Enterprise AI for finance',
+    round: 'Seed round',
+    note: 'Participated through an SPV with ScOp VC in a round led by Khosla Ventures.',
+    url: 'https://rogo.ai',
+  },
 ]
 
 const advisoryClients = [
@@ -245,14 +256,75 @@ const advisoryTestimonials = [
 const advisoryFilters = ['All', 'Healthcare', 'Technology', 'Consumer', 'Retail', 'Creative', 'Community', 'Sustainability']
 
 const mediaItems = [
-  { type: 'Speaking', icon: Mic2, title: 'Conference keynote or panel', outlet: 'Event name', year: '2026', url: 'https://example.com' },
-  { type: 'Podcast', icon: Mic2, title: 'Podcast episode title', outlet: 'Podcast name', year: '2026', url: 'https://example.com' },
-  { type: 'Press', icon: Newspaper, title: 'Featured article or profile', outlet: 'Publication name', year: '2025', url: 'https://example.com' },
-  { type: 'Publication', icon: BookOpen, title: 'Essay or publication title', outlet: 'Publication platform', year: '2025', url: 'https://example.com' },
+  {
+    type: 'Podcast',
+    icon: Mic2,
+    title: 'Protecting Your Peach with PIXI',
+    outlet: 'Electric Runway Podcast',
+    date: 'September 2017',
+    url: 'https://open.spotify.com/episode/1aPHrpWkvl3K8C0m8VPjb6?si=696f64ae343549d1',
+    description: 'A conversation about Pixi Cycling, product innovation, and designing more functional apparel for women.',
+  },
+  {
+    type: 'Video',
+    icon: Mic2,
+    title: 'Marketing Analytics with Christina Inge',
+    outlet: 'Video conversation',
+    date: 'May 2017',
+    url: 'https://www.youtube.com/watch?v=jn4mG-yH3Vw',
+    description: 'A discussion about marketing analytics, measurement, and using data to make better business decisions.',
+  },
+  {
+    type: 'Press',
+    icon: Newspaper,
+    title: 'How Emily Welsch Is Using Fashion and Chemistry to Close the Gender Gap in Cycling with Pixi',
+    outlet: 'Future-Forward Fashion Founders',
+    date: 'April 2017',
+    url: 'https://www.linkedin.com/pulse/how-emily-welsch-using-fashion-chemistry-close-gender-josh-walovitch/',
+  },
+  {
+    type: 'Press',
+    icon: Newspaper,
+    title: 'Fashion-Meets-Butt-Tech Apparel for Cycling and Beyond',
+    outlet: 'City Girl Rides',
+    date: 'March 2017',
+    url: 'https://citygirlrides.com/fashion-meets-butt-tech-apparel-for-cycling-and-beyond/',
+  },
+  {
+    type: 'Press',
+    icon: Newspaper,
+    title: 'Bike Commuting in Style and Comfort Just Got a Lot Easier',
+    outlet: 'Bike Pretty',
+    date: 'March 2017',
+    url: 'https://bikepretty.com/blogs/blog/bike-commuting-in-style-and-comfort-just-got-a-lot-easier',
+  },
+  {
+    type: 'Press',
+    icon: Newspaper,
+    title: 'Meet the Pixi Go Anywhere Pant',
+    outlet: 'Where the Blue Boots Go',
+    date: 'March 2017',
+    url: 'https://bluebootsgo.com/2017/03/15/meet-the-pixi-go-anywhere-pant-the-new-pant-you-must-know-about/',
+  },
+  {
+    type: 'Press',
+    icon: Newspaper,
+    title: 'A BU Grad Is Launching a Cycling Apparel Line for Women',
+    outlet: 'Boston Magazine',
+    date: 'November 2015',
+    url: 'https://www.bostonmagazine.com/health/2015/11/12/pixi-cycling/',
+  },
+  {
+    type: 'Press',
+    icon: Newspaper,
+    title: 'Boston Entrepreneur to Launch New Cycling Apparel Startup Aimed at Women',
+    outlet: 'Boston Business Journal',
+    date: 'November 2015',
+    url: 'https://www.bizjournals.com/boston/blog/startups/2015/11/boston-entrepreneur-to-launch-new-cycling-apparel.html',
+  },
 ]
 
 const nav = [
-  ['/', 'Home'],
   ['/ventures', 'Ventures'],
   ['/advisory', 'Advisory'],
   ['/media', 'Media'],
@@ -447,7 +519,7 @@ function Ventures() {
           <div className="directory-section investment-section">
             <div className="directory-title">
               <div><Eyebrow>Backed</Eyebrow><h2>Angel Investments</h2></div>
-              <p>Logo-led investment cards link directly to each company. We can add filters when you share the final list.</p>
+              <p>I focus on post-revenue software and technology companies. I invest in early growth teams building products with clear market traction.</p>
             </div>
             <div className="investment-grid">
               {investments.map((company, i) => (
@@ -463,8 +535,15 @@ function Ventures() {
                   viewport={{ once: true, amount: .2 }}
                   transition={{ delay: i * .035 }}
                 >
-                  <div className="logo-placeholder">{company.initials}</div>
-                  <div><h3>{company.name}</h3><p>{company.sector}</p></div>
+                  <div className={`investment-logo ${company.logo ? 'image' : 'wordmark'} ${company.logoShape || ''}`}>
+                    {company.logo ? <img src={company.logo} alt={`${company.name} logo`} /> : <span>{company.logoText}</span>}
+                  </div>
+                  <div className="investment-card-copy">
+                    <div className="investment-round">{company.round}</div>
+                    <h3>{company.name}</h3>
+                    <p>{company.sector}</p>
+                    <div className="investment-note">{company.note}</div>
+                  </div>
                   <ExternalLink size={17} />
                 </motion.a>
               ))}
@@ -677,7 +756,7 @@ function Advisory() {
               >
                 <div className="advisory-testimonial-top">
                   <span className="advisory-quote-mark">“</span>
-                  <div className={`advisory-testimonial-logo ${testimonial.logoShape}`}>
+                  <div className={`advisory-testimonial-logo ${testimonial.logoShape} ${testimonial.name.startsWith('Rachel Marriott') ? 'simi-logo' : ''}`}>
                     <img src={testimonial.logo} alt="" />
                   </div>
                 </div>
@@ -707,29 +786,63 @@ function Advisory() {
 }
 
 function Media() {
+  const podcasts = mediaItems.filter(item => item.type === 'Podcast' || item.type === 'Video')
+  const press = mediaItems.filter(item => item.type === 'Press')
+
+  const renderMediaGroup = (items, startIndex = 0) => (
+    <div className="media-list">
+      {items.map((item, index) => {
+        const Icon = item.icon
+        return (
+          <motion.a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            key={item.title}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="media-index">{String(startIndex + index + 1).padStart(2, '0')}</div>
+            <Icon />
+            <div className="media-main">
+              <span>{item.type}</span>
+              <h2>{item.title}</h2>
+              <p>{item.outlet}{item.description ? ` · ${item.description}` : ''}</p>
+            </div>
+            <div className="media-year">{item.date}</div>
+            <ArrowRight />
+          </motion.a>
+        )
+      })}
+    </div>
+  )
+
   return (
     <PageTransition>
       <section className="media-hero section-shell">
         <div>
-          <Eyebrow>Speaking · Podcasts · Press · Publications</Eyebrow>
+          <Eyebrow>Podcasts · Video · Press</Eyebrow>
           <h1>Ideas shared in public.</h1>
-          <p>A searchable archive can come later. This first version creates a strong editorial home for appearances, interviews, and published work.</p>
+          <p>A single archive of conversations, interviews, and press coverage spanning entrepreneurship, product design, marketing, and company building.</p>
         </div>
         <img src="/images/059.jpg" alt="Emily Welsch seated in a bright living room" />
       </section>
-      <section className="media-list section-shell">
-        {mediaItems.map((item, i) => {
-          const Icon = item.icon
-          return (
-            <motion.a href={item.url} target="_blank" rel="noreferrer" key={item.title} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <div className="media-index">0{i + 1}</div>
-              <Icon />
-              <div className="media-main"><span>{item.type}</span><h2>{item.title}</h2><p>{item.outlet}</p></div>
-              <div className="media-year">{item.year}</div>
-              <ArrowRight />
-            </motion.a>
-          )
-        })}
+
+      <section className="media-group section-shell">
+        <div className="media-group-heading">
+          <Eyebrow>Listen & watch</Eyebrow>
+          <h2>Podcasts and video</h2>
+        </div>
+        {renderMediaGroup(podcasts)}
+      </section>
+
+      <section className="media-group section-shell">
+        <div className="media-group-heading">
+          <Eyebrow>Coverage</Eyebrow>
+          <h2>Press</h2>
+        </div>
+        {renderMediaGroup(press, podcasts.length)}
       </section>
     </PageTransition>
   )
@@ -743,8 +856,11 @@ function Contact() {
           <Eyebrow>Contact</Eyebrow>
           <h1>Let’s start with what you’re building.</h1>
           <p>Use the form for advisory, investment, speaking, podcast, press, or general inquiries.</p>
-          <div className="contact-email"><Mail size={19} /><span>you@yourdomain.com</span></div>
-          <img src="/images/053.jpg" alt="Emily Welsch seated against a patterned wall" />
+          <a className="contact-email" href="mailto:emily@emilywelsch.co"><Mail size={19} /><span>emily@emilywelsch.co</span></a>
+          <div className="contact-note">
+            <span>Typical inquiries</span>
+            <p>Founder advisory, growth strategy, angel investment opportunities, partnerships, speaking engagements, and media conversations.</p>
+          </div>
         </div>
         <form className="contact-form" onSubmit={e => e.preventDefault()}>
           <div className="field-row">
@@ -785,7 +901,7 @@ function Footer() {
       </div>
       <div className="footer-bottom section-shell">
         <div>© {new Date().getFullYear()} Emily Welsch</div>
-        <div className="footer-links">{nav.slice(1).map(([href, label]) => <Link to={href} key={href}>{label}</Link>)}</div>
+        <div className="footer-links">{nav.map(([href, label]) => <Link to={href} key={href}>{label}</Link>)}</div>
       </div>
     </footer>
   )

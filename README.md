@@ -1,19 +1,17 @@
 # Emily Welsch Website
 
-Vite + React personal website prepared for deployment on Vercel.
+Vite + React website prepared for deployment on Vercel.
 
-## Current status
+## Current revision
 
-- Global Italian Countryside color palette applied
-- Homepage, Ventures, Media, and Contact remain draft pages
-- Advisory page approved and implemented with:
-  - 11 linked client cards
-  - sector filters and animated filtering
-  - five client testimonials
-  - responsive client and testimonial grids
-  - supplied photography and client logos
+- Approved Advisory page with eleven clients, sector filters, and five testimonials
+- Centered Simi Valley Birth Center testimonial logo
+- Navigation uses “Emily Welsch” as the home link; no separate Home item
+- Contact email updated to `emily@emilywelsch.co`; contact image removed
+- Media page includes the existing podcast/video and press archive from emilywelsch.co
+- Ventures page includes Guava Health and Rogo investments plus Emily’s investment thesis
 
-## Local development
+## Development
 
 ```bash
 npm install
@@ -26,8 +24,10 @@ npm run dev
 npm run build
 ```
 
-Vercel should detect the project as Vite and use the `dist` output directory automatically.
+Vercel should detect Vite automatically. The included `vercel.json` supports client-side routes.
 
-## Deployment
 
-Push the repository to GitHub. Vercel will automatically build and deploy each commit connected to the repository.
+## Revision 4
+- Updated Electric Runway podcast link to Spotify
+- Added supplied Rogo logo and changed its label to Seed round
+- Added a square-fitted Guava investment logo asset

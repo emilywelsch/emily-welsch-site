@@ -622,3 +622,149 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   .advisory-client-grid { grid-template-columns: 1fr; }
   .advisory-client-card { min-height: 255px; }
 }
+
+
+/* Site revision: approved advisory refinements and expanded content */
+.investment-card {
+  min-height: 250px;
+  grid-template-columns: 96px 1fr auto;
+  align-items: start;
+}
+.investment-logo {
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 1px solid rgba(50,49,45,.14);
+  overflow: hidden;
+}
+.investment-logo img { width: 100%; height: 100%; object-fit: contain; }
+.investment-logo.wordmark span {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  padding-left: .16em;
+}
+.investment-round {
+  margin-bottom: 10px;
+  color: var(--red);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.investment-card-copy h3 { font-size: 1.45rem; }
+.investment-note { margin-top: 14px; color: var(--muted); font-size: .82rem; line-height: 1.55; }
+
+/* Explicit visual centering for the featured Simi Valley logo. */
+.advisory-testimonial-card.featured .advisory-testimonial-logo {
+  justify-self: end;
+}
+.advisory-testimonial-card.featured .advisory-testimonial-logo img {
+  display: block;
+  margin-inline: auto;
+  object-position: 50% 50%;
+}
+
+.media-group { padding-bottom: 115px; }
+.media-group-heading {
+  display: grid;
+  grid-template-columns: .55fr 1.45fr;
+  align-items: end;
+  gap: 60px;
+  padding-bottom: 30px;
+}
+.media-group-heading h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+.media-group .media-list { padding-bottom: 0; }
+.media-year { line-height: 1.45; text-align: right; }
+
+.contact-email {
+  width: fit-content;
+  color: var(--red);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+}
+.contact-note {
+  max-width: 520px;
+  margin-top: 70px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.contact-note span {
+  color: var(--red);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.contact-note p { color: var(--muted); line-height: 1.7; }
+
+@media (max-width: 720px) {
+  .investment-card { grid-template-columns: 72px 1fr 24px; min-height: 245px; }
+  .investment-logo { width: 66px; height: 66px; }
+  .media-group-heading { grid-template-columns: 1fr; gap: 12px; }
+}
+
+.media-group .media-list > a {
+  grid-template-columns: 60px 45px minmax(0, 1fr) 125px 40px;
+}
+@media (max-width: 720px) {
+  .media-group .media-list > a { grid-template-columns: 35px 1fr 25px; }
+}
+
+/* Investment logo refinements */
+.investment-card {
+  grid-template-columns: 116px 1fr auto;
+}
+.investment-logo.square {
+  width: 86px;
+  height: 86px;
+}
+.investment-logo.wide {
+  width: 108px;
+  height: 86px;
+}
+.investment-logo.wide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 720px) {
+  .investment-card {
+    grid-template-columns: 78px 1fr 24px;
+  }
+  .investment-logo.square {
+    width: 66px;
+    height: 66px;
+  }
+  .investment-logo.wide {
+    width: 72px;
+    height: 66px;
+  }
+}
+
+/* Release v5 cumulative verification refinements */
+.advisory-testimonial-logo.simi-logo {
+  display: grid;
+  place-items: center;
+}
+.advisory-testimonial-logo.simi-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
+  margin: 0 auto;
+}
+.investment-logo.square img,
+.investment-logo.wide img {
+  object-fit: contain;
+  object-position: center;
+}
