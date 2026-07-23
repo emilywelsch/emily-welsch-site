@@ -1,11 +1,11 @@
 {
-  "release": "v11-yumyummy-hero-packaging",
-  "generated_at": "2026-07-23T05:59:05.252844+00:00",
+  "release": "v12-dots-client-fix",
+  "generated_at": "2026-07-23T06:29:06.578088+00:00",
   "includes": [
-    "All cumulative v10 site changes",
-    "YumYummy hero updated to use the IMG_3535_edit_light packaging image",
-    "YumYummy packaging-system section updated with the provided packaging artwork",
-    "Backside packaging artwork rotated 180 degrees for correct orientation",
-    "DOTS Technology Corp remains included on the advisory page"
+    "All cumulative v11 YumYummy hero and packaging updates",
+    "DOTS Technology Corp removed from angel investments",
+    "DOTS Technology Corp added as the twelfth advisory client",
+    "DOTS tagged Healthcare, Technology, and Life Sciences",
+    "Ventures backed-company area contains only Guava Health and Rogo"
   ]
 }

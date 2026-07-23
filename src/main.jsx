@@ -115,15 +115,6 @@ const projects = [
 
 const investments = [
   {
-    name: 'DOTS Technology Corp',
-    work: 'Pitch deck strategy and development supporting a $10M NEA financing',
-    url: 'https://www.nea.com/portfolio/dots-technology-corp',
-    logo: '/logos/dots-technology.png',
-    logoShape: 'wide',
-    logoClass: 'dots-logo',
-    tags: ['Healthcare', 'Technology', 'Life Sciences'],
-  },
-  {
     name: 'Guava Health',
     logo: '/logos/guava-health-investment.png',
     logoShape: 'square',
@@ -216,6 +207,15 @@ const advisoryClients = [
     logo: '/logos/guava-health.png',
     logoShape: 'square',
     tags: ['Healthcare', 'Technology'],
+  },
+  {
+    name: 'DOTS Technology Corp',
+    work: 'Pitch deck strategy and development supporting a $10M NEA financing',
+    url: 'https://www.nea.com/portfolio/dots-technology-corp',
+    logo: '/logos/dots-technology.png',
+    logoShape: 'wide',
+    logoClass: 'dots-logo',
+    tags: ['Healthcare', 'Technology', 'Life Sciences'],
   },
   {
     name: 'Tinkle Belle',

@@ -66,3 +66,10 @@ Open `/release.json` on the Vercel URL. It should report:
 - YumYummy has a packaging-system section showing open-flow, spill-proof, and variety designs
 - Advisory includes DOTS Technology Corp and a Life Sciences filter
 - `/release.json` reports `v11-yumyummy-hero-packaging`
+
+
+## Revision 12 verification
+- DOTS is visible in Selected Clients on `/advisory`
+- DOTS is absent from Companies I’ve Backed on `/ventures`
+- Advisory All count is 12
+- `/release.json` reports `v12-dots-client-fix`

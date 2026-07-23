@@ -61,3 +61,8 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 ## Revision 10
 - Added the real YumYummy logo and a dedicated packaging-system showcase
 - Added DOTS Technology Corp to Advisory with Healthcare, Technology, and Life Sciences tags
+
+
+## Revision 12
+- Corrected DOTS placement: advisory client, not angel investment
+- Ventures investments now remain Guava Health and Rogo only
