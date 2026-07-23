@@ -65,4 +65,4 @@ Open `/release.json` on the Vercel URL. It should report:
 - YumYummy hero uses the uploaded wordmark and layered package artwork
 - YumYummy has a packaging-system section showing open-flow, spill-proof, and variety designs
 - Advisory includes DOTS Technology Corp and a Life Sciences filter
-- `/release.json` reports `v10-yumyummy-dots`
+- `/release.json` reports `v11-yumyummy-hero-packaging`
