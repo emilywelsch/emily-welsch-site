@@ -17,20 +17,20 @@ const projects = [
   {
     slug: 'clinbook',
     name: 'Clinbook',
-    eyebrow: 'Founder-built company · Healthcare technology',
-    summary: 'A platform designed to make clinical study startup faster and more informed.',
+    eyebrow: 'Founder-built company · Clinical trial intelligence',
+    summary: 'A data platform helping sponsors, CROs, sites, and investigators make better clinical research partner decisions.',
     role: 'Founder & CEO',
-    status: 'Active',
+    status: 'Active company',
     year: '2023–present',
     url: 'https://clinbook.co',
-    accent: 'coral',
+    accent: 'clinbook',
     overview:
-      'Clinbook brings fragmented investigator and research-site information into a more useful decision-making experience for clinical research teams.',
+      'Clinbook combines clinical-trial history, investigator and site performance, claims, population data, reviews, and verified profile inputs in one decision layer.',
     work: [
-      'Company concept, strategy, and product direction',
-      'Data strategy and investigator/site intelligence model',
-      'Go-to-market positioning and commercial development',
-      'Product design, partnerships, and company building',
+      'Company strategy, positioning, and product direction',
+      'Investigator, site, trial, and patient-intelligence architecture',
+      'Data engineering, ratings, and profile-verification systems',
+      'Go-to-market, partnerships, pricing, and company building',
     ],
   },
 
@@ -587,6 +587,302 @@ function Ventures() {
   )
 }
 
+
+
+function ClinbookCaseStudy({ project }) {
+  const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
+
+  return (
+    <PageTransition>
+      <section className="clinbook-hero">
+        <div className="section-shell clinbook-hero-grid">
+          <motion.div
+            className="clinbook-hero-copy"
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .55 }}
+          >
+            <Link className="back-link" to="/ventures">← All ventures</Link>
+            <Eyebrow>Company case study · Clinical trial intelligence</Eyebrow>
+            <div className="clinbook-wordmark">CLINBOOK</div>
+            <h1>Find the right sites and investigators, backed by data.</h1>
+            <p>
+              Clinbook is a clinical intelligence platform built to make study planning, partner
+              selection, and enrollment decisions faster, more transparent, and more evidence based.
+            </p>
+            <div className="clinbook-hero-actions">
+              <ArrowLink to="https://clinbook.co" external>Visit Clinbook</ArrowLink>
+              <a href="#clinbook-claims">Explore patient intelligence ↓</a>
+            </div>
+          </motion.div>
+
+          <motion.aside
+            className="clinbook-facts"
+            initial={{ opacity: 0, x: 22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .55, delay: .08 }}
+          >
+            <div><span>Role</span><strong>Founder & CEO</strong></div>
+            <div><span>Timeline</span><strong>2023–present</strong></div>
+            <div><span>Model</span><strong>B2B SaaS</strong></div>
+            <div><span>Market</span><strong>Global clinical research</strong></div>
+          </motion.aside>
+        </div>
+
+        <div className="section-shell clinbook-hero-image">
+          <motion.img
+            src="/ventures/clinbook/clinbook-platform-overview.jpg"
+            alt="Clinbook website and product interface overview"
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .65, delay: .12 }}
+          />
+        </div>
+      </section>
+
+      <section className="clinbook-scale section-shell">
+        <div><strong>1.3K+</strong><span>Sponsors represented</span></div>
+        <div><strong>1.5M+</strong><span>Research sites</span></div>
+        <div><strong>1.7M+</strong><span>Investigators</span></div>
+        <div><strong>500K+</strong><span>Clinical trials</span></div>
+      </section>
+
+      <section className="clinbook-opportunity section-shell">
+        <div className="clinbook-opportunity-heading">
+          <Eyebrow>The opportunity</Eyebrow>
+          <h2>Clinical research teams were making high-stakes partner decisions from fragmented information.</h2>
+        </div>
+        <div className="clinbook-opportunity-copy">
+          <p>
+            Sponsor and CRO teams often piece together site and investigator intelligence across
+            trial registries, spreadsheets, institutional websites, vendor databases, and personal
+            networks. Much of the available information describes experience, but not performance.
+          </p>
+          <p>
+            Sites and investigators face the inverse problem. Their capabilities, enrollment history,
+            credentials, and patient reach are difficult to present in a portable, verified profile
+            that sponsors can discover and compare.
+          </p>
+          <p>
+            Clinbook was created as a shared intelligence layer for the ecosystem: structured data,
+            transparent ratings, verified profiles, and firsthand reviews in one product.
+          </p>
+        </div>
+      </section>
+
+      <section className="clinbook-audiences">
+        <div className="section-shell">
+          <div className="clinbook-section-heading">
+            <div>
+              <Eyebrow>One platform, three perspectives</Eyebrow>
+              <h2>Designed for every side of the research partnership.</h2>
+            </div>
+            <p>
+              Each audience uses the same underlying data differently, creating a more connected
+              and transparent market for clinical-research partnerships.
+            </p>
+          </div>
+
+          <div className="clinbook-audience-grid">
+            <motion.a
+              href="https://clinbook.co/for-sponsors"
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+            >
+              <span>01</span>
+              <h3>Sponsors & CROs</h3>
+              <p>Plan studies, compare candidates, build lists, and select high-performing, diverse sites and investigators.</p>
+              <small>Planning · Selection · Enrollment · Reviews</small>
+              <ExternalLink />
+            </motion.a>
+
+            <motion.a
+              href="https://clinbook.co/for-sites"
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+              transition={{ delay: .05 }}
+            >
+              <span>02</span>
+              <h3>Research sites</h3>
+              <p>Claim and strengthen a profile, showcase capabilities, demonstrate performance, and get discovered for new studies.</p>
+              <small>Visibility · Verification · Performance · Partnerships</small>
+              <ExternalLink />
+            </motion.a>
+
+            <motion.a
+              href="https://clinbook.co/for-investigators"
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+              transition={{ delay: .1 }}
+            >
+              <span>03</span>
+              <h3>Investigators</h3>
+              <p>Create a portable professional profile connecting trials, credentials, publications, enrollment history, and reviews.</p>
+              <small>Experience · Credentials · Publications · Discovery</small>
+              <ExternalLink />
+            </motion.a>
+          </div>
+        </div>
+      </section>
+
+      <section className="clinbook-data">
+        <div className="section-shell">
+          <div className="clinbook-section-heading">
+            <div>
+              <Eyebrow>Intelligence built on trusted sources</Eyebrow>
+              <h2>A unified data layer for sites, investigators, trials, and patients.</h2>
+            </div>
+            <p>
+              The product combines public and private sources with calculated performance metrics
+              and verified community inputs, turning raw records into practical decision support.
+            </p>
+          </div>
+
+          <div className="clinbook-data-grid">
+            {[
+              ['Clinical-trial history', 'Trial registrations, study phases, therapeutic experience, sponsors, interventions, and site participation.'],
+              ['Enrollment performance', 'Calculated ratings that compare historical enrollment results across investigators and research sites.'],
+              ['Professional experience', 'Credentials, specialties, publications, payments, affiliations, and verified profile updates.'],
+              ['Population & diversity', 'Census, disease-prevalence, geographic, and claims-based signals to support more informed recruitment planning.'],
+              ['Firsthand reviews', 'Candid, role-specific feedback from sponsors, CROs, sites, networks, and research professionals.'],
+              ['Claims intelligence', 'Patient-volume signals that connect indications with treating investigators and research-site opportunities.'],
+            ].map(([title, copy], index) => (
+              <motion.article
+                key={title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: .2 }}
+                transition={{ delay: index * .035 }}
+              >
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="clinbook-product section-shell">
+        <div className="clinbook-section-heading">
+          <div>
+            <Eyebrow>What I built</Eyebrow>
+            <h2>Company strategy, product architecture, data systems, and go-to-market.</h2>
+          </div>
+          <p>
+            Clinbook has required end-to-end ownership across the business and product, from the
+            initial market thesis to millions of normalized records and a commercial SaaS experience.
+          </p>
+        </div>
+
+        <div className="clinbook-product-grid">
+          {[
+            ['01', 'Market & product strategy', 'Defined the category, user journeys, value proposition, pricing, roadmap, and positioning across sponsors, sites, and investigators.'],
+            ['02', 'Data architecture', 'Built the model connecting trials, investigators, sites, publications, credentials, claims, population data, payments, ratings, and reviews.'],
+            ['03', 'Search & decision tools', 'Designed maps, advanced filters, saved lists, profile comparisons, exports, ratings, and partner-review workflows.'],
+            ['04', 'Profile verification', 'Created claim, edit, credential, and verification experiences so the people represented in the data can improve it.'],
+            ['05', 'Performance models', 'Developed enrollment, experience, publication, and composite rating systems for investigator and site evaluation.'],
+            ['06', 'Commercial development', 'Led partnerships, customer discovery, sales strategy, demonstrations, pilot design, and the operating plan for a bootstrapped SaaS company.'],
+          ].map(([number, title, copy]) => (
+            <motion.article
+              key={number}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+            >
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      <section className="clinbook-claims" id="clinbook-claims">
+        <div className="section-shell clinbook-claims-grid">
+          <motion.div
+            className="clinbook-claims-copy"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .18 }}
+          >
+            <Eyebrow>Patient intelligence</Eyebrow>
+            <h2>Connecting disease prevalence with the investigators and sites already treating those patients.</h2>
+            <p>
+              Clinbook is now ingesting Medicare fee-for-service claims to identify patient-volume
+              signals by indication and treating provider. The heat map helps teams see where patient
+              populations are concentrated and which investigators and sites may already have relevant reach.
+            </p>
+            <p>
+              Commercial claims are planned next. That expansion will broaden the view beyond the
+              Medicare population and support a more complete picture of potential patient access.
+            </p>
+            <div className="clinbook-claims-note">
+              Current counts are conservative minimums where Medicare cells are suppressed. Map shading
+              reflects each treating investigator’s primary practice location, not the patient’s home address.
+            </div>
+          </motion.div>
+
+          <motion.figure
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .12 }}
+          >
+            <img
+              src="/ventures/clinbook/clinbook-patient-heatmap.jpg"
+              alt="Clinbook patient heat map using Medicare claims data"
+            />
+            <figcaption>
+              Patient heat map combining county-level patient signals with matching investigators and sites.
+            </figcaption>
+          </motion.figure>
+        </div>
+      </section>
+
+      <section className="clinbook-thesis">
+        <div className="section-shell clinbook-thesis-grid">
+          <div>
+            <Eyebrow>Company thesis</Eyebrow>
+            <h2>Who you partner with matters.</h2>
+          </div>
+          <blockquote>
+            Better trials begin with better intelligence about the investigators, sites, sponsors,
+            and patient populations that make research possible.
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="clinbook-links section-shell">
+        <div>
+          <Eyebrow>Explore Clinbook</Eyebrow>
+          <h2>See the platform from each user’s perspective.</h2>
+        </div>
+        <div className="clinbook-link-list">
+          <a href="https://clinbook.co" target="_blank" rel="noreferrer">Platform overview <ExternalLink /></a>
+          <a href="https://clinbook.co/for-sponsors" target="_blank" rel="noreferrer">For sponsors <ExternalLink /></a>
+          <a href="https://clinbook.co/for-sites" target="_blank" rel="noreferrer">For sites <ExternalLink /></a>
+          <a href="https://clinbook.co/for-investigators" target="_blank" rel="noreferrer">For investigators <ExternalLink /></a>
+        </div>
+      </section>
+
+      <section className="next-project section-shell">
+        <p>Next company</p>
+        <Link to={`/ventures/${nextProject.slug}`}>
+          {nextProject.name}<ArrowRight />
+        </Link>
+      </section>
+    </PageTransition>
+  )
+}
 
 function SweatVidaCaseStudy({ project }) {
   const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
@@ -1561,6 +1857,7 @@ function ProjectDetail() {
   const { slug } = useParams()
   const project = projects.find(p => p.slug === slug)
   if (!project) return <NotFound />
+  if (project.slug === 'clinbook') return <ClinbookCaseStudy project={project} />
   if (project.slug === 'sweatvida') return <SweatVidaCaseStudy project={project} />
   if (project.slug === 'uncluttered-soul') return <UnclutteredSoulCaseStudy project={project} />
   if (project.slug === 'pixi-cycling') return <PixiCyclingCaseStudy project={project} />

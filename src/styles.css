@@ -2663,3 +2663,519 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   .uncluttered-player { grid-template-columns: 58px minmax(0, 1fr) 24px; padding: 22px; }
   .uncluttered-play { width: 54px; height: 54px; }
 }
+
+
+/* Release v15: Clinbook company case study */
+.project-card.clinbook:hover {
+  background: #d9c1ff;
+}
+
+.project-detail-hero.clinbook {
+  background: #d9c1ff;
+}
+
+.clinbook-hero {
+  padding: 92px 0 0;
+  overflow: hidden;
+  background: #17102d;
+  color: #f7f4ff;
+}
+
+.clinbook-hero .eyebrow {
+  color: #55c8ff;
+}
+
+.clinbook-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap: clamp(60px, 9vw, 135px);
+  align-items: end;
+  padding-bottom: 78px;
+}
+
+.clinbook-hero .back-link {
+  color: rgba(247,244,255,.68);
+}
+
+.clinbook-wordmark {
+  margin: 34px 0 38px;
+  color: #a93fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(3.3rem, 7vw, 6.8rem);
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: .08em;
+}
+
+.clinbook-hero-copy h1 {
+  max-width: 920px;
+  margin: 0 0 28px;
+  font-size: clamp(3.6rem, 7vw, 7.5rem);
+  line-height: .93;
+  letter-spacing: -.073em;
+}
+
+.clinbook-hero-copy > p {
+  max-width: 735px;
+  color: rgba(247,244,255,.7);
+  font-size: clamp(1.04rem, 1.42vw, 1.23rem);
+  line-height: 1.75;
+}
+
+.clinbook-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.clinbook-hero-actions a {
+  color: #f7f4ff;
+}
+
+.clinbook-hero-actions > a:last-child {
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+  color: rgba(247,244,255,.78);
+}
+
+.clinbook-facts {
+  border-top: 1px solid rgba(247,244,255,.25);
+}
+
+.clinbook-facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(247,244,255,.25);
+}
+
+.clinbook-facts span {
+  color: rgba(247,244,255,.5);
+}
+
+.clinbook-facts strong {
+  max-width: 220px;
+  text-align: right;
+  font-family: 'Manrope', sans-serif;
+}
+
+.clinbook-hero-image {
+  padding: 22px;
+  background: #e8d7ff;
+  transform: translateY(58px);
+  box-shadow: 0 35px 90px rgba(0,0,0,.28);
+}
+
+.clinbook-hero-image img {
+  width: 100%;
+  display: block;
+}
+
+.clinbook-scale {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 150px;
+  padding-bottom: 125px;
+  border-left: 1px solid var(--line);
+}
+
+.clinbook-scale div {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.clinbook-scale strong {
+  color: #8434e6;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.7rem);
+  letter-spacing: -.05em;
+}
+
+.clinbook-scale span {
+  color: var(--muted);
+  font-size: .72rem;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.clinbook-opportunity {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: clamp(70px, 10vw, 145px);
+  padding-bottom: 135px;
+}
+
+.clinbook-opportunity-heading {
+  align-self: start;
+  position: sticky;
+  top: 120px;
+}
+
+.clinbook-opportunity h2,
+.clinbook-section-heading h2,
+.clinbook-claims h2,
+.clinbook-thesis h2,
+.clinbook-links h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.65rem, 5vw, 5.35rem);
+  line-height: 1.01;
+  letter-spacing: -.062em;
+}
+
+.clinbook-opportunity-copy {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.clinbook-opportunity-copy p,
+.clinbook-section-heading > p,
+.clinbook-claims-copy > p {
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.32vw, 1.18rem);
+  line-height: 1.82;
+}
+
+.clinbook-audiences {
+  padding-block: 125px 145px;
+  background: #e5d3ff;
+}
+
+.clinbook-section-heading {
+  display: grid;
+  grid-template-columns: 1.07fr .93fr;
+  gap: 78px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.clinbook-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(23,16,45,.22);
+  border-left: 1px solid rgba(23,16,45,.22);
+}
+
+.clinbook-audience-grid a {
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 45px);
+  border-right: 1px solid rgba(23,16,45,.22);
+  border-bottom: 1px solid rgba(23,16,45,.22);
+  transition: background .25s ease, transform .25s ease;
+}
+
+.clinbook-audience-grid a:hover {
+  z-index: 2;
+  background: #f7f4ff;
+  transform: translateY(-5px);
+}
+
+.clinbook-audience-grid > a > span {
+  color: #8434e6;
+  font-size: .72rem;
+  letter-spacing: .14em;
+}
+
+.clinbook-audience-grid h3 {
+  margin: auto 0 18px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -.05em;
+}
+
+.clinbook-audience-grid p {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.clinbook-audience-grid small {
+  margin-top: 20px;
+  color: #6d29c4;
+  line-height: 1.55;
+}
+
+.clinbook-audience-grid svg {
+  width: 20px;
+  margin-top: 24px;
+}
+
+.clinbook-data {
+  padding-block: 125px 145px;
+  background: #17102d;
+  color: #f7f4ff;
+}
+
+.clinbook-data .eyebrow {
+  color: #55c8ff;
+}
+
+.clinbook-data .clinbook-section-heading > p {
+  color: rgba(247,244,255,.63);
+}
+
+.clinbook-data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(247,244,255,.22);
+  border-left: 1px solid rgba(247,244,255,.22);
+}
+
+.clinbook-data-grid article {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(27px, 3.5vw, 42px);
+  border-right: 1px solid rgba(247,244,255,.22);
+  border-bottom: 1px solid rgba(247,244,255,.22);
+}
+
+.clinbook-data-grid article > span {
+  color: #55c8ff;
+  font-size: .7rem;
+  letter-spacing: .14em;
+}
+
+.clinbook-data-grid h3 {
+  margin: auto 0 15px;
+  font-size: clamp(1.5rem, 2.4vw, 2.35rem);
+  letter-spacing: -.045em;
+}
+
+.clinbook-data-grid p {
+  margin: 0;
+  color: rgba(247,244,255,.62);
+  line-height: 1.65;
+}
+
+.clinbook-product {
+  padding-block: 130px 145px;
+}
+
+.clinbook-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.clinbook-product-grid article {
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 48px);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.clinbook-product-grid article > span {
+  color: #8434e6;
+  font-size: .72rem;
+  letter-spacing: .14em;
+}
+
+.clinbook-product-grid h3 {
+  margin: auto 0 16px;
+  font-size: clamp(1.7rem, 2.8vw, 2.8rem);
+  letter-spacing: -.05em;
+}
+
+.clinbook-product-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.clinbook-claims {
+  padding-block: 125px 145px;
+  background: #f1e9ff;
+}
+
+.clinbook-claims-grid {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: clamp(55px, 8vw, 110px);
+  align-items: start;
+}
+
+.clinbook-claims-copy {
+  position: sticky;
+  top: 120px;
+}
+
+.clinbook-claims-copy > p {
+  margin-top: 25px;
+}
+
+.clinbook-claims-note {
+  margin-top: 30px;
+  padding: 22px;
+  border-left: 2px solid #8434e6;
+  background: rgba(255,255,255,.58);
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.65;
+}
+
+.clinbook-claims figure {
+  margin: 0;
+  padding: 18px;
+  background: #fff;
+  box-shadow: 0 30px 75px rgba(23,16,45,.11);
+}
+
+.clinbook-claims figure img {
+  width: 100%;
+}
+
+.clinbook-claims figcaption {
+  padding-top: 15px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.clinbook-thesis {
+  padding-block: 125px 145px;
+  background: #8434e6;
+  color: #fff;
+}
+
+.clinbook-thesis .eyebrow {
+  color: #bdeaff;
+}
+
+.clinbook-thesis-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 85px;
+  align-items: end;
+}
+
+.clinbook-thesis blockquote {
+  margin: 0;
+  padding-left: 35px;
+  border-left: 2px solid #55c8ff;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.7rem, 3.1vw, 3.25rem);
+  line-height: 1.3;
+  letter-spacing: -.045em;
+}
+
+.clinbook-links {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  padding-block: 120px 135px;
+}
+
+.clinbook-link-list {
+  border-top: 1px solid var(--line);
+}
+
+.clinbook-link-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  letter-spacing: -.03em;
+  transition: padding .25s ease, color .25s ease;
+}
+
+.clinbook-link-list a:hover {
+  padding-left: 12px;
+  color: #8434e6;
+}
+
+.clinbook-link-list svg {
+  width: 20px;
+}
+
+@media (max-width: 980px) {
+  .clinbook-hero-grid,
+  .clinbook-opportunity,
+  .clinbook-section-heading,
+  .clinbook-claims-grid,
+  .clinbook-thesis-grid,
+  .clinbook-links {
+    grid-template-columns: 1fr;
+  }
+
+  .clinbook-opportunity-heading,
+  .clinbook-claims-copy {
+    position: static;
+  }
+
+  .clinbook-scale {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clinbook-audience-grid,
+  .clinbook-data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinbook-audience-grid a {
+    min-height: 310px;
+  }
+}
+
+@media (max-width: 720px) {
+  .clinbook-hero {
+    padding-top: 70px;
+  }
+
+  .clinbook-hero-copy h1 {
+    font-size: clamp(3.2rem, 14vw, 5.2rem);
+  }
+
+  .clinbook-wordmark {
+    font-size: clamp(3rem, 15vw, 4.8rem);
+  }
+
+  .clinbook-hero-image {
+    padding: 10px;
+    transform: translateY(35px);
+  }
+
+  .clinbook-scale {
+    grid-template-columns: 1fr;
+    padding-top: 95px;
+    padding-bottom: 90px;
+  }
+
+  .clinbook-scale div {
+    min-height: 135px;
+  }
+
+  .clinbook-opportunity,
+  .clinbook-audiences,
+  .clinbook-data,
+  .clinbook-product,
+  .clinbook-claims,
+  .clinbook-thesis,
+  .clinbook-links {
+    padding-block: 90px;
+  }
+
+  .clinbook-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinbook-product-grid article,
+  .clinbook-data-grid article {
+    min-height: 270px;
+  }
+}

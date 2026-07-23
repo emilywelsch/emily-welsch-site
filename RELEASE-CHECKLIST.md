@@ -86,3 +86,12 @@ Open `/release.json` on the Vercel URL. It should report:
 - The free meditation button links to `/take-a-break/` on Uncluttered Soul
 - The page describes all narration as AI-generated and notes that Emily’s synthetic voice is used for most meditations
 - `/release.json` reports `v14-uncluttered-soul-case-study`
+
+
+## Revision 15 verification
+- Clinbook opens a dedicated case study
+- The platform overview is the primary product image
+- The Medicare patient heat map appears in the Patient intelligence section
+- Commercial claims are described as planned next
+- DOTS appears under Advisory clients and not investments
+- `/release.json` reports `v15-clinbook-case-study`

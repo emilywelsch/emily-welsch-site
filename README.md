@@ -76,3 +76,9 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 ## Revision 14
 - Added a full Uncluttered Soul case study at `/ventures/uncluttered-soul`
 - Added the Uncluttered Soul membership, content architecture, AI voice-production workflow, and free meditation CTA
+
+
+## Revision 15
+- Added a dedicated Clinbook case study at `/ventures/clinbook`
+- Added the product overview and Medicare patient heat-map visuals
+- Added sponsor, site, investigator, data architecture, product, claims, and company-thesis sections
