@@ -114,6 +114,91 @@ const projects = [
   },
 ]
 
+
+const codingProjects = [
+  {
+    slug: 'surfguru',
+    name: 'SurfGuru',
+    eyebrow: 'Coding project · Ruby CLI gem',
+    summary: 'A command-line application for exploring current surf conditions at popular beaches around the world.',
+    image: '/ventures/coding/surfguru-cover.jpg',
+    accent: 'surfguru-code',
+    github: 'https://github.com/emilywelsch/surfguru',
+    video: 'https://www.youtube.com/watch?v=LVinCJ2QzOM',
+    heroTitle: 'A command-line guide to surf conditions around the world.',
+    description:
+      'SurfGuru helps surfers browse beaches by continent and country, then inspect the current conditions and ideal statistics for a specific break.',
+    facts: [
+      ['Format', 'CLI data gem'],
+      ['Language', 'Ruby'],
+      ['Data source', 'Surfline'],
+      ['License', 'MIT'],
+    ],
+    features: [
+      ['Location-first discovery', 'Move from continent to country to individual beaches through a guided command-line flow.'],
+      ['Detailed surf conditions', 'Review surf height, water and air temperature, swell direction, wind conditions, and ideal conditions for each beach.'],
+      ['Direct source access', 'Return a browser-ready link for the selected beach so users can continue into the original Surfline experience.'],
+    ],
+    architecture: [
+      ['Domain model', 'Continent, Country, and Beach objects organize a large global beach directory into a navigable hierarchy.'],
+      ['Scraping layer', 'A Nokogiri-powered scraper retrieves and structures information published on Surfline pages.'],
+      ['Interactive CLI', 'A dedicated command-line interface manages prompts, selections, validation, navigation, and formatted results.'],
+    ],
+    stack: ['Ruby', 'RubyGems', 'Nokogiri', 'Rake', 'Bundler', 'RSpec', 'Pry', 'CLI'],
+    installation: [
+      'git clone https://github.com/emilywelsch/surfguru.git',
+      'cd surfguru/',
+      'rake install',
+      'surfguru',
+    ],
+    noteEyebrow: 'Distribution & data rights',
+    noteTitle: 'Built as a gem, intentionally not published.',
+    note:
+      'SurfGuru was structured as a Ruby gem but was not published to RubyGems while permission from Surfline remained unresolved. Surf condition content belongs to Surfline/Wavetrak and the project remains an open-source technical demonstration.',
+  },
+  {
+    slug: 'shoplist',
+    name: 'ShopList',
+    eyebrow: 'Coding project · Sinatra web application',
+    summary: 'A database-backed shopping-list app for creating, editing, and sharing lists with groups.',
+    image: '/ventures/coding/shoplist-cover.jpg',
+    accent: 'shoplist-code',
+    github: 'https://github.com/emilywelsch/shoplist',
+    video: 'https://www.youtube.com/watch?v=2UyMYrLx7Bk&t=1247s',
+    heroTitle: 'A shared shopping-list application built around full-stack CRUD.',
+    description:
+      'ShopList is a Sinatra application that lets users create, read, update, delete, and share shopping-list content through a simple content-management workflow.',
+    facts: [
+      ['Format', 'Web application'],
+      ['Framework', 'Sinatra'],
+      ['Database', 'SQLite'],
+      ['Pattern', 'CRUD / MVC'],
+    ],
+    features: [
+      ['List creation', 'Users can create and manage shopping-list content through straightforward browser-based forms.'],
+      ['Edit and delete workflows', 'Each item moves through a complete CRUD lifecycle with database persistence.'],
+      ['Shared organization', 'The product is structured around users and collaborative list sharing for household or group use.'],
+    ],
+    architecture: [
+      ['Sinatra controllers', 'Application, user, and item controllers separate authentication, routing, and list-management responsibilities.'],
+      ['ActiveRecord data layer', 'User and item models persist through migrations, a schema, and SQLite databases for development and testing.'],
+      ['Server-rendered interface', 'ERB views and CSS provide the browser experience while bcrypt supports credential handling.'],
+    ],
+    stack: ['Ruby', 'Sinatra', 'ActiveRecord', 'SQLite', 'ERB', 'bcrypt', 'RSpec', 'Capybara', 'Rack::Test'],
+    installation: [
+      'git clone https://github.com/emilywelsch/shoplist.git',
+      'cd shoplist/',
+      'bundle install',
+      'rake db:migrate',
+      'shotgun',
+    ],
+    noteEyebrow: 'Learning objective',
+    noteTitle: 'A compact demonstration of full-stack application structure.',
+    note:
+      'ShopList was designed to illustrate the relationship between routes, controllers, models, views, authentication, database migrations, and the four core CRUD actions inside a simple content-management product.',
+  },
+]
+
 const investments = [
   {
     name: 'Guava Health',
@@ -494,9 +579,9 @@ function Home() {
 function Ventures() {
   const params = new URLSearchParams(useLocation().search)
   const requested = params.get('view')
-  const [view, setView] = useState(requested === 'backed' ? 'backed' : requested === 'built' ? 'built' : 'all')
+  const [view, setView] = useState(requested === 'backed' ? 'backed' : requested === 'built' ? 'built' : requested === 'code' ? 'code' : 'all')
   useEffect(() => {
-    if (requested === 'built' || requested === 'backed') setView(requested)
+    if (requested === 'built' || requested === 'backed' || requested === 'code') setView(requested)
   }, [requested])
 
   return (
@@ -504,14 +589,19 @@ function Ventures() {
       <section className="page-hero section-shell">
         <Eyebrow>Ventures</Eyebrow>
         <h1>Companies I’ve built and backed.</h1>
-        <p>This page brings together the companies I’ve built and the early-stage teams I’ve backed as an angel investor.</p>
+        <p>This page brings together the companies I’ve built, selected coding projects I’ve developed, and the early-stage teams I’ve backed as an angel investor.</p>
       </section>
 
       <section className="venture-directory section-shell">
         <div className="filter-row" role="tablist" aria-label="Venture filters">
-          {['all', 'built', 'backed'].map(item => (
+          {[
+            ['all', 'All'],
+            ['built', 'Companies'],
+            ['code', 'Coding Projects'],
+            ['backed', 'Backed'],
+          ].map(([item, label]) => (
             <button key={item} onClick={() => setView(item)} className={view === item ? 'filter active' : 'filter'}>
-              {item === 'all' ? 'All' : item === 'built' ? 'Built' : 'Backed'}
+              {label}
             </button>
           ))}
         </div>
@@ -540,6 +630,39 @@ function Ventures() {
                       <p>{project.summary}</p>
                     </div>
                     <div className="card-arrow"><ArrowRight /></div>
+                  </Link>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        )}
+
+
+        {(view === 'all' || view === 'code') && (
+          <div className="directory-section coding-directory-section">
+            <div className="directory-title">
+              <div><Eyebrow>Code</Eyebrow><h2>Coding Projects</h2></div>
+              <p>Selected applications from my software-development training, documented through the problem, product behavior, technical architecture, and source code.</p>
+            </div>
+            <div className="coding-project-grid">
+              {codingProjects.map((project, i) => (
+                <motion.article
+                  className={`coding-project-card ${project.accent}`}
+                  key={project.slug}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: .2 }}
+                  transition={{ delay: i * .06 }}
+                >
+                  <Link to={`/ventures/${project.slug}`}>
+                    <img src={project.image} alt={`${project.name} project cover`} />
+                    <div className="coding-project-overlay"></div>
+                    <div className="coding-project-card-copy">
+                      <div className="card-meta">{project.eyebrow}</div>
+                      <h3>{project.name}</h3>
+                      <p>{project.summary}</p>
+                    </div>
+                    <div className="coding-project-card-arrow"><ArrowRight /></div>
                   </Link>
                 </motion.article>
               ))}
@@ -589,6 +712,160 @@ function Ventures() {
 
 
 
+
+function CodingProjectCaseStudy({ project }) {
+  const nextProject = codingProjects[(codingProjects.indexOf(project) + 1) % codingProjects.length]
+
+  return (
+    <PageTransition>
+      <section className={`code-project-hero ${project.accent}`}>
+        <div className="section-shell code-project-hero-grid">
+          <motion.div
+            className="code-project-hero-copy"
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .55 }}
+          >
+            <Link className="back-link" to="/ventures?view=code">← Coding projects</Link>
+            <Eyebrow>{project.eyebrow}</Eyebrow>
+            <h1>{project.heroTitle}</h1>
+            <p>{project.description}</p>
+            <div className="code-project-actions">
+              <a href={project.github} target="_blank" rel="noreferrer">
+                View source on GitHub <ExternalLink size={17} />
+              </a>
+              <a href={project.video} target="_blank" rel="noreferrer">
+                Watch walkthrough <ExternalLink size={17} />
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.figure
+            className="code-project-hero-visual"
+            initial={{ opacity: 0, x: 22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .55, delay: .08 }}
+          >
+            <img src={project.image} alt={`${project.name} project cover`} />
+          </motion.figure>
+        </div>
+
+        <div className="section-shell code-project-facts">
+          {project.facts.map(([label, value]) => (
+            <div key={label}><strong>{value}</strong><span>{label}</span></div>
+          ))}
+        </div>
+      </section>
+
+      <section className="code-project-purpose section-shell">
+        <div>
+          <Eyebrow>Product behavior</Eyebrow>
+          <h2>What the application does.</h2>
+        </div>
+        <div className="code-project-feature-grid">
+          {project.features.map(([title, copy], index) => (
+            <motion.article
+              key={title}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+              transition={{ delay: index * .05 }}
+            >
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      <section className={`code-project-architecture ${project.accent}`}>
+        <div className="section-shell">
+          <div className="code-project-section-heading">
+            <div>
+              <Eyebrow>Architecture</Eyebrow>
+              <h2>How the system is organized.</h2>
+            </div>
+            <p>
+              A focused technical exercise connecting user behavior to clear application structure,
+              persistent data, and maintainable responsibilities.
+            </p>
+          </div>
+
+          <div className="code-project-architecture-grid">
+            {project.architecture.map(([title, copy], index) => (
+              <motion.article
+                key={title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: .2 }}
+              >
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="code-project-technical section-shell">
+        <div className="code-project-section-heading">
+          <div>
+            <Eyebrow>Technical foundation</Eyebrow>
+            <h2>Stack and local installation.</h2>
+          </div>
+          <p>
+            The repository remains available as an open-source record of the application,
+            dependencies, setup process, and implementation.
+          </p>
+        </div>
+
+        <div className="code-project-technical-grid">
+          <div className="code-stack">
+            <span>Technology</span>
+            <div>
+              {project.stack.map(item => <small key={item}>{item}</small>)}
+            </div>
+          </div>
+          <div className="code-terminal">
+            <div className="code-terminal-bar"><i></i><i></i><i></i><span>Terminal</span></div>
+            <pre><code>{project.installation.join('\n')}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section className={`code-project-note ${project.accent}`}>
+        <div className="section-shell code-project-note-grid">
+          <div>
+            <Eyebrow>{project.noteEyebrow}</Eyebrow>
+            <h2>{project.noteTitle}</h2>
+          </div>
+          <blockquote>{project.note}</blockquote>
+        </div>
+      </section>
+
+      <section className="code-project-links section-shell">
+        <div>
+          <Eyebrow>Project links</Eyebrow>
+          <h2>Read the code or see it in use.</h2>
+        </div>
+        <div>
+          <a href={project.github} target="_blank" rel="noreferrer">GitHub repository <ExternalLink /></a>
+          <a href={project.video} target="_blank" rel="noreferrer">Video walkthrough <ExternalLink /></a>
+        </div>
+      </section>
+
+      <section className="next-project section-shell">
+        <p>Next coding project</p>
+        <Link to={`/ventures/${nextProject.slug}`}>
+          {nextProject.name}<ArrowRight />
+        </Link>
+      </section>
+    </PageTransition>
+  )
+}
+
 function ClinbookCaseStudy({ project }) {
   const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
 
@@ -604,7 +881,7 @@ function ClinbookCaseStudy({ project }) {
           >
             <Link className="back-link" to="/ventures">← All ventures</Link>
             <Eyebrow>Company case study · Clinical trial intelligence</Eyebrow>
-            <div className="clinbook-wordmark">CLINBOOK</div>
+            <img className="clinbook-wordmark" src="/ventures/clinbook/clinbook-logo-purple.svg" alt="Clinbook" />
             <h1>Find the right sites and investigators, backed by data.</h1>
             <p>
               Clinbook is a clinical intelligence platform built to make study planning, partner
@@ -1855,8 +2132,9 @@ function PixiCyclingCaseStudy({ project }) {
 
 function ProjectDetail() {
   const { slug } = useParams()
-  const project = projects.find(p => p.slug === slug)
+  const project = projects.find(p => p.slug === slug) || codingProjects.find(p => p.slug === slug)
   if (!project) return <NotFound />
+  if (codingProjects.some(item => item.slug === project.slug)) return <CodingProjectCaseStudy project={project} />
   if (project.slug === 'clinbook') return <ClinbookCaseStudy project={project} />
   if (project.slug === 'sweatvida') return <SweatVidaCaseStudy project={project} />
   if (project.slug === 'uncluttered-soul') return <UnclutteredSoulCaseStudy project={project} />

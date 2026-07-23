@@ -95,3 +95,11 @@ Open `/release.json` on the Vercel URL. It should report:
 - Commercial claims are described as planned next
 - DOTS appears under Advisory clients and not investments
 - `/release.json` reports `v15-clinbook-case-study`
+
+
+## Revision 16 verification
+- Clinbook hero uses `/ventures/clinbook/clinbook-logo-purple.svg`
+- Ventures includes a Coding Projects filter and section
+- SurfGuru links to its GitHub repository and video walkthrough
+- ShopList links to its GitHub repository and video walkthrough
+- `/release.json` reports `v16-coding-projects`

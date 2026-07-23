@@ -1,14 +1,14 @@
 {
-  "release": "v15-clinbook-case-study",
-  "generated_at": "2026-07-23T17:38:12.035393+00:00",
+  "release": "v16-coding-projects",
+  "generated_at": "2026-07-23T18:53:42.537590+00:00",
   "includes": [
-    "All cumulative v14 site changes",
-    "Dedicated Clinbook case study at /ventures/clinbook",
-    "Clinbook platform overview image and patient heat map",
-    "Sponsor, site, and investigator audience sections",
-    "Clinical-trial, enrollment, profile, diversity, reviews, and claims data architecture",
-    "Medicare fee-for-service claims ingestion with commercial claims planned next",
-    "Links to Clinbook, For Sponsors, For Sites, and For Investigators",
+    "All cumulative v15 site changes",
+    "Actual Clinbook SVG logo used in the Clinbook case-study hero",
+    "Coding Projects section and filter added to Ventures",
+    "Dedicated SurfGuru coding-project profile",
+    "Dedicated ShopList coding-project profile",
+    "GitHub repository and video walkthrough links for both projects",
+    "Technical architecture, stack, installation, and project-context sections",
     "DOTS remains exclusively the 12th advisory client"
   ]
 }

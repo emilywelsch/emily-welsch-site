@@ -2698,13 +2698,10 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
 }
 
 .clinbook-wordmark {
+  width: min(450px, 70%);
+  height: auto;
   margin: 34px 0 38px;
-  color: #a93fff;
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(3.3rem, 7vw, 6.8rem);
-  font-weight: 700;
-  line-height: .9;
-  letter-spacing: .08em;
+  display: block;
 }
 
 .clinbook-hero-copy h1 {
@@ -3177,5 +3174,608 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   .clinbook-product-grid article,
   .clinbook-data-grid article {
     min-height: 270px;
+  }
+}
+
+
+/* Release v16: Clinbook logo and Coding Projects */
+.coding-directory-section {
+  margin-top: 115px;
+}
+
+.coding-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.coding-project-card {
+  min-height: 440px;
+  position: relative;
+  overflow: hidden;
+}
+
+.coding-project-card > a {
+  min-height: 440px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.coding-project-card img,
+.coding-project-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.coding-project-card img {
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+}
+
+.coding-project-card.surfguru-code img {
+  object-position: center;
+}
+
+.coding-project-card.shoplist-code img {
+  object-position: center;
+}
+
+.coding-project-overlay {
+  background: linear-gradient(180deg, rgba(10,15,18,.05) 24%, rgba(10,15,18,.84) 100%);
+}
+
+.coding-project-card:hover img {
+  transform: scale(1.035);
+}
+
+.coding-project-card-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 82%;
+  padding: clamp(28px, 4vw, 46px);
+}
+
+.coding-project-card .card-meta {
+  color: rgba(255,255,255,.68);
+}
+
+.coding-project-card h3 {
+  margin: 13px 0 14px;
+  font-size: clamp(2.4rem, 4.5vw, 4.8rem);
+  line-height: .95;
+  letter-spacing: -.065em;
+}
+
+.coding-project-card p {
+  margin: 0;
+  color: rgba(255,255,255,.73);
+  line-height: 1.62;
+}
+
+.coding-project-card-arrow {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.48);
+  border-radius: 50%;
+  transition: transform .25s ease, background .25s ease;
+}
+
+.coding-project-card:hover .coding-project-card-arrow {
+  transform: rotate(-35deg);
+  background: rgba(255,255,255,.14);
+}
+
+.code-project-hero {
+  padding: 92px 0 0;
+  overflow: hidden;
+}
+
+.code-project-hero.surfguru-code {
+  background: #08272d;
+  color: #f0f7f7;
+}
+
+.code-project-hero.shoplist-code {
+  background: #dce7ed;
+  color: #1f292c;
+}
+
+.code-project-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(360px, .97fr);
+  gap: clamp(55px, 8vw, 120px);
+  align-items: center;
+  padding-bottom: 85px;
+}
+
+.code-project-hero .back-link {
+  color: currentColor;
+  opacity: .65;
+}
+
+.code-project-hero.surfguru-code .eyebrow {
+  color: #77d3d8;
+}
+
+.code-project-hero.shoplist-code .eyebrow {
+  color: #c14c16;
+}
+
+.code-project-hero-copy h1 {
+  max-width: 900px;
+  margin: 30px 0 28px;
+  font-size: clamp(3.5rem, 6.8vw, 7.3rem);
+  line-height: .94;
+  letter-spacing: -.072em;
+}
+
+.code-project-hero-copy > p {
+  max-width: 720px;
+  font-size: clamp(1.03rem, 1.38vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.code-project-hero.surfguru-code .code-project-hero-copy > p {
+  color: rgba(240,247,247,.68);
+}
+
+.code-project-hero.shoplist-code .code-project-hero-copy > p {
+  color: #526168;
+}
+
+.code-project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 33px;
+}
+
+.code-project-actions a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  border: 1px solid currentColor;
+  transition: transform .23s ease, background .23s ease, color .23s ease;
+}
+
+.code-project-actions a:hover {
+  transform: translateY(-3px);
+}
+
+.code-project-hero.surfguru-code .code-project-actions a:first-child {
+  background: #f0f7f7;
+  color: #08272d;
+}
+
+.code-project-hero.shoplist-code .code-project-actions a:first-child {
+  background: #1f292c;
+  color: #fff;
+}
+
+.code-project-hero-visual {
+  margin: 0;
+  overflow: hidden;
+  box-shadow: 0 35px 90px rgba(0,0,0,.18);
+}
+
+.code-project-hero-visual img {
+  width: 100%;
+  min-height: 455px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.code-project-hero.surfguru-code .code-project-hero-visual img {
+  object-position: center;
+}
+
+.code-project-hero.shoplist-code .code-project-hero-visual img {
+  object-position: center;
+}
+
+.code-project-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+}
+
+.code-project-hero.surfguru-code .code-project-facts {
+  border-color: rgba(240,247,247,.23);
+}
+
+.code-project-hero.shoplist-code .code-project-facts {
+  border-color: rgba(31,41,44,.2);
+}
+
+.code-project-facts div {
+  min-height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.code-project-hero.surfguru-code .code-project-facts div {
+  border-color: rgba(240,247,247,.23);
+}
+
+.code-project-hero.shoplist-code .code-project-facts div {
+  border-color: rgba(31,41,44,.2);
+}
+
+.code-project-facts strong {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.45rem, 2.4vw, 2.25rem);
+  letter-spacing: -.04em;
+}
+
+.code-project-facts span {
+  opacity: .58;
+  font-size: .7rem;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.code-project-purpose {
+  display: grid;
+  grid-template-columns: .76fr 1.24fr;
+  gap: clamp(65px, 9vw, 130px);
+  padding-block: 130px 145px;
+}
+
+.code-project-purpose > div:first-child h2,
+.code-project-section-heading h2,
+.code-project-note h2,
+.code-project-links h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.65rem, 5vw, 5.25rem);
+  line-height: 1.01;
+  letter-spacing: -.062em;
+}
+
+.code-project-feature-grid {
+  border-top: 1px solid var(--line);
+}
+
+.code-project-feature-grid article {
+  display: grid;
+  grid-template-columns: 55px minmax(180px, .65fr) 1fr;
+  gap: 25px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.code-project-feature-grid article > span {
+  color: var(--muted);
+  font-size: .72rem;
+  letter-spacing: .12em;
+}
+
+.code-project-feature-grid h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.15vw, 2.2rem);
+  letter-spacing: -.04em;
+}
+
+.code-project-feature-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.code-project-architecture {
+  padding-block: 125px 145px;
+}
+
+.code-project-architecture.surfguru-code {
+  background: #08272d;
+  color: #f0f7f7;
+}
+
+.code-project-architecture.shoplist-code {
+  background: #c14c16;
+  color: #fff8f3;
+}
+
+.code-project-architecture .eyebrow {
+  color: #a8edf0;
+}
+
+.code-project-architecture.shoplist-code .eyebrow {
+  color: #ffe0cd;
+}
+
+.code-project-section-heading {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 76px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.code-project-section-heading > p {
+  color: var(--muted);
+  line-height: 1.78;
+}
+
+.code-project-architecture .code-project-section-heading > p {
+  color: currentColor;
+  opacity: .65;
+}
+
+.code-project-architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255,255,255,.24);
+  border-left: 1px solid rgba(255,255,255,.24);
+}
+
+.code-project-architecture-grid article {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 44px);
+  border-right: 1px solid rgba(255,255,255,.24);
+  border-bottom: 1px solid rgba(255,255,255,.24);
+}
+
+.code-project-architecture-grid article > span {
+  opacity: .65;
+  font-size: .72rem;
+  letter-spacing: .13em;
+}
+
+.code-project-architecture-grid h3 {
+  margin: auto 0 16px;
+  font-size: clamp(1.65rem, 2.7vw, 2.7rem);
+  letter-spacing: -.05em;
+}
+
+.code-project-architecture-grid p {
+  margin: 0;
+  opacity: .67;
+  line-height: 1.68;
+}
+
+.code-project-technical {
+  padding-block: 130px 145px;
+}
+
+.code-project-technical-grid {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 22px;
+}
+
+.code-stack,
+.code-terminal {
+  min-height: 420px;
+}
+
+.code-stack {
+  padding: 34px;
+  background: var(--sand);
+}
+
+.code-stack > span {
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.code-stack > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 9px;
+  margin-top: 35px;
+}
+
+.code-stack small {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(50,49,45,.25);
+  border-radius: 999px;
+  font-size: .75rem;
+}
+
+.code-terminal {
+  overflow: hidden;
+  background: #17191a;
+  color: #e7f5ef;
+}
+
+.code-terminal-bar {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  background: #262a2c;
+}
+
+.code-terminal-bar i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #777f81;
+}
+
+.code-terminal-bar span {
+  margin-left: 12px;
+  color: #aab3b5;
+  font-size: .72rem;
+}
+
+.code-terminal pre {
+  margin: 0;
+  padding: 38px;
+  overflow-x: auto;
+  font-size: clamp(.84rem, 1.25vw, 1rem);
+  line-height: 2;
+}
+
+.code-project-note {
+  padding-block: 125px 145px;
+}
+
+.code-project-note.surfguru-code {
+  background: #b7dedf;
+}
+
+.code-project-note.shoplist-code {
+  background: #f4c49f;
+}
+
+.code-project-note-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 85px;
+  align-items: end;
+}
+
+.code-project-note blockquote {
+  margin: 0;
+  padding-left: 35px;
+  border-left: 2px solid currentColor;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.55rem, 2.8vw, 2.9rem);
+  line-height: 1.32;
+  letter-spacing: -.04em;
+}
+
+.code-project-links {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  padding-block: 120px 135px;
+}
+
+.code-project-links > div:last-child {
+  border-top: 1px solid var(--line);
+}
+
+.code-project-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  letter-spacing: -.03em;
+  transition: padding .25s ease, color .25s ease;
+}
+
+.code-project-links a:hover {
+  padding-left: 12px;
+  color: var(--red);
+}
+
+.code-project-links svg {
+  width: 20px;
+}
+
+@media (max-width: 980px) {
+  .coding-project-grid,
+  .code-project-hero-grid,
+  .code-project-purpose,
+  .code-project-section-heading,
+  .code-project-technical-grid,
+  .code-project-note-grid,
+  .code-project-links {
+    grid-template-columns: 1fr;
+  }
+
+  .code-project-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .code-project-architecture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .code-project-architecture-grid article {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 720px) {
+  .coding-directory-section {
+    margin-top: 85px;
+  }
+
+  .coding-project-card,
+  .coding-project-card > a {
+    min-height: 390px;
+  }
+
+  .coding-project-card-copy {
+    max-width: 100%;
+  }
+
+  .code-project-hero {
+    padding-top: 70px;
+  }
+
+  .code-project-hero-copy h1 {
+    font-size: clamp(3.15rem, 14vw, 5.2rem);
+  }
+
+  .code-project-hero-visual img {
+    min-height: 340px;
+  }
+
+  .code-project-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .code-project-facts div {
+    min-height: 125px;
+  }
+
+  .code-project-purpose,
+  .code-project-architecture,
+  .code-project-technical,
+  .code-project-note,
+  .code-project-links {
+    padding-block: 90px;
+  }
+
+  .code-project-feature-grid article {
+    grid-template-columns: 35px 1fr;
+  }
+
+  .code-project-feature-grid article p {
+    grid-column: 2;
+  }
+
+  .code-stack,
+  .code-terminal {
+    min-height: auto;
+  }
+
+  .code-terminal pre {
+    padding: 28px 22px;
   }
 }

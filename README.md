@@ -82,3 +82,9 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Added a dedicated Clinbook case study at `/ventures/clinbook`
 - Added the product overview and Medicare patient heat-map visuals
 - Added sponsor, site, investigator, data architecture, product, claims, and company-thesis sections
+
+
+## Revision 16
+- Replaced the typed Clinbook wordmark with the supplied SVG logo
+- Added a dedicated Coding Projects section to `/ventures`
+- Added SurfGuru and ShopList profiles at `/ventures/surfguru` and `/ventures/shoplist`
