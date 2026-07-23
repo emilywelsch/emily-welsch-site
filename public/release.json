@@ -1,14 +1,13 @@
 {
-  "release": "v16-coding-projects",
-  "generated_at": "2026-07-23T18:53:42.537590+00:00",
+  "release": "v17-pitchit-case-study",
+  "generated_at": "2026-07-23T20:10:41.314362+00:00",
   "includes": [
-    "All cumulative v15 site changes",
-    "Actual Clinbook SVG logo used in the Clinbook case-study hero",
-    "Coding Projects section and filter added to Ventures",
-    "Dedicated SurfGuru coding-project profile",
-    "Dedicated ShopList coding-project profile",
-    "GitHub repository and video walkthrough links for both projects",
-    "Technical architecture, stack, installation, and project-context sections",
+    "All cumulative v16 site changes",
+    "Product Experiments category and Ventures filter",
+    "Dedicated Pitchit case study at /ventures/pitchit",
+    "Pitchit premise, rules, rotating-judge mechanic, prototype design, and Thanksgiving play test",
+    "Commercialization and accelerator icebreaker potential",
+    "Eight uploaded Pitchit prototype images",
     "DOTS remains exclusively the 12th advisory client"
   ]
 }

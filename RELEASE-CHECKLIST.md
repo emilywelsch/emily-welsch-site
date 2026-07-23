@@ -103,3 +103,11 @@ Open `/release.json` on the Vercel URL. It should report:
 - SurfGuru links to its GitHub repository and video walkthrough
 - ShopList links to its GitHub repository and video walkthrough
 - `/release.json` reports `v16-coding-projects`
+
+
+## Revision 17 verification
+- Ventures includes a Product Experiments filter
+- Pitchit opens at `/ventures/pitchit`
+- The page explains the white-card + black-card startup pitch mechanic
+- The page includes the rotating judge, Thanksgiving play test, and accelerator use case
+- `/release.json` reports `v17-pitchit-case-study`

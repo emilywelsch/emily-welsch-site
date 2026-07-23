@@ -88,3 +88,9 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Replaced the typed Clinbook wordmark with the supplied SVG logo
 - Added a dedicated Coding Projects section to `/ventures`
 - Added SurfGuru and ShopList profiles at `/ventures/surfguru` and `/ventures/shoplist`
+
+
+## Revision 17
+- Added a Product Experiments category and filter to `/ventures`
+- Added a dedicated Pitchit case study at `/ventures/pitchit`
+- Added the card-game premise, rules, prototype system, play test, and commercialization reflection

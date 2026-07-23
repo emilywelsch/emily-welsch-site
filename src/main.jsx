@@ -115,6 +115,18 @@ const projects = [
 ]
 
 
+
+const productExperiments = [
+  {
+    slug: 'pitchit',
+    name: 'Pitchit',
+    eyebrow: 'Product experiment · Physical card game',
+    summary: 'A startup card game for brewing new ideas through silly combinations, fast pitches, and a rotating judge.',
+    image: '/ventures/pitchit/pitchit-hero.jpg',
+    accent: 'pitchit-experiment',
+  },
+]
+
 const codingProjects = [
   {
     slug: 'surfguru',
@@ -579,17 +591,17 @@ function Home() {
 function Ventures() {
   const params = new URLSearchParams(useLocation().search)
   const requested = params.get('view')
-  const [view, setView] = useState(requested === 'backed' ? 'backed' : requested === 'built' ? 'built' : requested === 'code' ? 'code' : 'all')
+  const [view, setView] = useState(requested === 'backed' ? 'backed' : requested === 'built' ? 'built' : requested === 'experiments' ? 'experiments' : requested === 'code' ? 'code' : 'all')
   useEffect(() => {
-    if (requested === 'built' || requested === 'backed' || requested === 'code') setView(requested)
+    if (requested === 'built' || requested === 'backed' || requested === 'experiments' || requested === 'code') setView(requested)
   }, [requested])
 
   return (
     <PageTransition>
       <section className="page-hero section-shell">
         <Eyebrow>Ventures</Eyebrow>
-        <h1>Companies I’ve built and backed.</h1>
-        <p>This page brings together the companies I’ve built, selected coding projects I’ve developed, and the early-stage teams I’ve backed as an angel investor.</p>
+        <h1>Companies and products I’ve built. Teams I’ve backed.</h1>
+        <p>This page brings together the companies I’ve built, physical product experiments I’ve designed, selected coding work, and the early-stage teams I’ve backed as an angel investor.</p>
       </section>
 
       <section className="venture-directory section-shell">
@@ -597,6 +609,7 @@ function Ventures() {
           {[
             ['all', 'All'],
             ['built', 'Companies'],
+            ['experiments', 'Product Experiments'],
             ['code', 'Coding Projects'],
             ['backed', 'Backed'],
           ].map(([item, label]) => (
@@ -637,6 +650,39 @@ function Ventures() {
           </div>
         )}
 
+
+
+        {(view === 'all' || view === 'experiments') && (
+          <div className="directory-section product-experiment-directory">
+            <div className="directory-title">
+              <div><Eyebrow>Designed</Eyebrow><h2>Product Experiments</h2></div>
+              <p>Physical concepts I designed and prototyped to explore a specific behavior, use case, or creative opportunity.</p>
+            </div>
+            <div className="product-experiment-grid">
+              {productExperiments.map((project, i) => (
+                <motion.article
+                  className={`product-experiment-card ${project.accent}`}
+                  key={project.slug}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: .2 }}
+                  transition={{ delay: i * .06 }}
+                >
+                  <Link to={`/ventures/${project.slug}`}>
+                    <img src={project.image} alt={`${project.name} card-game prototype`} />
+                    <div className="product-experiment-overlay"></div>
+                    <div className="product-experiment-copy">
+                      <div className="card-meta">{project.eyebrow}</div>
+                      <h3>{project.name}</h3>
+                      <p>{project.summary}</p>
+                    </div>
+                    <div className="product-experiment-arrow"><ArrowRight /></div>
+                  </Link>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        )}
 
         {(view === 'all' || view === 'code') && (
           <div className="directory-section coding-directory-section">
@@ -712,6 +758,250 @@ function Ventures() {
 
 
 
+
+
+function PitchitCaseStudy() {
+  const examples = [
+    ['Halloween costumes', 'for gerbils'],
+    ['Tinder', 'for music festivals'],
+    ['Robot doctors', 'for old people'],
+    ['Scooters', 'for turtles'],
+    ['Robot nannies', 'for annoying boyfriends'],
+  ]
+
+  return (
+    <PageTransition>
+      <section className="pitchit-hero">
+        <div className="section-shell pitchit-hero-grid">
+          <motion.div
+            className="pitchit-hero-copy"
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .55 }}
+          >
+            <Link className="back-link" to="/ventures?view=experiments">← Product experiments</Link>
+            <Eyebrow>Product experiment · Physical card game</Eyebrow>
+            <div className="pitchit-wordmark">pitchit</div>
+            <h1>A startup card game for brewing new ideas.</h1>
+            <p>
+              Pitchit turns startup ideation into a playful party game. Players combine a white
+              concept card with a black audience card, then pitch the resulting company to a
+              rotating judge.
+            </p>
+          </motion.div>
+
+          <motion.figure
+            className="pitchit-hero-image"
+            initial={{ opacity: 0, x: 22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .55, delay: .08 }}
+          >
+            <img src="/ventures/pitchit/pitchit-hero.jpg" alt="Pitchit black and white startup card-game prototype" />
+          </motion.figure>
+        </div>
+
+        <div className="section-shell pitchit-facts">
+          <div><strong>Creator & designer</strong><span>Role</span></div>
+          <div><strong>Physical prototype</strong><span>Format</span></div>
+          <div><strong>Rotating judge</strong><span>Game mechanic</span></div>
+          <div><strong>Play-tested</strong><span>Status</span></div>
+        </div>
+      </section>
+
+      <section className="pitchit-premise section-shell">
+        <div className="pitchit-premise-heading">
+          <Eyebrow>The premise</Eyebrow>
+          <h2>Make the idea ridiculous first. Decide whether it is brilliant later.</h2>
+        </div>
+        <div className="pitchit-premise-copy">
+          <p>
+            Startup ideation can become overly serious very quickly. The pressure to find the
+            “right” opportunity often makes people self-edit before they have generated enough
+            possibilities to discover something interesting.
+          </p>
+          <p>
+            Pitchit removes that pressure by making combination and performance the point.
+            A strange pairing gives every player somewhere to start, and the pitch itself creates
+            room for humor, improvisation, and unexpected usefulness.
+          </p>
+        </div>
+      </section>
+
+      <section className="pitchit-how">
+        <div className="section-shell">
+          <div className="pitchit-section-heading">
+            <div>
+              <Eyebrow>How to play</Eyebrow>
+              <h2>Two cards, one pitch, and a judge who decides what wins.</h2>
+            </div>
+            <p>
+              The format borrows the social rhythm of judge-based party games while shifting the
+              creative task from completing a joke to inventing and selling a startup idea.
+            </p>
+          </div>
+
+          <div className="pitchit-steps">
+            {[
+              ['01', 'Draw the idea', 'Each player receives or selects a white card naming a product, category, behavior, or concept.'],
+              ['02', 'Match the audience', 'Pair it with a black “for…” card describing a customer, market, profession, or absurdly specific group.'],
+              ['03', 'Pitch the company', 'Explain why “It’s [white card] for [black card]” should exist and persuade the rotating judge to choose it.'],
+            ].map(([number, title, copy]) => (
+              <motion.article
+                key={number}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: .2 }}
+              >
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </motion.article>
+            ))}
+          </div>
+
+          <div className="pitchit-judge-note">
+            <span>The judge decides the standard</span>
+            <p>
+              Pick the most outrageously funny pitch, the idea with the most genuine potential,
+              or whatever combination makes the round memorable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="pitchit-example">
+        <div className="section-shell pitchit-example-grid">
+          <motion.figure
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .15 }}
+          >
+            <img src="/ventures/pitchit/pitchit-example-pairs.jpg" alt="Pitchit example startup combinations arranged in pairs" />
+          </motion.figure>
+          <div className="pitchit-example-copy">
+            <Eyebrow>Example round</Eyebrow>
+            <h2>The combinations do most of the creative work.</h2>
+            <div className="pitchit-example-list">
+              {examples.map(([idea, audience]) => (
+                <div key={`${idea}-${audience}`}>
+                  <span>{idea}</span>
+                  <strong>{audience}</strong>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pitchit-design section-shell">
+        <div className="pitchit-section-heading">
+          <div>
+            <Eyebrow>Product design</Eyebrow>
+            <h2>A deliberately minimal prototype that keeps attention on the ideas.</h2>
+          </div>
+          <p>
+            The deck uses a stark black-and-white system, rounded cards, and typewriter-style
+            typography. White cards introduce the concept; black cards complete the phrase with
+            an audience or use case.
+          </p>
+        </div>
+
+        <div className="pitchit-design-grid">
+          <motion.figure
+            className="pitchit-design-main"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .15 }}
+          >
+            <img src="/ventures/pitchit/pitchit-full-deck.jpg" alt="Complete Pitchit black and white prototype card deck" />
+            <figcaption>The working prototype included separate white concept cards and black audience cards.</figcaption>
+          </motion.figure>
+          <motion.figure
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .15 }}
+          >
+            <img src="/ventures/pitchit/pitchit-deck.jpg" alt="Stack of black Pitchit cards" />
+            <figcaption>Compact enough to bring into a family gathering, workshop, or accelerator session.</figcaption>
+          </motion.figure>
+          <motion.figure
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .15 }}
+          >
+            <img src="/ventures/pitchit/pitchit-card-groups.jpg" alt="Pitchit black and white card groups" />
+            <figcaption>The two-deck structure makes the prompt instantly legible.</figcaption>
+          </motion.figure>
+        </div>
+      </section>
+
+      <section className="pitchit-playtest">
+        <div className="section-shell">
+          <div className="pitchit-section-heading">
+            <div>
+              <Eyebrow>Real-world play test</Eyebrow>
+              <h2>A family Thanksgiving proved the mechanic was genuinely fun.</h2>
+            </div>
+            <p>
+              The prototype made it out of the design phase and onto the table. Players understood
+              the format quickly, improvised around the prompts, and found humor in combinations
+              that would never emerge from a conventional brainstorming session.
+            </p>
+          </div>
+
+          <div className="pitchit-playtest-gallery">
+            <figure><img src="/ventures/pitchit/pitchit-card-outdoors.jpg" alt="Pitchit card held outdoors" /></figure>
+            <figure><img src="/ventures/pitchit/pitchit-card-fan.jpg" alt="Fan of Pitchit cards showing startup concepts" /></figure>
+            <figure><img src="/ventures/pitchit/pitchit-card-groups-alt.jpg" alt="Pitchit concept and audience card groups" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="pitchit-potential section-shell">
+        <div className="pitchit-potential-copy">
+          <Eyebrow>Commercial potential</Eyebrow>
+          <h2>A validated concept that would need another curation pass before becoming a product.</h2>
+          <p>
+            I never attempted to sell Pitchit. A commercial edition would need a more carefully
+            balanced card set, stronger category coverage, refined instructions, packaging, and
+            repeated play testing to ensure the combinations stay fresh.
+          </p>
+          <p>
+            The core mechanic could support a family game, a creative warm-up for teams, or an
+            icebreaker for startup accelerators and founder programs.
+          </p>
+        </div>
+        <div className="pitchit-potential-note">
+          <span>Best use case</span>
+          <p>
+            Helping people in a creative rut get a little silly, suspend judgment, and generate
+            possibilities before returning to serious ideas.
+          </p>
+        </div>
+      </section>
+
+      <section className="pitchit-reflection">
+        <div className="section-shell pitchit-reflection-grid">
+          <div>
+            <Eyebrow>Creator reflection</Eyebrow>
+            <h2>Sometimes the fastest route to a useful idea is through a completely absurd one.</h2>
+          </div>
+          <blockquote>
+            Pitchit turned startup thinking into a social game and made pitching feel playful,
+            low-stakes, and accessible to people who might never volunteer for a formal brainstorm.
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="next-project section-shell">
+        <p>Explore coding projects</p>
+        <Link to="/ventures?view=code">
+          SurfGuru & ShopList<ArrowRight />
+        </Link>
+      </section>
+    </PageTransition>
+  )
+}
 
 function CodingProjectCaseStudy({ project }) {
   const nextProject = codingProjects[(codingProjects.indexOf(project) + 1) % codingProjects.length]
@@ -2132,8 +2422,9 @@ function PixiCyclingCaseStudy({ project }) {
 
 function ProjectDetail() {
   const { slug } = useParams()
-  const project = projects.find(p => p.slug === slug) || codingProjects.find(p => p.slug === slug)
+  const project = projects.find(p => p.slug === slug) || productExperiments.find(p => p.slug === slug) || codingProjects.find(p => p.slug === slug)
   if (!project) return <NotFound />
+  if (project.slug === 'pitchit') return <PitchitCaseStudy />
   if (codingProjects.some(item => item.slug === project.slug)) return <CodingProjectCaseStudy project={project} />
   if (project.slug === 'clinbook') return <ClinbookCaseStudy project={project} />
   if (project.slug === 'sweatvida') return <SweatVidaCaseStudy project={project} />
