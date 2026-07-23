@@ -1,13 +1,15 @@
 {
-  "release": "v7-sweatvida-case-study",
-  "generated_at": "2026-07-22T23:06:41.610653+00:00",
+  "release": "v8-pixi-case-study",
+  "generated_at": "2026-07-22T23:23:26.105748+00:00",
   "includes": [
-    "All v6 cumulative site changes",
-    "Founder Projects renamed to Companies Built",
-    "Projects language removed from the public Ventures experience",
-    "SweatVida added to Companies I\u2019ve Built",
-    "Dedicated SweatVida company case study",
-    "SweatVida logo and product screenshots",
-    "Product, taxonomy, SEO, partnership, outcome and reflection sections"
+    "All cumulative v7 site changes",
+    "Dedicated Pixi Cycling company case study",
+    "Founder & CEO timeline from March 2016 to February 2022",
+    "Detachable chamois product and patent story",
+    "1,000+ units sold and two Amazon's Choice categories",
+    "80+ brand ambassador community",
+    "Original 2018 PowerPoint pitch deck available for download",
+    "Selected deck slides displayed as initial company visuals",
+    "Pixi-related podcast and press archive linked from the case study"
   ]
 }

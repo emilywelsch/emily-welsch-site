@@ -95,20 +95,20 @@ const projects = [
   {
     slug: 'pixi-cycling',
     name: 'Pixi Cycling',
-    eyebrow: 'Founder-built company · Consumer brand',
-    summary: 'An earlier consumer company and an important chapter in my founder story.',
-    role: 'Founder',
-    status: 'Past company',
-    year: 'Company archive',
+    eyebrow: 'Founder-built company · Technical apparel',
+    summary: 'Women’s cycling apparel designed to move seamlessly from bike to brunch.',
+    role: 'Founder & CEO',
+    status: 'Archived company',
+    year: 'Mar 2016–Feb 2022',
     url: '#',
-    accent: 'ink',
+    accent: 'pixi',
     overview:
-      'A dedicated archive for the company’s origin, product and brand work, imagery, and the lessons that shaped later ventures.',
+      'Pixi Cycling combined technical cycling apparel with the versatility of athleisure through a patented detachable chamois liner.',
     work: [
-      'Early-stage company building',
-      'Product and brand development',
-      'Customer discovery and market positioning',
-      'End-to-end founder execution',
+      'Product innovation, technical design, and intellectual property',
+      'Brand, positioning, and go-to-market strategy',
+      'E-commerce, crowdfunding, pop-ups, and selective retail',
+      'Ambassador, influencer, wellness-brand, and media community',
     ],
   },
 ]
@@ -786,11 +786,314 @@ function SweatVidaCaseStudy({ project }) {
   )
 }
 
+
+function PixiCyclingCaseStudy({ project }) {
+  const pixiMedia = mediaItems.filter(item => item.title !== 'Marketing Analytics with Christina Inge')
+  const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
+
+  return (
+    <PageTransition>
+      <section className="pixi-hero">
+        <div className="section-shell pixi-hero-grid">
+          <motion.div
+            className="pixi-hero-copy"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .55 }}
+          >
+            <Link className="back-link" to="/ventures">← All ventures</Link>
+            <Eyebrow>Company case study · Technical apparel</Eyebrow>
+            <div className="pixi-wordmark" aria-label="Pixi Cycling">PIXI</div>
+            <h1>Technical cycling apparel made to go from bike to brunch.</h1>
+            <p>
+              Pixi Cycling created women’s leggings and shorts with a patented detachable chamois
+              liner, combining cycling comfort with the versatility of modern athleisure.
+            </p>
+            <div className="pixi-hero-actions">
+              <a
+                className="button pixi-download-button"
+                href="/ventures/pixi-cycling/Pixi-Pitch-Deck-2018.pptx"
+                download
+              >
+                Download 2018 pitch deck <ArrowRight size={18} />
+              </a>
+              <a className="pixi-text-link" href="#pixi-media">
+                View media coverage ↓
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="pixi-cover-frame"
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .55, delay: .08 }}
+          >
+            <img src="/ventures/pixi-cycling/slide-01.jpg" alt="Pixi Cycling 2018 pitch deck cover" />
+          </motion.div>
+        </div>
+
+        <div className="section-shell pixi-facts">
+          <div><strong>Founder & CEO</strong><span>Role</span></div>
+          <div><strong>Mar 2016–Feb 2022</strong><span>Timeline</span></div>
+          <div><strong>1,000+</strong><span>Units sold</span></div>
+          <div><strong>2 categories</strong><span>Amazon’s Choice</span></div>
+        </div>
+      </section>
+
+      <section className="pixi-opportunity section-shell">
+        <div className="pixi-opportunity-copy">
+          <Eyebrow>The opportunity</Eyebrow>
+          <h2>Cycling apparel solved for the ride, but not for the rest of a woman’s day.</h2>
+          <p>
+            Traditional padded cycling bottoms were often uncomfortable off the bike, visually
+            single-purpose, and difficult to integrate into an active lifestyle. Women needed
+            technical protection while riding without being locked into “diaper butt” once the
+            ride ended.
+          </p>
+        </div>
+        <motion.figure
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: .18 }}
+        >
+          <img src="/ventures/pixi-cycling/slide-04.jpg" alt="Pixi Cycling problem slide" />
+          <figcaption>Problem framing from the 2018 pitch deck.</figcaption>
+        </motion.figure>
+      </section>
+
+      <section className="pixi-product">
+        <div className="section-shell">
+          <div className="pixi-section-heading">
+            <div>
+              <Eyebrow>Product innovation</Eyebrow>
+              <h2>One garment. Two modes.</h2>
+            </div>
+            <p>
+              The Ride & Recreation collection paired technical leggings and shorts with TushCush,
+              a removable contoured protective pad. Wear it for cycling, then remove it for yoga,
+              running, errands, or brunch.
+            </p>
+          </div>
+
+          <div className="pixi-product-grid">
+            <motion.figure
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .15 }}
+            >
+              <img src="/ventures/pixi-cycling/slide-08.jpg" alt="Pixi Ride and Recreation Legging" />
+              <figcaption><span>Flagship product</span>Wear the leggings with or without the detachable liner.</figcaption>
+            </motion.figure>
+            <motion.figure
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .15 }}
+            >
+              <img src="/ventures/pixi-cycling/slide-09.jpg" alt="Pixi TushCush detachable liner" />
+              <figcaption><span>Proprietary technology</span>A discreet, breathable, anti-chafing, high-density cushion.</figcaption>
+            </motion.figure>
+          </div>
+
+          <div className="pixi-patent-note">
+            <span>Intellectual property</span>
+            <p>
+              Authored worldwide provisional and non-provisional utility patent applications for
+              the proprietary wearable technology: PCT/US2017/031340 and US 62/332,802.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="pixi-build section-shell">
+        <div className="pixi-section-heading">
+          <div>
+            <Eyebrow>What I built</Eyebrow>
+            <h2>End-to-end ownership from product concept through commercial execution.</h2>
+          </div>
+          <p>
+            I managed cross-functional work spanning technical apparel, manufacturing, brand,
+            marketing, partnerships, e-commerce, retail, intellectual property, and sales.
+          </p>
+        </div>
+
+        <div className="pixi-build-grid">
+          {[
+            ['01', 'Product & IP', 'Led product concept, design, technical development, sourcing, manufacturing, and patent strategy for the detachable liner system.'],
+            ['02', 'Brand & GTM', 'Created the bike-to-brunch positioning and launched through PR, crowdfunding, brand storytelling, and multi-platform commerce.'],
+            ['03', 'Commerce & retail', 'Managed e-commerce launches, Amazon, retail pop-ups, events, and selective wholesale pathways across cycling and fitness.'],
+            ['04', 'Community & partnerships', 'Built collaborations with wellness brands, social influencers, media, and more than 80 brand ambassadors.'],
+          ].map(([number, title, copy]) => (
+            <motion.article
+              key={number}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+            >
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      <section className="pixi-gtm">
+        <div className="section-shell">
+          <div className="pixi-section-heading">
+            <div>
+              <Eyebrow>Go-to-market</Eyebrow>
+              <h2>A direct-to-consumer brand supported by events, ambassadors, and selective distribution.</h2>
+            </div>
+            <p>
+              The commercial strategy connected product education, founder storytelling, community
+              credibility, and high-touch customer experiences across online and offline channels.
+            </p>
+          </div>
+
+          <div className="pixi-gtm-visuals">
+            <figure>
+              <img src="/ventures/pixi-cycling/slide-22.jpg" alt="Pixi Cycling business model" />
+              <figcaption>Online sales paired with selective wholesale distribution.</figcaption>
+            </figure>
+            <figure>
+              <img src="/ventures/pixi-cycling/slide-23.jpg" alt="Pixi Cycling customer acquisition strategy" />
+              <figcaption>PR, pop-ups, ambassadors, influencers, incentives, and community events.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="pixi-traction section-shell">
+        <div className="pixi-traction-intro">
+          <Eyebrow>Commercial traction</Eyebrow>
+          <h2>Evidence that a highly specific product could earn trust in a crowded category.</h2>
+        </div>
+        <div className="pixi-stat-grid">
+          <div><strong>1,000+</strong><span>Units sold</span></div>
+          <div><strong>Amazon’s Choice</strong><span>Women’s cycling shorts</span></div>
+          <div><strong>Amazon’s Choice</strong><span>Women’s cycling leggings</span></div>
+          <div><strong>80+</strong><span>Brand ambassadors</span></div>
+        </div>
+        <div className="pixi-traction-note">
+          <p>
+            The launch combined crowdfunding, multi-platform e-commerce, pop-up retail, public
+            relations, influencer partnerships, and a community of wellness and cycling advocates.
+          </p>
+        </div>
+      </section>
+
+      <section className="pixi-deck">
+        <div className="section-shell">
+          <div className="pixi-section-heading">
+            <div>
+              <Eyebrow>Company materials</Eyebrow>
+              <h2>Selected pages from the 2018 pitch deck.</h2>
+            </div>
+            <div className="pixi-deck-copy">
+              <p>
+                The deck captures the original consumer problem, product differentiation,
+                commercial model, acquisition strategy, and early brand traction.
+              </p>
+              <a
+                className="button pixi-download-button"
+                href="/ventures/pixi-cycling/Pixi-Pitch-Deck-2018.pptx"
+                download
+              >
+                Download full pitch deck <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
+
+          <div className="pixi-deck-grid">
+            {[
+              ['/ventures/pixi-cycling/slide-06.jpg', 'Positioning'],
+              ['/ventures/pixi-cycling/slide-24.jpg', 'Early brand traction'],
+              ['/ventures/pixi-cycling/slide-29.jpg', 'Company story'],
+            ].map(([src, label]) => (
+              <motion.figure
+                key={src}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: .15 }}
+              >
+                <img src={src} alt={`Pixi Cycling pitch deck: ${label}`} />
+                <figcaption>{label}</figcaption>
+              </motion.figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pixi-media section-shell" id="pixi-media">
+        <div className="pixi-section-heading">
+          <div>
+            <Eyebrow>Media archive</Eyebrow>
+            <h2>Coverage of the product, founder story, and company launch.</h2>
+          </div>
+          <p>
+            Most of the earliest media in the site archive documents Pixi Cycling’s launch,
+            product innovation, and approach to women’s technical apparel.
+          </p>
+        </div>
+
+        <div className="pixi-media-list">
+          {pixiMedia.map((item, index) => {
+            const Icon = item.icon
+            return (
+              <motion.a
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                key={item.title}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: .2 }}
+                transition={{ delay: index * .035 }}
+              >
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <Icon />
+                <div>
+                  <small>{item.type} · {item.outlet}</small>
+                  <h3>{item.title}</h3>
+                  <p>{item.date}</p>
+                </div>
+                <ExternalLink />
+              </motion.a>
+            )
+          })}
+        </div>
+      </section>
+
+      <section className="pixi-reflection">
+        <div className="section-shell pixi-reflection-grid">
+          <div>
+            <Eyebrow>Founder reflection</Eyebrow>
+            <h2>Pixi was an education in building a physical product company from first principles.</h2>
+          </div>
+          <blockquote>
+            It required translating a real consumer pain point into patented product design,
+            manufacturing, positioning, distribution, community, and measurable sales.
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="next-project section-shell">
+        <p>Next company</p>
+        <Link to={`/ventures/${nextProject.slug}`}>
+          {nextProject.name}<ArrowRight />
+        </Link>
+      </section>
+    </PageTransition>
+  )
+}
+
 function ProjectDetail() {
   const { slug } = useParams()
   const project = projects.find(p => p.slug === slug)
   if (!project) return <NotFound />
   if (project.slug === 'sweatvida') return <SweatVidaCaseStudy project={project} />
+  if (project.slug === 'pixi-cycling') return <PixiCyclingCaseStudy project={project} />
   return (
     <PageTransition>
       <section className={`project-detail-hero ${project.accent}`}>

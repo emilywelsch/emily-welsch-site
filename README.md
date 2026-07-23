@@ -43,3 +43,10 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Replaced public-facing “Founder Projects” language with “Companies Built”
 - Added SweatVida to the built-company directory
 - Added a full SweatVida case study at `/ventures/sweatvida`
+
+
+## Revision 8
+- Added a full Pixi Cycling case study at `/ventures/pixi-cycling`
+- Added the original 2018 PowerPoint pitch deck as a downloadable site asset
+- Added selected pitch-deck slides as initial case-study visuals
+- Linked the Pixi-related podcast and press archive from the case study
