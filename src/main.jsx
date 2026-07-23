@@ -76,20 +76,20 @@ const projects = [
   {
     slug: 'yumyummy',
     name: 'YumYummy',
-    eyebrow: 'Founder-built company · Consumer',
-    summary: 'A consumer venture with room for the full story, imagery, and links.',
-    role: 'Owner',
-    status: 'Selected work',
-    year: 'Company archive',
+    eyebrow: 'Founder-built product venture · Infant feeding',
+    summary: 'An Amazon-first baby-feeding concept built around silicone pouch tops, paused after testing and commercialization review.',
+    role: 'Founder',
+    status: 'Paused before launch',
+    year: '2024',
     url: '#',
-    accent: 'gold',
+    accent: 'yumyummy',
     overview:
-      'This company page is structured as a case study for its original opportunity, what I created, and the results.',
+      'YumYummy explored safer, softer, universal silicone pouch tops for baby and toddler food pouches, alongside packaging built for a fast consumer-product launch.',
     work: [
-      'Concept and business development',
-      'Brand and customer experience',
-      'Operations and commercialization',
-      'Company leadership',
+      'Consumer product concept, positioning, and product-market framing',
+      'Product design, prototyping, packaging, and Amazon-ready merchandising',
+      'Testing, compliance evaluation, and commercialization diligence',
+      'Founder decision-making around safety, liability, and launch tradeoffs',
     ],
   },
   {
@@ -114,6 +114,15 @@ const projects = [
 ]
 
 const investments = [
+  {
+    name: 'DOTS Technology Corp',
+    work: 'Pitch deck strategy and development supporting a $10M NEA financing',
+    url: 'https://www.nea.com/portfolio/dots-technology-corp',
+    logo: '/logos/dots-technology.png',
+    logoShape: 'wide',
+    logoClass: 'dots-logo',
+    tags: ['Healthcare', 'Technology', 'Life Sciences'],
+  },
   {
     name: 'Guava Health',
     logo: '/logos/guava-health-investment.png',
@@ -275,7 +284,7 @@ const advisoryTestimonials = [
   },
 ]
 
-const advisoryFilters = ['All', 'Healthcare', 'Technology', 'Consumer', 'Retail', 'Creative', 'Community', 'Sustainability']
+const advisoryFilters = ['All', 'Healthcare', 'Technology', 'Life Sciences', 'Consumer', 'Retail', 'Creative', 'Community', 'Sustainability']
 
 const mediaItems = [
   {
@@ -717,30 +726,30 @@ function SweatVidaCaseStudy({ project }) {
 
       <section className="sweatvida-visuals section-shell">
         <motion.figure
-          className="sweatvida-filter-figure"
+          className="sweatvida-filter-figure sweatvida-filter-20"
           initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: .18 }}
         >
-          <img src="/ventures/sweatvida/sweatvida-filter-detail.jpg" alt="SweatVida search filters" />
+          <img src="/ventures/sweatvida/sweatvida-20min-filter.png" alt="SweatVida filtered view showing 20-minute workouts" />
           <figcaption>
             <span>Discovery architecture</span>
-            Search and filters transformed a large workout library into a usable product.
+            An example filtered view focused on 20-minute workouts across category, instructor, and channel.
           </figcaption>
         </motion.figure>
 
         <motion.figure
-          className="sweatvida-page-figure"
+          className="sweatvida-page-figure sweatvida-results-20"
           initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: .12 }}
         >
           <div className="sweatvida-page-scroll">
-            <img src="/ventures/sweatvida/sweatvida-full-page.jpg" alt="SweatVida full directory page" />
+            <img src="/ventures/sweatvida/sweatvida-20min-filter.png" alt="SweatVida results grid filtered for 20-minute workouts" />
           </div>
           <figcaption>
             <span>Content depth</span>
-            A broad directory organized across workout categories and featured instructors.
+            Filtered results let visitors browse depth without losing the clarity of the search experience.
           </figcaption>
         </motion.figure>
       </section>
@@ -786,6 +795,265 @@ function SweatVidaCaseStudy({ project }) {
   )
 }
 
+
+
+function YumYummyCaseStudy({ project }) {
+  const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
+
+  return (
+    <PageTransition>
+      <section className="yumyummy-hero">
+        <div className="section-shell yumyummy-hero-grid">
+          <motion.div
+            className="yumyummy-hero-copy"
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .55 }}
+          >
+            <Link className="back-link" to="/ventures">← All ventures</Link>
+            <Eyebrow>Company case study · Infant feeding product</Eyebrow>
+            <img className="yumyummy-logo" src="/ventures/yumyummy/yumyummy-logo.png" alt="YumYummy" />
+            <h1>Safer, softer pouch tops for babies and toddlers.</h1>
+            <p>
+              YumYummy was a 2024 consumer-product venture built around universal silicone pouch tops
+              designed to make food pouches easier for little hands to hold and gentler on little mouths.
+            </p>
+            <p>
+              The concept was developed for a fast Amazon launch, but I ultimately chose not to
+              commercialize it after testing, safety review, and a deeper look at the liability profile
+              of baby products.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="yumyummy-hero-visual"
+            initial={{ opacity: 0, x: 22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .55, delay: .08 }}
+          >
+            <div className="yumyummy-package-stack" aria-label="YumYummy packaging family">
+              <img className="yumyummy-pack open-flow" src="/ventures/yumyummy/open-flow-front.png" alt="YumYummy open-flow pouch-top package" />
+              <img className="yumyummy-pack spill-proof" src="/ventures/yumyummy/spill-proof-front.png" alt="YumYummy spill-proof pouch-top package" />
+              <img className="yumyummy-pack variety" src="/ventures/yumyummy/variety-pack.png" alt="YumYummy variety pouch-top package" />
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="section-shell yumyummy-facts">
+          <div><strong>Founder</strong><span>Role</span></div>
+          <div><strong>2024</strong><span>Timeline</span></div>
+          <div><strong>Amazon-first</strong><span>Launch thesis</span></div>
+          <div><strong>Paused before launch</strong><span>Outcome</span></div>
+        </div>
+      </section>
+
+      <section className="yumyummy-opportunity section-shell">
+        <div className="yumyummy-opportunity-copy">
+          <Eyebrow>The opportunity</Eyebrow>
+          <h2>Food pouches were convenient, but the user experience for babies was not thoughtfully designed.</h2>
+          <p>
+            Many baby and toddler pouches rely on hard plastic spouts. I saw an opportunity to create a
+            softer silicone attachment that improved comfort, encouraged self-feeding, and worked across
+            the pouch brands parents already bought.
+          </p>
+          <p>
+            The resulting concept focused on universal compatibility, safety-minded materials, and a design
+            simple enough to merchandise clearly in an Amazon-first consumer launch.
+          </p>
+        </div>
+        <motion.figure
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: .18 }}
+        >
+          <img src="/ventures/yumyummy/child-happybaby.jpg" alt="Young child using a YumYummy pouch top on a baby food pouch" />
+          <figcaption>Real-world use with young children helped validate comfort, grip, and usability.</figcaption>
+        </motion.figure>
+      </section>
+
+      <section className="yumyummy-solution">
+        <div className="section-shell">
+          <div className="yumyummy-section-heading">
+            <div>
+              <Eyebrow>Product concept</Eyebrow>
+              <h2>A small product with a very clear job to do.</h2>
+            </div>
+            <p>
+              YumYummy pouch tops were built as universal silicone accessories intended to fit common food-pouch
+              brands, protect tender gums, and offer both open-flow and spill-proof options.
+            </p>
+          </div>
+
+          <div className="yumyummy-solution-grid">
+            <motion.figure
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .15 }}
+            >
+              <img src="/ventures/yumyummy/feature-diagram.jpg" alt="YumYummy product diagram showing open flow and spill-proof features" />
+              <figcaption><span>Functional design</span>Open-flow and spill-proof top options, a soft spout, and inner ribbing to secure the top in place.</figcaption>
+            </motion.figure>
+            <motion.figure
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .15 }}
+            >
+              <img src="/ventures/yumyummy/package-hand.png" alt="Hand holding YumYummy pouch-top packaging" />
+              <figcaption><span>Retail packaging</span>Amazon-ready packaging created to communicate the product clearly and quickly on a digital shelf.</figcaption>
+            </motion.figure>
+          </div>
+
+          <div className="yumyummy-benefits-grid">
+            <figure>
+              <img src="/ventures/yumyummy/benefits-happybaby.jpg" alt="YumYummy benefits: baby-led weaning, universal pouch compatibility, and gum protection" />
+            </figure>
+            <figure>
+              <img src="/ventures/yumyummy/benefits-siggis.jpg" alt="YumYummy materials and safety benefit graphic" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="yumyummy-packaging">
+        <div className="section-shell">
+          <div className="yumyummy-section-heading">
+            <div>
+              <Eyebrow>Packaging system</Eyebrow>
+              <h2>A playful shelf presence built to explain the product in seconds.</h2>
+            </div>
+            <p>
+              The packaging translated a small, unfamiliar accessory into an immediately understandable product family.
+              Color separated open-flow, spill-proof, and variety formats while the front panels made the use case clear at a glance.
+            </p>
+          </div>
+
+          <div className="yumyummy-package-family">
+            <motion.figure initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .16 }}>
+              <img src="/ventures/yumyummy/open-flow-front.png" alt="YumYummy open-flow pouch-top front package artwork" />
+              <figcaption><span>Open-flow top</span>Pink, produce-led artwork for the open-flow four-pack.</figcaption>
+            </motion.figure>
+            <motion.figure initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .16 }}>
+              <img src="/ventures/yumyummy/spill-proof-front.png" alt="YumYummy spill-proof pouch-top front package artwork" />
+              <figcaption><span>Spill-proof top</span>A red variation that keeps the family recognizable while differentiating the model.</figcaption>
+            </motion.figure>
+            <motion.figure initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .16 }}>
+              <img src="/ventures/yumyummy/variety-pack.png" alt="YumYummy variety pouch-top package artwork" />
+              <figcaption><span>Variety pack</span>A mint and teal two-pack combining both product formats.</figcaption>
+            </motion.figure>
+          </div>
+
+          <div className="yumyummy-package-backs">
+            <figure>
+              <img src="/ventures/yumyummy/open-flow-back.png" alt="YumYummy open-flow pouch-top back package artwork" />
+              <figcaption>Open-flow back panel with benefits, instructions, materials, and compliance language.</figcaption>
+            </figure>
+            <figure>
+              <img src="/ventures/yumyummy/spill-proof-back.png" alt="YumYummy spill-proof pouch-top back package artwork" />
+              <figcaption>Spill-proof back panel using the same visual system and model-specific messaging.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="yumyummy-build section-shell">
+        <div className="yumyummy-section-heading">
+          <div>
+            <Eyebrow>What I built</Eyebrow>
+            <h2>From product concept through packaging, testing, and launch evaluation.</h2>
+          </div>
+          <p>
+            Although I initially approached YumYummy as a lightweight side venture, the project quickly grew into a real
+            product-development and commercialization exercise.
+          </p>
+        </div>
+
+        <div className="yumyummy-build-grid">
+          {[
+            ['01', 'Product design', 'Developed the silicone pouch-top concept and worked through model variations intended for infant and toddler feeding.'],
+            ['02', 'Brand & packaging', 'Created the YumYummy brand expression, product packaging, and Amazon-ready product presentation.'],
+            ['03', 'Testing & compliance', 'Navigated third-party testing and assessed safety considerations associated with baby and toddler consumer products.'],
+            ['04', 'Commercial judgment', 'Made the deliberate decision not to launch commercially when the risk, redesign effort, and liability profile no longer fit the original thesis.'],
+          ].map(([number, title, copy]) => (
+            <motion.article
+              key={number}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+            >
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      <section className="yumyummy-validation">
+        <div className="section-shell">
+          <div className="yumyummy-section-heading">
+            <div>
+              <Eyebrow>Use testing & merchandising</Eyebrow>
+              <h2>The concept worked well in real life and photographed well for retail, too.</h2>
+            </div>
+            <p>
+              The product tested well in everyday use with my own children, and the brand assets showed that the concept could be packaged,
+              merchandised, and explained simply for parents shopping online.
+            </p>
+          </div>
+
+          <div className="yumyummy-validation-grid">
+            <figure className="wide"><img src="/ventures/yumyummy/child-kirkland.jpg" alt="Baby using a YumYummy pouch top on a food pouch" /></figure>
+            <figure><img src="/ventures/yumyummy/four-tops.jpg" alt="Four YumYummy pouch tops on a white background" /></figure>
+            <figure><img src="/ventures/yumyummy/single-top.png" alt="Single YumYummy pouch top product image" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="yumyummy-outcome section-shell">
+        <div className="yumyummy-outcome-copy">
+          <Eyebrow>Commercial outcome</Eyebrow>
+          <h2>A thoughtful decision to stop before launch.</h2>
+          <p>
+            One of the two product models failed part of the third-party testing tied to CPSC small-parts regulation.
+            While redesign was possible, the project had already consumed more time than its original “design it and list it on Amazon”
+            thesis justified.
+          </p>
+          <p>
+            More importantly, the experience made the liability profile of the baby-products category feel much more real. I chose not to
+            commercialize the product rather than force a launch in a category where safety scrutiny and downside risk are high.
+          </p>
+        </div>
+        <div className="yumyummy-outcome-note">
+          <span>What the project taught me</span>
+          <p>
+            Even “simple” consumer products can become sophisticated operational and regulatory exercises once they enter the world of testing,
+            compliance, and products meant for infants.
+          </p>
+        </div>
+      </section>
+
+      <section className="yumyummy-reflection">
+        <div className="section-shell yumyummy-reflection-grid">
+          <div>
+            <Eyebrow>Founder reflection</Eyebrow>
+            <h2>Not every strong concept should become a commercial business.</h2>
+          </div>
+          <blockquote>
+            YumYummy was a good reminder that product-market appeal is only one part of the decision. The best founder move can also be knowing when not to launch.
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="next-project section-shell">
+        <p>Next company</p>
+        <Link to={`/ventures/${nextProject.slug}`}>
+          {nextProject.name}<ArrowRight />
+        </Link>
+      </section>
+    </PageTransition>
+  )
+}
 
 function PixiCyclingCaseStudy({ project }) {
   const pixiMedia = mediaItems.filter(item => item.title !== 'Marketing Analytics with Christina Inge')
@@ -1094,6 +1362,7 @@ function ProjectDetail() {
   if (!project) return <NotFound />
   if (project.slug === 'sweatvida') return <SweatVidaCaseStudy project={project} />
   if (project.slug === 'pixi-cycling') return <PixiCyclingCaseStudy project={project} />
+  if (project.slug === 'yumyummy') return <YumYummyCaseStudy project={project} />
   return (
     <PageTransition>
       <section className={`project-detail-hero ${project.accent}`}>
@@ -1251,7 +1520,7 @@ function Advisory() {
                 exit={{ opacity: 0, scale: .97, y: 8 }}
                 transition={{ duration: .28 }}
               >
-                <div className={`advisory-client-logo ${client.logoShape}`}>
+                <div className={`advisory-client-logo ${client.logoShape} ${client.logoClass || ''}`}>
                   {client.logo
                     ? <img src={client.logo} alt={`${client.name} logo`} />
                     : <span>{client.logoText}</span>}

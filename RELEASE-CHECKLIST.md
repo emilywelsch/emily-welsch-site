@@ -52,3 +52,17 @@ Open `/release.json` on the Vercel URL. It should report:
 - The pitch-deck buttons download `Pixi-Pitch-Deck-2018.pptx`
 - Product, patent, GTM, traction, and media sections render
 - The page shows 1,000+ units, two Amazon’s Choice categories, and 80+ ambassadors
+
+
+## Revision 9 verification
+- SweatVida shows the 20-minute filtered workout view in both visual examples
+- YumYummy opens a dedicated case study
+- YumYummy includes product concept, what I built, validation, and commercial outcome sections
+- /release.json reports `v9-yumyummy-case-study`
+
+
+## Revision 10 verification
+- YumYummy hero uses the uploaded wordmark and layered package artwork
+- YumYummy has a packaging-system section showing open-flow, spill-proof, and variety designs
+- Advisory includes DOTS Technology Corp and a Life Sciences filter
+- `/release.json` reports `v10-yumyummy-dots`

@@ -1,15 +1,13 @@
 {
-  "release": "v8-pixi-case-study",
-  "generated_at": "2026-07-22T23:23:26.105748+00:00",
+  "release": "v10-yumyummy-dots",
+  "generated_at": "2026-07-23T05:44:26.253106+00:00",
   "includes": [
-    "All cumulative v7 site changes",
-    "Dedicated Pixi Cycling company case study",
-    "Founder & CEO timeline from March 2016 to February 2022",
-    "Detachable chamois product and patent story",
-    "1,000+ units sold and two Amazon's Choice categories",
-    "80+ brand ambassador community",
-    "Original 2018 PowerPoint pitch deck available for download",
-    "Selected deck slides displayed as initial company visuals",
-    "Pixi-related podcast and press archive linked from the case study"
+    "All cumulative v9 site changes",
+    "YumYummy uploaded wordmark added to the case-study hero",
+    "Layered YumYummy open-flow, spill-proof, and variety packaging composition",
+    "Dedicated YumYummy packaging-system section with front and back artwork",
+    "DOTS Technology Corp added as the twelfth advisory client",
+    "DOTS pitch-deck engagement linked to the NEA portfolio page",
+    "Life Sciences added as an advisory client filter"
   ]
 }

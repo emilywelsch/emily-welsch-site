@@ -50,3 +50,14 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Added the original 2018 PowerPoint pitch deck as a downloadable site asset
 - Added selected pitch-deck slides as initial case-study visuals
 - Linked the Pixi-related podcast and press archive from the case study
+
+
+## Revision 9
+- Updated the SweatVida case study visuals to show a filtered 20-minute workout results view
+- Added a dedicated YumYummy case study at `/ventures/yumyummy`
+- Added YumYummy product, packaging, child-use, testing, and founder reflection visuals
+
+
+## Revision 10
+- Added the real YumYummy logo and a dedicated packaging-system showcase
+- Added DOTS Technology Corp to Advisory with Healthcare, Technology, and Life Sciences tags
