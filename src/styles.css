@@ -2040,6 +2040,14 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   width: 100%;
 }
 
+.yumyummy-hero-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  object-fit: cover;
+  display: block;
+}
+
 .yumyummy-facts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2378,68 +2386,10 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
 .yumyummy-hero-visual {
   min-height: 650px;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
   border: 0;
   background: transparent;
   box-shadow: none;
-}
-
-.yumyummy-package-stack {
-  min-height: 650px;
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.yumyummy-package-stack::before {
-  content: '';
-  position: absolute;
-  inset: 9% 6% 7%;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(210,79,28,.13), rgba(210,79,28,0) 70%);
-}
-
-.yumyummy-pack {
-  position: absolute;
-  width: clamp(215px, 31vw, 330px);
-  max-height: 610px;
-  object-fit: contain;
-  filter: drop-shadow(0 28px 28px rgba(50,49,45,.18));
-  transition: transform .35s ease;
-}
-
-.yumyummy-pack.open-flow {
-  left: 0;
-  bottom: 4%;
-  transform: rotate(-8deg);
-  z-index: 1;
-}
-
-.yumyummy-pack.spill-proof {
-  right: 0;
-  bottom: 6%;
-  transform: rotate(8deg);
-  z-index: 2;
-}
-
-.yumyummy-pack.variety {
-  width: clamp(230px, 34vw, 355px);
-  top: 1%;
-  left: 50%;
-  transform: translateX(-50%) rotate(-1deg);
-  z-index: 3;
-}
-
-.yumyummy-package-stack:hover .open-flow {
-  transform: translateX(-8px) rotate(-10deg);
-}
-
-.yumyummy-package-stack:hover .spill-proof {
-  transform: translateX(8px) rotate(10deg);
-}
-
-.yumyummy-package-stack:hover .variety {
-  transform: translateX(-50%) translateY(-8px) rotate(-1deg);
 }
 
 .yumyummy-packaging {
@@ -2454,12 +2404,12 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   align-items: start;
 }
 
-.yumyummy-package-family figure,
-.yumyummy-package-backs figure {
-  margin: 0;
+.yumyummy-package-family--four {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .yumyummy-package-family figure {
+  margin: 0;
   padding: 18px;
   background: rgba(255,255,255,.78);
 }
@@ -2470,8 +2420,7 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   object-fit: contain;
 }
 
-.yumyummy-package-family figcaption,
-.yumyummy-package-backs figcaption {
+.yumyummy-package-family figcaption {
   display: grid;
   gap: 6px;
   padding-top: 16px;
@@ -2488,38 +2437,18 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   text-transform: uppercase;
 }
 
-.yumyummy-package-backs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.yumyummy-package-backs figure {
-  padding: 18px;
-  background: rgba(255,255,255,.62);
-}
-
-.yumyummy-package-backs img {
-  width: 100%;
-  max-height: 680px;
-  object-fit: contain;
-}
-
 @media (max-width: 980px) {
-  .yumyummy-hero-visual,
-  .yumyummy-package-stack {
+  .yumyummy-hero-visual {
     min-height: 610px;
   }
 
-  .yumyummy-package-family {
-    grid-template-columns: 1fr 1fr;
+  .yumyummy-hero-photo {
+    min-height: 610px;
   }
 
-  .yumyummy-package-family figure:last-child {
-    grid-column: 1 / -1;
-    width: min(520px, 100%);
-    justify-self: center;
+  .yumyummy-package-family,
+  .yumyummy-package-family--four {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -2532,17 +2461,12 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
     width: 94%;
   }
 
-  .yumyummy-hero-visual,
-  .yumyummy-package-stack {
+  .yumyummy-hero-visual {
     min-height: 470px;
   }
 
-  .yumyummy-pack {
-    width: 43vw;
-  }
-
-  .yumyummy-pack.variety {
-    width: 48vw;
+  .yumyummy-hero-photo {
+    min-height: 470px;
   }
 
   .yumyummy-packaging {
@@ -2550,12 +2474,7 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
   }
 
   .yumyummy-package-family,
-  .yumyummy-package-backs {
+  .yumyummy-package-family--four {
     grid-template-columns: 1fr;
-  }
-
-  .yumyummy-package-family figure:last-child {
-    grid-column: auto;
-    width: 100%;
   }
 }

@@ -831,11 +831,7 @@ function YumYummyCaseStudy({ project }) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: .55, delay: .08 }}
           >
-            <div className="yumyummy-package-stack" aria-label="YumYummy packaging family">
-              <img className="yumyummy-pack open-flow" src="/ventures/yumyummy/open-flow-front.png" alt="YumYummy open-flow pouch-top package" />
-              <img className="yumyummy-pack spill-proof" src="/ventures/yumyummy/spill-proof-front.png" alt="YumYummy spill-proof pouch-top package" />
-              <img className="yumyummy-pack variety" src="/ventures/yumyummy/variety-pack.png" alt="YumYummy variety pouch-top package" />
-            </div>
+            <img className="yumyummy-hero-photo" src="/ventures/yumyummy/hero-main.png" alt="YumYummy product packaging lineup" />
           </motion.div>
         </div>
 
@@ -928,30 +924,23 @@ function YumYummyCaseStudy({ project }) {
             </p>
           </div>
 
-          <div className="yumyummy-package-family">
+          <div className="yumyummy-package-family yumyummy-package-family--four">
             <motion.figure initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .16 }}>
-              <img src="/ventures/yumyummy/open-flow-front.png" alt="YumYummy open-flow pouch-top front package artwork" />
-              <figcaption><span>Open-flow top</span>Pink, produce-led artwork for the open-flow four-pack.</figcaption>
+              <img src="/ventures/yumyummy/open-flow-front-v2.png" alt="YumYummy open-flow pouch-top front package artwork" />
+              <figcaption><span>Open-flow top</span>Front packaging for the four-pack with the soft pink palette and produce-led illustration system.</figcaption>
             </motion.figure>
             <motion.figure initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .16 }}>
-              <img src="/ventures/yumyummy/spill-proof-front.png" alt="YumYummy spill-proof pouch-top front package artwork" />
-              <figcaption><span>Spill-proof top</span>A red variation that keeps the family recognizable while differentiating the model.</figcaption>
+              <img src="/ventures/yumyummy/spill-proof-front-v2.png" alt="YumYummy spill-proof pouch-top front package artwork" />
+              <figcaption><span>Spill-proof top</span>The red variant differentiates the spill-proof model while staying consistent with the core brand system.</figcaption>
             </motion.figure>
             <motion.figure initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .16 }}>
-              <img src="/ventures/yumyummy/variety-pack.png" alt="YumYummy variety pouch-top package artwork" />
-              <figcaption><span>Variety pack</span>A mint and teal two-pack combining both product formats.</figcaption>
+              <img src="/ventures/yumyummy/variety-pack-v2.png" alt="YumYummy variety pack package artwork" />
+              <figcaption><span>Variety pack</span>A mint and teal two-pack combining both product formats for an easy trial SKU.</figcaption>
             </motion.figure>
-          </div>
-
-          <div className="yumyummy-package-backs">
-            <figure>
-              <img src="/ventures/yumyummy/open-flow-back.png" alt="YumYummy open-flow pouch-top back package artwork" />
-              <figcaption>Open-flow back panel with benefits, instructions, materials, and compliance language.</figcaption>
-            </figure>
-            <figure>
-              <img src="/ventures/yumyummy/spill-proof-back.png" alt="YumYummy spill-proof pouch-top back package artwork" />
-              <figcaption>Spill-proof back panel using the same visual system and model-specific messaging.</figcaption>
-            </figure>
+            <motion.figure initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .16 }}>
+              <img src="/ventures/yumyummy/open-flow-back-rotated.png" alt="YumYummy back panel package artwork" />
+              <figcaption><span>Back panel</span>Benefit-led back-of-pack communication with usage guidance, materials, and compliance information.</figcaption>
+            </motion.figure>
           </div>
         </div>
       </section>
