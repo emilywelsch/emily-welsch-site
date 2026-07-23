@@ -1,10 +1,12 @@
 {
-  "release": "v13-sweatvida-full-width",
-  "generated_at": "2026-07-23T06:39:32.472213+00:00",
+  "release": "v14-uncluttered-soul-case-study",
+  "generated_at": "2026-07-23T07:05:14.943105+00:00",
   "includes": [
-    "All cumulative v12 site changes",
-    "Removed the SweatVida Content depth image and caption",
-    "Expanded the SweatVida Discovery architecture image to the full content width",
+    "All cumulative v13 site changes",
+    "Dedicated Uncluttered Soul case study at /ventures/uncluttered-soul",
+    "Uncluttered Soul logo and uploaded product-library screenshot",
+    "Membership, content architecture, AI narration workflow, and founder reflection sections",
+    "Free Take a Break meditation linked from the case study",
     "DOTS remains the twelfth advisory client and is not listed as an investment"
   ]
 }

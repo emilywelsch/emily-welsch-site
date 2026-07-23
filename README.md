@@ -71,3 +71,8 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 ## Revision 13
 - Removed the second SweatVida Content depth visual
 - Expanded the Discovery architecture screenshot to the full page content width
+
+
+## Revision 14
+- Added a full Uncluttered Soul case study at `/ventures/uncluttered-soul`
+- Added the Uncluttered Soul membership, content architecture, AI voice-production workflow, and free meditation CTA

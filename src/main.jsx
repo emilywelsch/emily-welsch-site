@@ -57,20 +57,21 @@ const projects = [
   {
     slug: 'uncluttered-soul',
     name: 'Uncluttered Soul',
-    eyebrow: 'Founder-built brand · Personal growth',
-    summary: 'A founder-led platform exploring clarity, mindfulness, and intentional living.',
+    eyebrow: 'Founder-built company · Mindfulness technology',
+    summary: 'A membership platform for meditation, sleep, journaling, and more intentional daily habits.',
     role: 'Founder',
-    status: 'Selected work',
+    status: 'Active platform',
     year: '2023–present',
-    url: '#',
-    accent: 'teal',
+    url: 'https://unclutteredsoul.co/',
+    accent: 'uncluttered',
+    logo: '/ventures/uncluttered-soul/uncluttered-soul-logo.png',
     overview:
-      'A space for ideas and offerings centered on living with greater clarity and intention. This page can hold the brand story, imagery, products, and milestones.',
+      'Uncluttered Soul is a mindfulness and mental well-being platform designed to make rest, reflection, stress support, and intentional living easier to access in everyday life.',
     work: [
-      'Brand strategy and positioning',
-      'Editorial and product direction',
-      'Audience and community development',
-      'Creative concept and visual identity',
+      'Brand, positioning, and membership product strategy',
+      'Meditation, sleep, journaling, and mindful-living content architecture',
+      'AI-generated narration and scalable audio-production workflow',
+      'Subscription experience, free entry point, and ongoing content operations',
     ],
   },
   {
@@ -782,6 +783,232 @@ function SweatVidaCaseStudy({ project }) {
 
 
 
+
+function UnclutteredSoulCaseStudy({ project }) {
+  const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
+
+  const contentFormats = [
+    ['Guided meditations', 'In-the-moment support for stress, negative thought spirals, gratitude, focus, and emotional reset.'],
+    ['Sleep meditations', 'Slower guided experiences designed to quiet the mind and prepare the body for restorative rest.'],
+    ['Sleep stories', 'Narrative audio experiences that help listeners disengage from the day and ease toward sleep.'],
+    ['Soundscapes', 'Sleep and awakening audio environments for rest, relaxation, clarity, and focus.'],
+    ['Online journal', 'A private digital journaling experience with daily prompts for reflection, gratitude, and mindfulness.'],
+    ['Guides & workbooks', 'Longer-form tools that help members turn mindfulness concepts into repeatable practices.'],
+  ]
+
+  return (
+    <PageTransition>
+      <section className="uncluttered-hero">
+        <div className="section-shell uncluttered-hero-grid">
+          <motion.div
+            className="uncluttered-hero-copy"
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .55 }}
+          >
+            <Link className="back-link" to="/ventures">← All ventures</Link>
+            <Eyebrow>Company case study · Mindfulness technology</Eyebrow>
+            <img className="uncluttered-logo" src={project.logo} alt="Uncluttered Soul" />
+            <h1>A digital sanctuary for rest, reflection, and everyday mental well-being.</h1>
+            <p>
+              Uncluttered Soul brings guided meditations, sleep content, soundscapes, journaling,
+              and soulful-living tools into one membership experience built for moments when people
+              need calm, clarity, or a better night’s sleep.
+            </p>
+            <div className="uncluttered-actions">
+              <a className="button uncluttered-primary" href="https://unclutteredsoul.co/take-a-break/" target="_blank" rel="noreferrer">
+                Try the free meditation <ArrowRight size={18} />
+              </a>
+              <a className="uncluttered-text-link" href="https://unclutteredsoul.co/" target="_blank" rel="noreferrer">
+                Visit Uncluttered Soul ↗
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="uncluttered-hero-visual"
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .55, delay: .08 }}
+          >
+            <img src="/ventures/uncluttered-soul/uncluttered-soul-library-detail.jpg" alt="Uncluttered Soul meditation and sleep library" />
+          </motion.div>
+        </div>
+
+        <div className="section-shell uncluttered-facts">
+          <div><strong>Founder</strong><span>Role</span></div>
+          <div><strong>2023–present</strong><span>Timeline</span></div>
+          <div><strong>Membership</strong><span>Business model</span></div>
+          <div><strong>AI-generated</strong><span>All narration</span></div>
+        </div>
+      </section>
+
+      <section className="uncluttered-opportunity section-shell">
+        <div className="uncluttered-opportunity-copy">
+          <Eyebrow>The opportunity</Eyebrow>
+          <h2>Mindfulness content was everywhere. A cohesive daily practice was harder to find.</h2>
+          <p>
+            People often encounter meditation, journaling, sleep audio, and self-reflection as separate
+            products or scattered pieces of content. Uncluttered Soul was designed as one calm, accessible
+            place to support immediate relief and longer-term habit building.
+          </p>
+          <p>
+            The product serves distinct moments: falling asleep, returning to sleep, calming an overwhelmed
+            nervous system, stepping out of negative thought patterns, reflecting through journaling, or simply
+            creating a few intentional minutes in a busy day.
+          </p>
+        </div>
+        <div className="uncluttered-pillars">
+          <div><span>01</span><h3>Reclaim peace</h3><p>Tools for releasing mental clutter, limiting beliefs, and reactive patterns.</p></div>
+          <div><span>02</span><h3>Sleep better</h3><p>Stories, meditations, soundscapes, and routines for deeper, more restorative rest.</p></div>
+          <div><span>03</span><h3>Stress less</h3><p>Short, practical ways to return to the present moment and create more ease.</p></div>
+        </div>
+      </section>
+
+      <section className="uncluttered-product">
+        <div className="section-shell">
+          <div className="uncluttered-section-heading">
+            <div>
+              <Eyebrow>The product</Eyebrow>
+              <h2>One membership, multiple paths back to yourself.</h2>
+            </div>
+            <p>
+              The library combines immediate, audio-led experiences with repeatable practices and longer-form
+              resources, allowing members to choose what fits their mood, intention, and available time.
+            </p>
+          </div>
+
+          <motion.div
+            className="uncluttered-browser"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .16 }}
+          >
+            <div className="uncluttered-browser-bar"><span></span><span></span><span></span><div>unclutteredsoul.co</div></div>
+            <img src="/ventures/uncluttered-soul/uncluttered-soul-library.png" alt="Uncluttered Soul content library" />
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="uncluttered-content section-shell">
+        <div className="uncluttered-section-heading">
+          <div>
+            <Eyebrow>Content architecture</Eyebrow>
+            <h2>Built around how people actually seek support.</h2>
+          </div>
+          <p>
+            The content system balances immediate-use audio, reflective practices, and deeper learning so the
+            platform can support both a five-minute reset and a longer-term mindfulness routine.
+          </p>
+        </div>
+
+        <div className="uncluttered-content-grid">
+          {contentFormats.map(([title, copy], index) => (
+            <motion.article
+              key={title}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+            >
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      <section className="uncluttered-ai">
+        <div className="section-shell uncluttered-ai-grid">
+          <div className="uncluttered-ai-copy">
+            <Eyebrow>AI-enabled production</Eyebrow>
+            <h2>A scalable audio studio built with synthetic voices.</h2>
+            <p>
+              All voices on Uncluttered Soul are AI-generated. A synthetic version of my own voice is used for
+              the majority of the guided meditations, allowing the platform to maintain a consistent tone while
+              producing a growing library of high-quality audio more efficiently.
+            </p>
+            <p>
+              The technology accelerates production, but the editorial work remains human-led: choosing the need,
+              shaping the script, setting the pacing, reviewing the emotional tone, and deciding how each experience
+              fits into the larger member journey.
+            </p>
+          </div>
+
+          <div className="uncluttered-workflow">
+            <div><span>01</span><strong>Define the moment</strong><p>Sleep, anxiety relief, focus, gratitude, self-care, or reflection.</p></div>
+            <div><span>02</span><strong>Write & edit</strong><p>Create the script, pacing, cues, and emotional arc.</p></div>
+            <div><span>03</span><strong>Generate narration</strong><p>Produce the audio with the appropriate AI voice, including my own synthetic voice.</p></div>
+            <div><span>04</span><strong>Mix & publish</strong><p>Pair voice, music, and sound design, then place the experience in the membership library.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="uncluttered-build section-shell">
+        <div className="uncluttered-section-heading">
+          <div>
+            <Eyebrow>What I built</Eyebrow>
+            <h2>A brand, subscription product, and ongoing content operation.</h2>
+          </div>
+          <p>
+            The work spans product strategy, brand positioning, membership design, content development, AI audio
+            workflows, subscription packaging, and the systems required to publish new tools regularly.
+          </p>
+        </div>
+
+        <div className="uncluttered-build-grid">
+          {[
+            ['01', 'Brand & positioning', 'Developed a calm, premium identity centered on releasing mental clutter and returning to clarity, peace, and purpose.'],
+            ['02', 'Membership experience', 'Structured the product around free discovery, a subscription library, and content paths for sleep, stress, reflection, and personal growth.'],
+            ['03', 'Content system', 'Built a repeatable editorial framework spanning meditation scripts, stories, soundscapes, journal prompts, workbooks, and mindful-living resources.'],
+            ['04', 'AI production workflow', 'Created an efficient process for turning human-led concepts and scripts into consistent, publishable narrated audio.'],
+          ].map(([number, title, copy]) => (
+            <motion.article key={number} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }}>
+              <span>{number}</span><h3>{title}</h3><p>{copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      <section className="uncluttered-free">
+        <div className="section-shell uncluttered-free-grid">
+          <div>
+            <Eyebrow>Try the experience</Eyebrow>
+            <h2>Take a break.</h2>
+            <p>
+              A free guided meditation offers a simple entry point into the product and demonstrates the voice,
+              pacing, and immediate-use philosophy behind the larger library.
+            </p>
+          </div>
+          <a className="uncluttered-player" href="https://unclutteredsoul.co/take-a-break/" target="_blank" rel="noreferrer">
+            <div className="uncluttered-play">▶</div>
+            <div><span>Free guided meditation</span><strong>Take a Break</strong><small>Meditation · Emily</small></div>
+            <ArrowRight />
+          </a>
+        </div>
+      </section>
+
+      <section className="uncluttered-reflection">
+        <div className="section-shell uncluttered-reflection-grid">
+          <div>
+            <Eyebrow>Founder reflection</Eyebrow>
+            <h2>AI made the content operation more scalable without replacing the creative judgment.</h2>
+          </div>
+          <blockquote>
+            Uncluttered Soul became an experiment in building a thoughtful wellness product where brand,
+            behavioral design, editorial depth, and AI-enabled production all work together.
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="next-project section-shell">
+        <p>Next company</p>
+        <Link to={`/ventures/${nextProject.slug}`}>{nextProject.name}<ArrowRight /></Link>
+      </section>
+    </PageTransition>
+  )
+}
+
 function YumYummyCaseStudy({ project }) {
   const nextProject = projects[(projects.indexOf(project) + 1) % projects.length]
 
@@ -1335,6 +1562,7 @@ function ProjectDetail() {
   const project = projects.find(p => p.slug === slug)
   if (!project) return <NotFound />
   if (project.slug === 'sweatvida') return <SweatVidaCaseStudy project={project} />
+  if (project.slug === 'uncluttered-soul') return <UnclutteredSoulCaseStudy project={project} />
   if (project.slug === 'pixi-cycling') return <PixiCyclingCaseStudy project={project} />
   if (project.slug === 'yumyummy') return <YumYummyCaseStudy project={project} />
   return (

@@ -79,3 +79,10 @@ Open `/release.json` on the Vercel URL. It should report:
 - SweatVida contains no Content depth visual
 - The Discovery architecture figure spans the full section width
 - /release.json reports `v13-sweatvida-full-width`
+
+
+## Revision 14 verification
+- Uncluttered Soul opens a dedicated company case study
+- The free meditation button links to `/take-a-break/` on Uncluttered Soul
+- The page describes all narration as AI-generated and notes that Emily’s synthetic voice is used for most meditations
+- `/release.json` reports `v14-uncluttered-soul-case-study`
