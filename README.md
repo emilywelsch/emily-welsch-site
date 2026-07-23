@@ -66,3 +66,8 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 ## Revision 12
 - Corrected DOTS placement: advisory client, not angel investment
 - Ventures investments now remain Guava Health and Rogo only
+
+
+## Revision 13
+- Removed the second SweatVida Content depth visual
+- Expanded the Discovery architecture screenshot to the full page content width

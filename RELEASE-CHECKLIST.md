@@ -73,3 +73,9 @@ Open `/release.json` on the Vercel URL. It should report:
 - DOTS is absent from Companies I’ve Backed on `/ventures`
 - Advisory All count is 12
 - `/release.json` reports `v12-dots-client-fix`
+
+
+## Revision 13 verification
+- SweatVida contains no Content depth visual
+- The Discovery architecture figure spans the full section width
+- /release.json reports `v13-sweatvida-full-width`

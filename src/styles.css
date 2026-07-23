@@ -2478,3 +2478,21 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Release v13: single full-width SweatVida discovery image */
+.sweatvida-visuals-full {
+  display: block;
+}
+
+.sweatvida-visuals-full .sweatvida-filter-figure {
+  width: 100%;
+}
+
+.sweatvida-visuals-full .sweatvida-filter-figure img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center top;
+}

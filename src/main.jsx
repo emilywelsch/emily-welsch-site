@@ -724,7 +724,7 @@ function SweatVidaCaseStudy({ project }) {
         </div>
       </section>
 
-      <section className="sweatvida-visuals section-shell">
+      <section className="sweatvida-visuals sweatvida-visuals-full section-shell">
         <motion.figure
           className="sweatvida-filter-figure sweatvida-filter-20"
           initial={{ opacity: 0, y: 22 }}
@@ -735,21 +735,6 @@ function SweatVidaCaseStudy({ project }) {
           <figcaption>
             <span>Discovery architecture</span>
             An example filtered view focused on 20-minute workouts across category, instructor, and channel.
-          </figcaption>
-        </motion.figure>
-
-        <motion.figure
-          className="sweatvida-page-figure sweatvida-results-20"
-          initial={{ opacity: 0, y: 22 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: .12 }}
-        >
-          <div className="sweatvida-page-scroll">
-            <img src="/ventures/sweatvida/sweatvida-20min-filter.png" alt="SweatVida results grid filtered for 20-minute workouts" />
-          </div>
-          <figcaption>
-            <span>Content depth</span>
-            Filtered results let visitors browse depth without losing the clarity of the search experience.
           </figcaption>
         </motion.figure>
       </section>

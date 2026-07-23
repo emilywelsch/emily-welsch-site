@@ -1,11 +1,10 @@
 {
-  "release": "v12-dots-client-fix",
-  "generated_at": "2026-07-23T06:29:06.578088+00:00",
+  "release": "v13-sweatvida-full-width",
+  "generated_at": "2026-07-23T06:39:32.472213+00:00",
   "includes": [
-    "All cumulative v11 YumYummy hero and packaging updates",
-    "DOTS Technology Corp removed from angel investments",
-    "DOTS Technology Corp added as the twelfth advisory client",
-    "DOTS tagged Healthcare, Technology, and Life Sciences",
-    "Ventures backed-company area contains only Guava Health and Rogo"
+    "All cumulative v12 site changes",
+    "Removed the SweatVida Content depth image and caption",
+    "Expanded the SweatVida Discovery architecture image to the full content width",
+    "DOTS remains the twelfth advisory client and is not listed as an investment"
   ]
 }
