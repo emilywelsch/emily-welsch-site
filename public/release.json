@@ -1,13 +1,12 @@
 {
-  "release": "v17-pitchit-case-study",
-  "generated_at": "2026-07-23T20:10:41.314362+00:00",
+  "release": "v20-ventures-filters",
+  "generated_at": "2026-07-24T19:21:41.325465+00:00",
   "includes": [
-    "All cumulative v16 site changes",
-    "Product Experiments category and Ventures filter",
-    "Dedicated Pitchit case study at /ventures/pitchit",
-    "Pitchit premise, rules, rotating-judge mechanic, prototype design, and Thanksgiving play test",
-    "Commercialization and accelerator icebreaker potential",
-    "Eight uploaded Pitchit prototype images",
+    "All cumulative V19 site changes",
+    "Smaller Pixi Cycling logo on the Ventures page",
+    "Clickable Built portfolio filters for Company, SaaS Product, Physical Product, Digital Product, and Coding Project",
+    "Filtered results retain the existing chronological portfolio order",
+    "Pixi Cycling Instagram button no longer displays follower counts",
     "DOTS remains exclusively the 12th advisory client"
   ]
 }

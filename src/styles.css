@@ -4341,3 +4341,553 @@ footer { background: var(--ink); color: var(--white); padding-top: 90px; }
     gap: 7px;
   }
 }
+
+
+/* Release v18: Unified Ventures grids and case-study social links */
+.ventures-page-hero {
+  padding-bottom: 80px;
+}
+
+.venture-portfolio-section {
+  padding-block: 110px 140px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: calc(var(--header-height) + 25px);
+}
+
+.venture-backed-section {
+  padding-top: 125px;
+}
+
+.venture-portfolio-heading {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+.venture-portfolio-heading h2 {
+  margin: 16px 0 0;
+  font-size: clamp(2.6rem, 4.5vw, 4.9rem);
+  line-height: 1.02;
+  letter-spacing: -.058em;
+}
+
+.venture-portfolio-heading > p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.venture-card-grid {
+  display: grid;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.venture-built-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.venture-backed-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.venture-portfolio-card {
+  min-height: 320px;
+  background: var(--ivory);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  transition: background .28s, transform .28s, box-shadow .28s;
+}
+
+.venture-portfolio-card > a,
+a.venture-portfolio-card {
+  min-height: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.venture-portfolio-card:hover {
+  z-index: 2;
+  background: var(--sand);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 55px rgba(50,49,45,.09);
+}
+
+.venture-card-logo {
+  height: 130px;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(50,49,45,.1);
+}
+
+.venture-card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.venture-card-logo.square img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.venture-card-logo.wide img {
+  max-width: 94%;
+  max-height: 88px;
+}
+
+.venture-card-logo.wordmark span {
+  padding-left: .2em;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 650;
+  letter-spacing: .16em;
+  text-align: center;
+}
+
+.venture-card-logo.built-logo-pitchit span {
+  padding-left: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 2.45rem;
+  letter-spacing: .02em;
+  text-transform: lowercase;
+}
+
+.venture-card-logo.built-logo-pixi span {
+  font-size: 2.3rem;
+  letter-spacing: .27em;
+}
+
+.venture-card-logo.built-logo-surfguru span {
+  font-size: 1.45rem;
+  letter-spacing: .12em;
+}
+
+.venture-card-logo.built-logo-shoplist span {
+  font-size: 1.5rem;
+  letter-spacing: .09em;
+}
+
+.venture-card-logo.built-logo-yumyummy img {
+  max-height: 70px;
+}
+
+.venture-card-logo.built-logo-sweatvida img {
+  max-height: 76px;
+}
+
+.venture-card-logo.built-logo-uncluttered img {
+  max-height: 76px;
+}
+
+.venture-card-logo.rogo-logo img {
+  padding-inline: 10px;
+}
+
+.venture-card-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.venture-card-title small {
+  display: block;
+  min-height: 15px;
+  margin-bottom: 6px;
+  color: var(--red);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.venture-card-title h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.2;
+  letter-spacing: -.03em;
+}
+
+.venture-card-title svg {
+  flex: 0 0 auto;
+  transition: transform .25s;
+}
+
+.venture-portfolio-card:hover .venture-card-title svg {
+  transform: translate(3px, -3px);
+}
+
+.venture-portfolio-card p {
+  margin: auto 0 0;
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.venture-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 16px;
+}
+
+.venture-card-tags span {
+  min-height: 25px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 9px;
+  border: 1px solid rgba(50,49,45,.18);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: .66rem;
+  letter-spacing: .025em;
+  white-space: nowrap;
+}
+
+.venture-portfolio-card:hover .venture-card-tags span {
+  border-color: rgba(106,12,4,.3);
+  color: var(--red);
+  background: rgba(231,230,226,.55);
+}
+
+.venture-investment-card .venture-card-logo {
+  height: 145px;
+}
+
+.venture-investment-card p {
+  max-width: 500px;
+}
+
+/* No Framer Motion hover transform on investment cards: CSS owns the hover state. */
+.venture-investment-card {
+  will-change: auto;
+}
+
+/* Clinbook social link */
+.clinbook-social-link {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px;
+  border: 1px solid rgba(247,244,255,.32);
+  color: rgba(247,244,255,.85) !important;
+  transition: background .22s, border-color .22s, transform .22s;
+}
+
+.clinbook-social-link:hover {
+  background: rgba(247,244,255,.08);
+  border-color: rgba(247,244,255,.62);
+  transform: translateY(-2px);
+}
+
+/* SweatVida brand banner */
+.sweatvida-brand-banner {
+  padding-top: 110px;
+}
+
+.sweatvida-brand-banner img {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  box-shadow: 0 28px 75px rgba(50,49,45,.11);
+}
+
+.sweatvida-brand-banner + .sweatvida-product {
+  padding-top: 50px;
+}
+
+/* Uncluttered Soul social button */
+.uncluttered-instagram-link,
+.pixi-instagram-link {
+  min-height: 49px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border: 1px solid currentColor;
+  transition: transform .22s, background .22s;
+}
+
+.uncluttered-instagram-link {
+  color: rgba(244,241,235,.88);
+}
+
+.uncluttered-instagram-link:hover {
+  background: rgba(244,241,235,.08);
+  transform: translateY(-2px);
+}
+
+.uncluttered-instagram-link span,
+.pixi-instagram-link span {
+  font-weight: 600;
+}
+
+.uncluttered-instagram-link small,
+.pixi-instagram-link small {
+  opacity: .64;
+  font-size: .68rem;
+  white-space: nowrap;
+}
+
+.pixi-instagram-link {
+  color: var(--charcoal);
+}
+
+.pixi-instagram-link:hover {
+  background: rgba(50,49,45,.06);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1100px) {
+  .venture-built-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .venture-portfolio-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .venture-built-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .venture-backed-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .venture-portfolio-card,
+  .venture-portfolio-card > a,
+  a.venture-portfolio-card {
+    min-height: 295px;
+  }
+}
+
+@media (max-width: 560px) {
+  .venture-portfolio-section {
+    padding-block: 88px 105px;
+  }
+
+  .venture-built-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .venture-portfolio-card,
+  .venture-portfolio-card > a,
+  a.venture-portfolio-card {
+    min-height: 270px;
+  }
+
+  .sweatvida-brand-banner {
+    padding-top: 80px;
+  }
+
+  .sweatvida-brand-banner img {
+    aspect-ratio: 16 / 7;
+  }
+
+  .uncluttered-instagram-link,
+  .pixi-instagram-link {
+    grid-template-columns: auto 1fr auto;
+    width: 100%;
+  }
+
+  .uncluttered-instagram-link small,
+  .pixi-instagram-link small {
+    white-space: normal;
+  }
+}
+
+
+/* Release v19: final supplied project logos and SweatVida banner placement */
+.venture-card-logo.built-logo-pitchit img {
+  max-width: 88%;
+  max-height: 60px;
+}
+
+.venture-card-logo.built-logo-pixi img {
+  max-width: 72%;
+  max-height: 70px;
+}
+
+.venture-card-logo.built-logo-surfguru img {
+  max-width: 94%;
+  max-height: 55px;
+}
+
+.venture-card-logo.built-logo-shoplist img {
+  max-width: 90%;
+  max-height: 68px;
+}
+
+.pitchit-wordmark {
+  width: min(520px, 82%);
+  height: auto;
+  display: block;
+  margin: 38px 0 32px;
+  filter: invert(1);
+}
+
+.pixi-wordmark {
+  width: min(420px, 65%);
+  height: auto;
+  display: block;
+  margin: 38px 0 42px;
+  filter: invert(1);
+}
+
+.code-project-logo {
+  width: min(550px, 84%);
+  height: auto;
+  display: block;
+  margin: 30px 0 28px;
+}
+
+.code-project-hero.surfguru-code .code-project-logo {
+  filter: invert(1);
+}
+
+.code-project-hero.shoplist-code .code-project-logo {
+  width: min(500px, 80%);
+}
+
+.sweatvida-brand-banner-late {
+  margin: 55px 0 0;
+  padding: 0;
+}
+
+.sweatvida-brand-banner-late img {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(231,230,226,.2);
+  box-shadow: 0 24px 65px rgba(0,0,0,.16);
+}
+
+.sweatvida-product {
+  padding-top: 120px;
+}
+
+@media (max-width: 720px) {
+  .pitchit-wordmark {
+    width: min(430px, 92%);
+  }
+
+  .pixi-wordmark {
+    width: min(340px, 75%);
+  }
+
+  .code-project-logo {
+    width: min(470px, 92%);
+  }
+
+  .sweatvida-brand-banner-late img {
+    aspect-ratio: 16 / 7;
+  }
+}
+
+
+/* Release v20: Built portfolio filters and Pixi sizing */
+.venture-card-logo.built-logo-pixi img {
+  max-width: 52%;
+  max-height: 44px;
+}
+
+.venture-filter-panel {
+  max-width: 710px;
+}
+
+.venture-filter-panel > span {
+  display: block;
+  margin-bottom: 13px;
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.venture-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.venture-filter-buttons button {
+  min-height: 37px;
+  padding: 0 13px;
+  border: 1px solid rgba(50,49,45,.23);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: .72rem;
+  cursor: pointer;
+  transition:
+    background .22s ease,
+    border-color .22s ease,
+    color .22s ease,
+    transform .22s ease;
+}
+
+.venture-filter-buttons button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(106,12,4,.38);
+  color: var(--red);
+}
+
+.venture-filter-buttons button.active {
+  border-color: var(--charcoal);
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+.venture-built-grid {
+  align-items: stretch;
+}
+
+.pixi-instagram-link {
+  grid-template-columns: auto auto;
+}
+
+@media (max-width: 860px) {
+  .venture-filter-panel {
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .venture-filter-buttons {
+    gap: 7px;
+  }
+
+  .venture-filter-buttons button {
+    min-height: 35px;
+    padding-inline: 11px;
+    font-size: .69rem;
+  }
+
+  .venture-card-logo.built-logo-pixi img {
+    max-width: 46%;
+    max-height: 40px;
+  }
+}

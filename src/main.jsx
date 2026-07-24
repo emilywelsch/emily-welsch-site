@@ -123,6 +123,7 @@ const productExperiments = [
     eyebrow: 'Product experiment · Physical card game',
     summary: 'A startup card game for brewing new ideas through silly combinations, fast pitches, and a rotating judge.',
     image: '/ventures/pitchit/pitchit-hero.jpg',
+    logo: '/ventures/pitchit/pitchit-logo.png',
     accent: 'pitchit-experiment',
   },
 ]
@@ -134,6 +135,7 @@ const codingProjects = [
     eyebrow: 'Coding project · Ruby CLI gem',
     summary: 'A command-line application for exploring current surf conditions at popular beaches around the world.',
     image: '/ventures/coding/surfguru-cover.jpg',
+    logo: '/ventures/coding/surfguru-logo.png',
     accent: 'surfguru-code',
     github: 'https://github.com/emilywelsch/surfguru',
     video: 'https://www.youtube.com/watch?v=LVinCJ2QzOM',
@@ -174,6 +176,7 @@ const codingProjects = [
     eyebrow: 'Coding project · Sinatra web application',
     summary: 'A database-backed shopping-list app for creating, editing, and sharing lists with groups.',
     image: '/ventures/coding/shoplist-cover.jpg',
+    logo: '/ventures/coding/shoplist-logo.png',
     accent: 'shoplist-code',
     github: 'https://github.com/emilywelsch/shoplist',
     video: 'https://www.youtube.com/watch?v=2UyMYrLx7Bk&t=1247s',
@@ -211,6 +214,100 @@ const codingProjects = [
   },
 ]
 
+
+const builtPortfolio = [
+  {
+    slug: 'clinbook',
+    name: 'Clinbook',
+    logo: '/ventures/clinbook/clinbook-logo-purple.svg',
+    logoShape: 'wide',
+    logoClass: 'built-logo-clinbook',
+    period: '2023–present',
+    summary: 'Clinical-trial intelligence SaaS for sponsor, site, investigator, and patient-partner decisions.',
+    tags: ['Company', 'SaaS Product', 'Healthcare', 'Data'],
+  },
+  {
+    slug: 'uncluttered-soul',
+    name: 'Uncluttered Soul',
+    logo: '/ventures/uncluttered-soul/uncluttered-soul-logo.png',
+    logoShape: 'wide',
+    logoClass: 'built-logo-uncluttered',
+    period: '2023–present',
+    summary: 'A mindfulness membership platform spanning meditation, sleep, journaling, and AI-enabled audio.',
+    tags: ['Company', 'SaaS Product', 'Wellness', 'AI'],
+  },
+  {
+    slug: 'yumyummy',
+    name: 'YumYummy',
+    logo: '/ventures/yumyummy/yumyummy-logo.png',
+    logoShape: 'wide',
+    logoClass: 'built-logo-yumyummy',
+    period: '2024',
+    summary: 'An Amazon-first silicone pouch-top product developed through packaging and third-party testing.',
+    tags: ['Physical Product', 'Consumer', 'Baby & Family'],
+  },
+  {
+    slug: 'pitchit',
+    name: 'Pitchit',
+    logo: '/ventures/pitchit/pitchit-logo.png',
+    logoShape: 'wide',
+    logoClass: 'built-logo-pitchit',
+    period: '',
+    summary: 'A play-tested startup card game for generating ideas through absurd combinations and fast pitches.',
+    tags: ['Physical Product', 'Product Experiment', 'Games', 'Entrepreneurship'],
+  },
+  {
+    slug: 'sweatvida',
+    name: 'SweatVida',
+    logo: '/ventures/sweatvida/sweatvida-logo.png',
+    logoShape: 'wide',
+    logoClass: 'built-logo-sweatvida',
+    period: 'Apr 2020–May 2023',
+    summary: 'A search-led directory that made high-quality, free at-home workouts easier to discover.',
+    tags: ['Company', 'Digital Product', 'Fitness', 'SEO'],
+  },
+  {
+    slug: 'pixi-cycling',
+    name: 'Pixi Cycling',
+    logo: '/ventures/pixi-cycling/pixi-logo.png',
+    logoShape: 'wide',
+    logoClass: 'built-logo-pixi',
+    period: 'Mar 2016–Feb 2022',
+    summary: 'Patented women’s cycling apparel designed to transition seamlessly from bike to brunch.',
+    tags: ['Company', 'Physical Product', 'Consumer', 'Apparel'],
+  },
+  {
+    slug: 'surfguru',
+    name: 'SurfGuru',
+    logo: '/ventures/coding/surfguru-logo.png',
+    logoShape: 'wide',
+    logoClass: 'built-logo-surfguru',
+    period: '',
+    summary: 'A Ruby command-line application for exploring surf conditions at beaches around the world.',
+    tags: ['Coding Project', 'Ruby', 'CLI', 'Data'],
+  },
+  {
+    slug: 'shoplist',
+    name: 'ShopList',
+    logo: '/ventures/coding/shoplist-logo.png',
+    logoShape: 'wide',
+    logoClass: 'built-logo-shoplist',
+    period: '',
+    summary: 'A Sinatra shopping-list application demonstrating CRUD, authentication, and database persistence.',
+    tags: ['Coding Project', 'Web App', 'Ruby', 'CRUD'],
+  },
+]
+
+
+const builtPortfolioFilters = [
+  'All',
+  'Company',
+  'SaaS Product',
+  'Physical Product',
+  'Digital Product',
+  'Coding Project',
+]
+
 const investments = [
   {
     name: 'Guava Health',
@@ -219,6 +316,7 @@ const investments = [
     sector: 'Consumer health technology',
     round: 'Seed round',
     note: 'Participated in the company’s seed round.',
+    tags: ['Seed Round', 'Healthcare', 'Consumer Technology'],
     url: 'https://guavahealth.com',
   },
   {
@@ -229,6 +327,7 @@ const investments = [
     sector: 'Enterprise AI for finance',
     round: 'Seed round',
     note: 'Participated through an SPV with ScOp VC in a round led by Khosla Ventures.',
+    tags: ['Seed Round', 'Enterprise AI', 'Financial Services'],
     url: 'https://rogo.ai',
   },
 ]
@@ -562,13 +661,13 @@ function Home() {
             <span>01</span>
             <h3>Companies Built</h3>
             <p>Companies and creative ventures I have built, led, or developed from the ground up.</p>
-            <ArrowLink to="/ventures?view=built">View companies</ArrowLink>
+            <ArrowLink to="/ventures#built">View companies</ArrowLink>
           </motion.article>
           <motion.article className="feature-card teal" whileHover={{ y: -8 }} transition={{ duration: .25 }}>
             <span>02</span>
             <h3>Angel Investments</h3>
             <p>Early-stage companies and founders I have chosen to support as an investor.</p>
-            <ArrowLink to="/ventures?view=backed">View investments</ArrowLink>
+            <ArrowLink to="/ventures#backed">View investments</ArrowLink>
           </motion.article>
         </div>
       </section>
@@ -589,176 +688,131 @@ function Home() {
 }
 
 function Ventures() {
-  const params = new URLSearchParams(useLocation().search)
-  const requested = params.get('view')
-  const [view, setView] = useState(requested === 'backed' ? 'backed' : requested === 'built' ? 'built' : requested === 'experiments' ? 'experiments' : requested === 'code' ? 'code' : 'all')
-  useEffect(() => {
-    if (requested === 'built' || requested === 'backed' || requested === 'experiments' || requested === 'code') setView(requested)
-  }, [requested])
+  const [builtFilter, setBuiltFilter] = useState('All')
+  const visibleBuiltPortfolio =
+    builtFilter === 'All'
+      ? builtPortfolio
+      : builtPortfolio.filter(item => item.tags.includes(builtFilter))
 
   return (
     <PageTransition>
-      <section className="page-hero section-shell">
+      <section className="page-hero section-shell ventures-page-hero">
         <Eyebrow>Ventures</Eyebrow>
         <h1>Companies and products I’ve built. Teams I’ve backed.</h1>
-        <p>This page brings together the companies I’ve built, physical product experiments I’ve designed, selected coding work, and the early-stage teams I’ve backed as an angel investor.</p>
+        <p>
+          A selected portfolio of operating companies, physical and digital products, technical
+          work, and early-stage investments.
+        </p>
       </section>
 
-      <section className="venture-directory section-shell">
-        <div className="filter-row" role="tablist" aria-label="Venture filters">
-          {[
-            ['all', 'All'],
-            ['built', 'Companies'],
-            ['experiments', 'Product Experiments'],
-            ['code', 'Coding Projects'],
-            ['backed', 'Backed'],
-          ].map(([item, label]) => (
-            <button key={item} onClick={() => setView(item)} className={view === item ? 'filter active' : 'filter'}>
-              {label}
-            </button>
-          ))}
+      <section className="venture-portfolio-section section-shell" id="built">
+        <div className="venture-portfolio-heading">
+          <div>
+            <Eyebrow>Built</Eyebrow>
+            <h2>Companies and products I’ve created.</h2>
+          </div>
+          <div className="venture-filter-panel" aria-label="Filter built portfolio">
+            <span>Filter by type</span>
+            <div className="venture-filter-buttons">
+              {builtPortfolioFilters.map(filter => (
+                <button
+                  type="button"
+                  key={filter}
+                  className={builtFilter === filter ? 'active' : ''}
+                  aria-pressed={builtFilter === filter}
+                  onClick={() => setBuiltFilter(filter)}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {(view === 'all' || view === 'built') && (
-          <div className="directory-section">
-            <div className="directory-title">
-              <div><Eyebrow>Built</Eyebrow><h2>Companies I’ve Built</h2></div>
-              <p>Each company opens into a dedicated case study with its story, the work I led, imagery, and links.</p>
-            </div>
-            <div className="project-grid">
-              {projects.map((project, i) => (
-                <motion.article
-                  className={`project-card ${project.accent}`}
-                  key={project.slug}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: .2 }}
-                  transition={{ delay: i * .05 }}
-                >
-                  <Link to={`/ventures/${project.slug}`}>
-                    <div className="project-number">0{i + 1}</div>
+        <motion.div layout className="venture-card-grid venture-built-grid">
+          <AnimatePresence mode="popLayout" initial={false}>
+            {visibleBuiltPortfolio.map((item, index) => (
+              <motion.article
+                layout
+                className="venture-portfolio-card"
+                key={item.slug}
+                initial={{ opacity: 0, scale: .97, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: .97, y: -8 }}
+                transition={{ duration: .22, delay: index * .018 }}
+              >
+                <Link to={`/ventures/${item.slug}`}>
+                  <div className={`venture-card-logo ${item.logoShape} ${item.logoClass || ''}`}>
+                    {item.logo
+                      ? <img src={item.logo} alt={`${item.name} logo`} />
+                      : <span>{item.logoText}</span>}
+                  </div>
+                  <div className="venture-card-title">
                     <div>
-                      <div className="card-meta">{project.eyebrow}</div>
-                      <h3>{project.name}</h3>
-                      <p>{project.summary}</p>
+                      {item.period && <small>{item.period}</small>}
+                      <h3>{item.name}</h3>
                     </div>
-                    <div className="card-arrow"><ArrowRight /></div>
-                  </Link>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        )}
-
-
-
-        {(view === 'all' || view === 'experiments') && (
-          <div className="directory-section product-experiment-directory">
-            <div className="directory-title">
-              <div><Eyebrow>Designed</Eyebrow><h2>Product Experiments</h2></div>
-              <p>Physical concepts I designed and prototyped to explore a specific behavior, use case, or creative opportunity.</p>
-            </div>
-            <div className="product-experiment-grid">
-              {productExperiments.map((project, i) => (
-                <motion.article
-                  className={`product-experiment-card ${project.accent}`}
-                  key={project.slug}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: .2 }}
-                  transition={{ delay: i * .06 }}
-                >
-                  <Link to={`/ventures/${project.slug}`}>
-                    <img src={project.image} alt={`${project.name} card-game prototype`} />
-                    <div className="product-experiment-overlay"></div>
-                    <div className="product-experiment-copy">
-                      <div className="card-meta">{project.eyebrow}</div>
-                      <h3>{project.name}</h3>
-                      <p>{project.summary}</p>
-                    </div>
-                    <div className="product-experiment-arrow"><ArrowRight /></div>
-                  </Link>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {(view === 'all' || view === 'code') && (
-          <div className="directory-section coding-directory-section">
-            <div className="directory-title">
-              <div><Eyebrow>Code</Eyebrow><h2>Coding Projects</h2></div>
-              <p>Selected applications from my software-development training, documented through the problem, product behavior, technical architecture, and source code.</p>
-            </div>
-            <div className="coding-project-grid">
-              {codingProjects.map((project, i) => (
-                <motion.article
-                  className={`coding-project-card ${project.accent}`}
-                  key={project.slug}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: .2 }}
-                  transition={{ delay: i * .06 }}
-                >
-                  <Link to={`/ventures/${project.slug}`}>
-                    <img src={project.image} alt={`${project.name} project cover`} />
-                    <div className="coding-project-overlay"></div>
-                    <div className="coding-project-card-copy">
-                      <div className="card-meta">{project.eyebrow}</div>
-                      <h3>{project.name}</h3>
-                      <p>{project.summary}</p>
-                    </div>
-                    <div className="coding-project-card-arrow"><ArrowRight /></div>
-                  </Link>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {(view === 'all' || view === 'backed') && (
-          <div className="directory-section investment-section">
-            <div className="directory-title">
-              <div><Eyebrow>Backed</Eyebrow><h2>Angel Investments</h2></div>
-              <p>I focus on post-revenue software and technology companies. I invest in early growth teams building products with clear market traction.</p>
-            </div>
-            <div className="investment-grid">
-              {investments.map((company, i) => (
-                <motion.a
-                  href={company.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="investment-card"
-                  key={company.name}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  whileHover={{ y: -6 }}
-                  viewport={{ once: true, amount: .2 }}
-                  transition={{ delay: i * .035 }}
-                >
-                  <div className={`investment-logo ${company.logo ? 'image' : 'wordmark'} ${company.logoShape || ''} ${company.logoClass || ''}`}>
-                    {company.logo ? <img src={company.logo} alt={`${company.name} logo`} /> : <span>{company.logoText}</span>}
+                    <ArrowRight size={19} />
                   </div>
-                  <div className="investment-card-copy">
-                    <div className="investment-round">{company.round}</div>
-                    <h3>{company.name}</h3>
-                    <p>{company.sector}</p>
-                    <div className="investment-note">{company.note}</div>
+                  <p>{item.summary}</p>
+                  <div className="venture-card-tags">
+                    {item.tags.map(tag => <span key={tag}>{tag}</span>)}
                   </div>
-                  <ExternalLink size={17} />
-                </motion.a>
-              ))}
-            </div>
+                </Link>
+              </motion.article>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </section>
+
+      <section className="venture-portfolio-section venture-backed-section section-shell" id="backed">
+        <div className="venture-portfolio-heading">
+          <div>
+            <Eyebrow>Backed</Eyebrow>
+            <h2>Companies I’ve backed.</h2>
           </div>
-        )}
+          <p>
+            I focus on post-revenue software and technology companies, investing in early-growth
+            teams building products with clear market traction.
+          </p>
+        </div>
+
+        <div className="venture-card-grid venture-backed-grid">
+          {investments.map((company, index) => (
+            <motion.a
+              className="venture-portfolio-card venture-investment-card"
+              href={company.url}
+              target="_blank"
+              rel="noreferrer"
+              key={company.name}
+              initial={{ opacity: 0, scale: .985, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, amount: .18 }}
+              transition={{ duration: .28, delay: index * .04 }}
+            >
+              <div className={`venture-card-logo ${company.logoShape || ''} ${company.logoClass || ''}`}>
+                {company.logo
+                  ? <img src={company.logo} alt={`${company.name} logo`} />
+                  : <span>{company.logoText}</span>}
+              </div>
+              <div className="venture-card-title">
+                <div>
+                  <small>{company.round}</small>
+                  <h3>{company.name}</h3>
+                </div>
+                <ExternalLink size={18} />
+              </div>
+              <p>{company.note}</p>
+              <div className="venture-card-tags">
+                {company.tags.map(tag => <span key={tag}>{tag}</span>)}
+              </div>
+            </motion.a>
+          ))}
+        </div>
       </section>
     </PageTransition>
   )
 }
-
-
-
-
 
 function PitchitCaseStudy() {
   const examples = [
@@ -779,9 +833,9 @@ function PitchitCaseStudy() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .55 }}
           >
-            <Link className="back-link" to="/ventures?view=experiments">← Product experiments</Link>
+            <Link className="back-link" to="/ventures#built">← Product experiments</Link>
             <Eyebrow>Product experiment · Physical card game</Eyebrow>
-            <div className="pitchit-wordmark">pitchit</div>
+            <img className="pitchit-wordmark" src="/ventures/pitchit/pitchit-logo.png" alt="Pitchit" />
             <h1>A startup card game for brewing new ideas.</h1>
             <p>
               Pitchit turns startup ideation into a playful party game. Players combine a white
@@ -995,7 +1049,7 @@ function PitchitCaseStudy() {
 
       <section className="next-project section-shell">
         <p>Explore coding projects</p>
-        <Link to="/ventures?view=code">
+        <Link to="/ventures#built">
           SurfGuru & ShopList<ArrowRight />
         </Link>
       </section>
@@ -1016,8 +1070,9 @@ function CodingProjectCaseStudy({ project }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .55 }}
           >
-            <Link className="back-link" to="/ventures?view=code">← Coding projects</Link>
+            <Link className="back-link" to="/ventures#built">← Coding projects</Link>
             <Eyebrow>{project.eyebrow}</Eyebrow>
+            <img className="code-project-logo" src={project.logo} alt={project.name} />
             <h1>{project.heroTitle}</h1>
             <p>{project.description}</p>
             <div className="code-project-actions">
@@ -1179,6 +1234,9 @@ function ClinbookCaseStudy({ project }) {
             </p>
             <div className="clinbook-hero-actions">
               <ArrowLink to="https://clinbook.co" external>Visit Clinbook</ArrowLink>
+              <a className="clinbook-social-link" href="https://www.linkedin.com/company/clinbook/" target="_blank" rel="noreferrer">
+                LinkedIn <ExternalLink size={15} />
+              </a>
               <a href="#clinbook-claims">Explore patient intelligence ↓</a>
             </div>
           </motion.div>
@@ -1631,6 +1689,18 @@ function SweatVidaCaseStudy({ project }) {
               generate substantial traffic from precise, high-intent audiences.
             </p>
           </div>
+
+          <motion.figure
+            className="sweatvida-brand-banner sweatvida-brand-banner-late"
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .18 }}
+          >
+            <img
+              src="/ventures/sweatvida/sweatvida-banner.jpg"
+              alt="SweatVida fitness brand banner with colorful dumbbells"
+            />
+          </motion.figure>
         </div>
       </section>
 
@@ -1684,6 +1754,9 @@ function UnclutteredSoulCaseStudy({ project }) {
               </a>
               <a className="uncluttered-text-link" href="https://unclutteredsoul.co/" target="_blank" rel="noreferrer">
                 Visit Uncluttered Soul ↗
+              </a>
+              <a className="uncluttered-instagram-link" href="https://www.instagram.com/unclutteredsoul" target="_blank" rel="noreferrer">
+                <span>Instagram</span><small>677 followers</small><ExternalLink size={15} />
               </a>
             </div>
           </motion.div>
@@ -2135,7 +2208,7 @@ function PixiCyclingCaseStudy({ project }) {
           >
             <Link className="back-link" to="/ventures">← All ventures</Link>
             <Eyebrow>Company case study · Technical apparel</Eyebrow>
-            <div className="pixi-wordmark" aria-label="Pixi Cycling">PIXI</div>
+            <img className="pixi-wordmark" src="/ventures/pixi-cycling/pixi-logo.png" alt="Pixi Cycling" />
             <h1>Technical cycling apparel made to go from bike to brunch.</h1>
             <p>
               Pixi Cycling created women’s leggings and shorts with a patented detachable chamois
@@ -2148,6 +2221,10 @@ function PixiCyclingCaseStudy({ project }) {
                 download
               >
                 Download 2018 pitch deck <ArrowRight size={18} />
+              </a>
+              <a className="pixi-instagram-link" href="https://www.instagram.com/pixicycling/" target="_blank" rel="noreferrer">
+                <span>Instagram</span>
+                <ExternalLink size={15} />
               </a>
               <a className="pixi-text-link" href="#pixi-media">
                 View media coverage ↓

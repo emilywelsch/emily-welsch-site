@@ -94,3 +94,24 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Added a Product Experiments category and filter to `/ventures`
 - Added a dedicated Pitchit case study at `/ventures/pitchit`
 - Added the card-game premise, rules, prototype system, play test, and commercialization reflection
+
+
+## Revision 18
+- Redesigned `/ventures` into one Built grid and one Backed grid
+- Reused the Advisory client-card visual system with tags and sand hover
+- Removed the separate Coding Projects and Product Experiments presentation
+- Added Clinbook LinkedIn, Uncluttered Soul Instagram, and Pixi Cycling Instagram links
+- Added the supplied SweatVida banner
+
+
+## Revision 19
+- Replaced temporary Pitchit, Pixi Cycling, SurfGuru, and ShopList wordmarks with supplied logos
+- Added the logos to their case-study heroes
+- Moved the SweatVida banner beside the founder outcome and reflection instead of beneath the hero
+
+
+## Revision 20
+- Reduced the Pixi Cycling logo size in the Ventures grid
+- Replaced the Built section explanatory paragraph with clickable portfolio-type filters
+- Preserved the existing chronology while filtering
+- Removed changing follower totals from the Pixi Cycling Instagram button

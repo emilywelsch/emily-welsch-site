@@ -111,3 +111,29 @@ Open `/release.json` on the Vercel URL. It should report:
 - The page explains the white-card + black-card startup pitch mechanic
 - The page includes the rotating judge, Thanksgiving play test, and accelerator use case
 - `/release.json` reports `v17-pitchit-case-study`
+
+
+## Revision 18 verification
+- `/ventures` contains only Built and Backed portfolio sections
+- Coding projects appear at the end of the Built grid rather than in a separate section
+- Built and Backed cards use sand hover with no motion-hover jitter
+- Clinbook links to LinkedIn
+- Uncluttered Soul links to Instagram and displays 677 followers
+- Pixi Cycling links to Instagram and displays 1,157 followers and approximately 3,000 at peak
+- SweatVida displays the supplied banner
+- `/release.json` reports `v18-ventures-grid`
+
+
+## Revision 19 verification
+- The Built grid uses supplied logos for Pitchit, Pixi Cycling, SurfGuru, and ShopList
+- Each corresponding case-study hero uses the supplied logo
+- The SweatVida banner appears after the founder reflection and not beneath the hero
+- `/release.json` reports `v19-project-logos`
+
+
+## Revision 20 verification
+- Pixi Cycling is visually smaller than the other wide logos in the Ventures grid
+- Built filter buttons include All, Company, SaaS Product, Physical Product, Digital Product, and Coding Project
+- Clicking a filter updates the Built card grid
+- Pixi Cycling's Instagram button displays only Instagram
+- `/release.json` reports `v20-ventures-filters`
