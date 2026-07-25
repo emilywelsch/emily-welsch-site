@@ -1,11 +1,11 @@
 {
-  "release": "v23-image-refresh-uncluttered",
-  "generated_at": "2026-07-25T05:33:12.582693+00:00",
+  "release": "v24-uncluttered-date-image",
+  "generated_at": "2026-07-25T05:42:14.443799+00:00",
   "includes": [
-    "Replacement homepage and portrait images: hero.jpg, 053.jpg, 059.jpg, and 077.jpg",
-    "Uncluttered Soul timeline changed to 2023\u20132024",
-    "Uncluttered Soul status changed to Live archive",
-    "Uncluttered Soul Instagram follower count removed",
-    "This archive contains only files changed since V22"
+    "Uncluttered Soul Ventures card corrected to 2023\u20132024",
+    "Uncluttered Soul project metadata corrected to 2023\u20132024",
+    "Clinbook restored to 2023\u2013present",
+    "public/images/077.jpg replaced with the newly supplied IMG_1858.JPG",
+    "This archive contains only files changed since V23"
   ]
 }
