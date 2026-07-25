@@ -304,8 +304,7 @@ const builtPortfolio = [
 
 
 const pixiDeckUrl =
-  import.meta.env.VITE_PIXI_DECK_URL ||
-  '/ventures/pixi-cycling/Pixi-Pitch-Deck-2018.pptx'
+  'https://github.com/emilywelsch/emily-welsch-site/releases/download/pixi-deck/Pixi-Pitch-Deck-2018.pptx'
 
 const builtPortfolioFilters = [
   'All',

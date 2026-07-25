@@ -1,14 +1,9 @@
 {
-  "release": "v30-light-clinbook-focus",
-  "generated_at": "2026-07-25T07:28:27.708270+00:00",
+  "release": "v31-pixi-download-url",
+  "generated_at": "2026-07-25T23:29:11.851408+00:00",
   "includes": [
-    "Homepage introduction adds one sentence stating exclusive focus on Clinbook",
-    "Homepage Advisory services button renamed Advisory Portfolio",
-    "A restrained Current full-time focus banner is added before the Ventures Built section",
-    "Clinbook Ventures card receives a red outline and upper-left CURRENT corner triangle",
-    "Advisory inquiry CTA becomes a non-clickable availability notice",
-    "Media introduction is shortened to the user-provided copy",
-    "Contact headline and inquiry descriptions use the user-provided copy",
-    "This archive is based on V28 and contains only changed files"
+    "Pixi Cycling pitch-deck button now uses the verified public GitHub release asset URL",
+    "Removed the VITE_PIXI_DECK_URL runtime dependency from the website code",
+    "This archive contains only files changed since V30"
   ]
 }
