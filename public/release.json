@@ -1,13 +1,11 @@
 {
-  "release": "v22-home-hero-polish",
-  "generated_at": "2026-07-25T03:49:29.810448+00:00",
+  "release": "v23-image-refresh-uncluttered",
+  "generated_at": "2026-07-25T05:33:12.582693+00:00",
   "includes": [
-    "All cumulative V21 site changes",
-    "Only the homepage headline extends over the hero image",
-    "Supporting paragraph and action buttons remain fully within the solid text column",
-    "Reduced spacing between repeated marquee statements",
-    "Upload-ready package excludes the 27 MB Pixi pitch deck",
-    "Pixi deck remains configurable through VITE_PIXI_DECK_URL",
-    "DOTS remains exclusively the 12th advisory client"
+    "Replacement homepage and portrait images: hero.jpg, 053.jpg, 059.jpg, and 077.jpg",
+    "Uncluttered Soul timeline changed to 2023\u20132024",
+    "Uncluttered Soul status changed to Live archive",
+    "Uncluttered Soul Instagram follower count removed",
+    "This archive contains only files changed since V22"
   ]
 }

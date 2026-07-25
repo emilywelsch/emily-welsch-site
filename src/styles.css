@@ -5066,3 +5066,15 @@ a.venture-portfolio-card {
     padding-right: 26px;
   }
 }
+
+
+/* Release v23: Uncluttered Soul status and stable Instagram label */
+.uncluttered-instagram-link {
+  grid-template-columns: auto auto;
+}
+
+@media (max-width: 560px) {
+  .uncluttered-instagram-link {
+    grid-template-columns: auto auto;
+  }
+}

@@ -21,7 +21,7 @@ const projects = [
     summary: 'A data platform helping sponsors, CROs, sites, and investigators make better clinical research partner decisions.',
     role: 'Founder & CEO',
     status: 'Active company',
-    year: '2023–present',
+    year: '2023–2024',
     url: 'https://clinbook.co',
     accent: 'clinbook',
     overview:
@@ -60,7 +60,7 @@ const projects = [
     eyebrow: 'Founder-built company · Mindfulness technology',
     summary: 'A membership platform for meditation, sleep, journaling, and more intentional daily habits.',
     role: 'Founder',
-    status: 'Active platform',
+    status: 'Live archive',
     year: '2023–present',
     url: 'https://unclutteredsoul.co/',
     accent: 'uncluttered',
@@ -222,7 +222,7 @@ const builtPortfolio = [
     logo: '/ventures/clinbook/clinbook-logo-purple.svg',
     logoShape: 'wide',
     logoClass: 'built-logo-clinbook',
-    period: '2023–present',
+    period: '2023–2024',
     summary: 'Clinical-trial intelligence SaaS for sponsor, site, investigator, and patient-partner decisions.',
     tags: ['Company', 'Digital Product', 'Healthcare', 'Data'],
   },
@@ -1762,7 +1762,7 @@ function UnclutteredSoulCaseStudy({ project }) {
                 Visit Uncluttered Soul ↗
               </a>
               <a className="uncluttered-instagram-link" href="https://www.instagram.com/unclutteredsoul" target="_blank" rel="noreferrer">
-                <span>Instagram</span><small>677 followers</small><ExternalLink size={15} />
+                <span>Instagram</span><ExternalLink size={15} />
               </a>
             </div>
           </motion.div>
@@ -1779,7 +1779,7 @@ function UnclutteredSoulCaseStudy({ project }) {
 
         <div className="section-shell uncluttered-facts">
           <div><strong>Founder</strong><span>Role</span></div>
-          <div><strong>2023–present</strong><span>Timeline</span></div>
+          <div><strong>2023–2024</strong><span>Timeline</span></div>
           <div><strong>Membership</strong><span>Business model</span></div>
           <div><strong>AI-generated</strong><span>All narration</span></div>
         </div>
