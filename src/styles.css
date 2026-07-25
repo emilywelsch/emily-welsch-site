@@ -5078,3 +5078,48 @@ a.venture-portfolio-card {
     grid-template-columns: auto auto;
   }
 }
+
+
+/* Release v25: 2018 project dates, three-line hero, uncropped SurfGuru */
+.home-hero .hero-copy h1 {
+  width: min(1320px, 205%);
+  font-size: clamp(3.8rem, 6.65vw, 7.05rem);
+}
+
+.hero-headline-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.code-project-hero.surfguru-code .code-project-hero-visual {
+  display: flex;
+  align-items: center;
+  background: #08272d;
+  box-shadow: none;
+}
+
+.code-project-hero.surfguru-code .code-project-hero-visual img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 1100px) {
+  .home-hero .hero-copy h1 {
+    width: min(1160px, 195%);
+    font-size: clamp(3.6rem, 6.25vw, 6.35rem);
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-headline-line {
+    display: inline;
+    white-space: normal;
+  }
+
+  .hero-headline-line + .hero-headline-line::before {
+    content: ' ';
+  }
+}

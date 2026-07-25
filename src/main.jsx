@@ -124,6 +124,7 @@ const productExperiments = [
     summary: 'A startup card game for brewing new ideas through silly combinations, fast pitches, and a rotating judge.',
     image: '/ventures/pitchit/pitchit-hero.jpg',
     logo: '/ventures/pitchit/pitchit-logo.png',
+    year: '2018',
     accent: 'pitchit-experiment',
   },
 ]
@@ -136,6 +137,7 @@ const codingProjects = [
     summary: 'A command-line application for exploring current surf conditions at popular beaches around the world.',
     image: '/ventures/coding/surfguru-cover.jpg',
     logo: '/ventures/coding/surfguru-logo.png',
+    year: '2018',
     accent: 'surfguru-code',
     github: 'https://github.com/emilywelsch/surfguru',
     video: 'https://www.youtube.com/watch?v=LVinCJ2QzOM',
@@ -145,8 +147,8 @@ const codingProjects = [
     facts: [
       ['Format', 'CLI data gem'],
       ['Language', 'Ruby'],
+      ['Timeline', '2018'],
       ['Data source', 'Surfline'],
-      ['License', 'MIT'],
     ],
     features: [
       ['Location-first discovery', 'Move from continent to country to individual beaches through a guided command-line flow.'],
@@ -177,6 +179,7 @@ const codingProjects = [
     summary: 'A database-backed shopping-list app for creating, editing, and sharing lists with groups.',
     image: '/ventures/coding/shoplist-cover.jpg',
     logo: '/ventures/coding/shoplist-logo.png',
+    year: '2018',
     accent: 'shoplist-code',
     github: 'https://github.com/emilywelsch/shoplist',
     video: 'https://www.youtube.com/watch?v=2UyMYrLx7Bk&t=1247s',
@@ -186,8 +189,8 @@ const codingProjects = [
     facts: [
       ['Format', 'Web application'],
       ['Framework', 'Sinatra'],
+      ['Timeline', '2018'],
       ['Database', 'SQLite'],
-      ['Pattern', 'CRUD / MVC'],
     ],
     features: [
       ['List creation', 'Users can create and manage shopping-list content through straightforward browser-based forms.'],
@@ -252,7 +255,7 @@ const builtPortfolio = [
     logo: '/ventures/pitchit/pitchit-logo.png',
     logoShape: 'wide',
     logoClass: 'built-logo-pitchit',
-    period: '',
+    period: '2018',
     summary: 'A play-tested startup card game for generating ideas through absurd combinations and fast pitches.',
     tags: ['Physical Product', 'Product Experiment', 'Games', 'Entrepreneurship'],
   },
@@ -282,7 +285,7 @@ const builtPortfolio = [
     logo: '/ventures/coding/surfguru-logo.png',
     logoShape: 'wide',
     logoClass: 'built-logo-surfguru',
-    period: '',
+    period: '2018',
     summary: 'A Ruby command-line application for exploring surf conditions at beaches around the world.',
     tags: ['Coding Project', 'Ruby', 'CLI', 'Data'],
   },
@@ -292,7 +295,7 @@ const builtPortfolio = [
     logo: '/ventures/coding/shoplist-logo.png',
     logoShape: 'wide',
     logoClass: 'built-logo-shoplist',
-    period: '',
+    period: '2018',
     summary: 'A Sinatra shopping-list application demonstrating CRUD, authentication, and database persistence.',
     tags: ['Coding Project', 'Web App', 'Ruby', 'CRUD'],
   },
@@ -632,7 +635,9 @@ function Home() {
         <motion.div className="hero-copy" initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.12 } } }}>
           <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}><Eyebrow>Founder · Angel Investor · Advisor</Eyebrow></motion.div>
           <motion.h1 variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0 } }}>
-            I build, back, and advise ambitious businesses.
+            <span className="hero-headline-line">I build, back,</span>
+            <span className="hero-headline-line">and advise ambitious</span>
+            <span className="hero-headline-line">businesses.</span>
           </motion.h1>
           <motion.p variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}>
             I’m Emily Welsch, an operator and entrepreneur working across healthcare, technology, and consumer ventures.
@@ -862,9 +867,9 @@ function PitchitCaseStudy() {
 
         <div className="section-shell pitchit-facts">
           <div><strong>Creator & designer</strong><span>Role</span></div>
+          <div><strong>2018</strong><span>Timeline</span></div>
           <div><strong>Physical prototype</strong><span>Format</span></div>
           <div><strong>Rotating judge</strong><span>Game mechanic</span></div>
-          <div><strong>Play-tested</strong><span>Status</span></div>
         </div>
       </section>
 

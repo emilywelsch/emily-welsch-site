@@ -1,11 +1,11 @@
 {
-  "release": "v24-uncluttered-date-image",
-  "generated_at": "2026-07-25T05:42:14.443799+00:00",
+  "release": "v25-project-dates-home-surfguru",
+  "generated_at": "2026-07-25T05:58:53.747021+00:00",
   "includes": [
-    "Uncluttered Soul Ventures card corrected to 2023\u20132024",
-    "Uncluttered Soul project metadata corrected to 2023\u20132024",
-    "Clinbook restored to 2023\u2013present",
-    "public/images/077.jpg replaced with the newly supplied IMG_1858.JPG",
-    "This archive contains only files changed since V23"
+    "Pitchit, SurfGuru, and ShopList show 2018 on the Ventures page",
+    "Pitchit, SurfGuru, and ShopList case studies show a 2018 timeline",
+    "Homepage headline is locked to three desktop lines and extends farther over the image",
+    "SurfGuru case-study cover image is displayed in full without cropping",
+    "This archive contains only files changed since V24"
   ]
 }
