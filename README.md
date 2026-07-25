@@ -115,3 +115,20 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Replaced the Built section explanatory paragraph with clickable portfolio-type filters
 - Preserved the existing chronology while filtering
 - Removed changing follower totals from the Pixi Cycling Instagram button
+
+
+## Revision 21
+- Consolidated SaaS Product and Digital Product into Digital Product
+- Expanded the homepage hero image and allowed the headline to overlap the image
+- Converted the positioning statement into a continuous marquee
+- Reframed How I Work around customer obsession
+- Added a working Vercel `/api/contact` function powered by Resend
+- Added configurable external hosting for the large Pixi pitch deck
+- See `.env.example` and `PIXI-DECK-HOSTING.md` for deployment setup
+
+
+## Revision 22
+- Limited homepage image overlap to the main headline only
+- Kept the supporting paragraph and buttons inside the solid text column
+- Tightened the space where the positioning marquee repeats
+- Removed the 27 MB Pixi deck from this upload-ready package

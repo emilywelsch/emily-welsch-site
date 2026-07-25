@@ -137,3 +137,23 @@ Open `/release.json` on the Vercel URL. It should report:
 - Clicking a filter updates the Built card grid
 - Pixi Cycling's Instagram button displays only Instagram
 - `/release.json` reports `v20-ventures-filters`
+
+
+## Revision 21 verification
+- Ventures has no SaaS Product filter or tags
+- Clinbook, Uncluttered Soul, and SweatVida filter under Digital Product
+- Homepage headline overlaps the wider hero image on desktop
+- Statement text loops continuously and respects reduced-motion preferences
+- How I Work uses customer-obsession language
+- Contact form posts to `/api/contact` and displays sending, success, and error states
+- Vercel has `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, and `CONTACT_FROM_EMAIL`
+- Optional `VITE_PIXI_DECK_URL` points to the externally hosted deck
+- `/release.json` reports `v21-home-contact`
+
+
+## Revision 22 verification
+- Only “I build, back, and advise ambitious businesses.” crosses over the hero image
+- The supporting paragraph and both buttons remain left of the image
+- The marquee repeats with normal word spacing between “execution.” and “Founder”
+- The upload-ready package does not contain the Pixi PPTX
+- `/release.json` reports `v22-home-hero-polish`
