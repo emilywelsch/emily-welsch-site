@@ -1,11 +1,11 @@
 {
-  "release": "v25-project-dates-home-surfguru",
-  "generated_at": "2026-07-25T05:58:53.747021+00:00",
+  "release": "v27-home-headline-overlap",
+  "generated_at": "2026-07-25T06:15:42.663788+00:00",
   "includes": [
-    "Pitchit, SurfGuru, and ShopList show 2018 on the Ventures page",
-    "Pitchit, SurfGuru, and ShopList case studies show a 2018 timeline",
-    "Homepage headline is locked to three desktop lines and extends farther over the image",
-    "SurfGuru case-study cover image is displayed in full without cropping",
-    "This archive contains only files changed since V24"
+    "Homepage headline restored to: I build, back, / and advise ambitious / businesses.",
+    "All three desktop headline lines extend into the hero image",
+    "Founder \u00b7 Angel Investor \u00b7 Advisor remains on one line",
+    "The eyebrow remains entirely within the solid text column",
+    "This archive contains only files changed since V26"
   ]
 }
