@@ -224,7 +224,7 @@ const builtPortfolio = [
     logoClass: 'built-logo-clinbook',
     period: '2023–present',
     summary: 'Clinical-trial intelligence SaaS for sponsor, site, investigator, and patient-partner decisions.',
-    tags: ['Company', 'SaaS Product', 'Healthcare', 'Data'],
+    tags: ['Company', 'Digital Product', 'Healthcare', 'Data'],
   },
   {
     slug: 'uncluttered-soul',
@@ -234,7 +234,7 @@ const builtPortfolio = [
     logoClass: 'built-logo-uncluttered',
     period: '2023–present',
     summary: 'A mindfulness membership platform spanning meditation, sleep, journaling, and AI-enabled audio.',
-    tags: ['Company', 'SaaS Product', 'Wellness', 'AI'],
+    tags: ['Company', 'Digital Product', 'Wellness', 'AI'],
   },
   {
     slug: 'yumyummy',
@@ -299,12 +299,15 @@ const builtPortfolio = [
 ]
 
 
+const pixiDeckUrl =
+  import.meta.env.VITE_PIXI_DECK_URL ||
+  '/ventures/pixi-cycling/Pixi-Pitch-Deck-2018.pptx'
+
 const builtPortfolioFilters = [
   'All',
   'Company',
-  'SaaS Product',
-  'Physical Product',
   'Digital Product',
+  'Physical Product',
   'Coding Project',
 ]
 
@@ -645,10 +648,13 @@ function Home() {
         </motion.div>
       </section>
 
-      <section className="statement-band">
-        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: .5 }}>
-          Founder perspective. Investor curiosity. Operator-level execution.
-        </motion.p>
+      <section className="statement-band" aria-label="Founder perspective. Investor curiosity. Operator-level execution.">
+        <div className="statement-marquee">
+          <div className="statement-track">
+            <span>Founder perspective. Investor curiosity. Operator-level execution.</span>
+            <span aria-hidden="true">Founder perspective. Investor curiosity. Operator-level execution.</span>
+          </div>
+        </div>
       </section>
 
       <section className="home-intro section-shell">
@@ -678,8 +684,8 @@ function Home() {
         </motion.div>
         <motion.div className="portrait-copy" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .35 }}>
           <Eyebrow>How I work</Eyebrow>
-          <h2>Clear thinking, creative pattern recognition, and pragmatic execution.</h2>
-          <p>I enjoy working at the intersection of strategy and building: finding the strongest opportunity, shaping the story, and turning it into a plan people can execute.</p>
+          <h2>Customer obsession, clear thinking, and pragmatic execution.</h2>
+          <p>I start with the customer: what they need, where they get stuck, and what will earn their trust. From there, I clarify the opportunity, shape the strategy and story, and build an execution plan grounded in real behavior and measurable outcomes.</p>
           <ArrowLink to="/advisory">Explore advisory services</ArrowLink>
         </motion.div>
       </section>
@@ -2217,7 +2223,7 @@ function PixiCyclingCaseStudy({ project }) {
             <div className="pixi-hero-actions">
               <a
                 className="button pixi-download-button"
-                href="/ventures/pixi-cycling/Pixi-Pitch-Deck-2018.pptx"
+                href={pixiDeckUrl}
                 download
               >
                 Download 2018 pitch deck <ArrowRight size={18} />
@@ -2406,7 +2412,7 @@ function PixiCyclingCaseStudy({ project }) {
               </p>
               <a
                 className="button pixi-download-button"
-                href="/ventures/pixi-cycling/Pixi-Pitch-Deck-2018.pptx"
+                href={pixiDeckUrl}
                 download
               >
                 Download full pitch deck <ArrowRight size={18} />
@@ -2830,6 +2836,41 @@ function Media() {
 
 
 function Contact() {
+  const [formStatus, setFormStatus] = useState('idle')
+  const [formMessage, setFormMessage] = useState('')
+
+  async function handleSubmit(event) {
+    event.preventDefault()
+    const form = event.currentTarget
+    const payload = Object.fromEntries(new FormData(form).entries())
+
+    setFormStatus('submitting')
+    setFormMessage('Sending your inquiry…')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      const result = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Your message could not be sent.')
+      }
+
+      form.reset()
+      setFormStatus('success')
+      setFormMessage('Thank you. Your inquiry has been sent, and I’ll be in touch soon.')
+    } catch (error) {
+      setFormStatus('error')
+      setFormMessage(
+        error.message ||
+        'Something went wrong. Please email me directly at emily@emilywelsch.co.'
+      )
+    }
+  }
+
   return (
     <PageTransition>
       <section className="contact-layout section-shell">
@@ -2843,15 +2884,19 @@ function Contact() {
             <p>Founder advisory, growth strategy, angel investment opportunities, partnerships, speaking engagements, and media conversations.</p>
           </div>
         </div>
-        <form className="contact-form" onSubmit={e => e.preventDefault()}>
+        <form
+          className="contact-form"
+          onSubmit={handleSubmit}
+          aria-busy={formStatus === 'submitting'}
+        >
           <div className="field-row">
-            <label>First name<input name="firstName" required /></label>
-            <label>Last name<input name="lastName" required /></label>
+            <label>First name<input name="firstName" autoComplete="given-name" required /></label>
+            <label>Last name<input name="lastName" autoComplete="family-name" required /></label>
           </div>
-          <label>Email<input type="email" name="email" required /></label>
-          <label>Company or organization<input name="company" /></label>
+          <label>Email<input type="email" name="email" autoComplete="email" required /></label>
+          <label>Company or organization<input name="company" autoComplete="organization" /></label>
           <label>Inquiry type
-            <select name="type" defaultValue="">
+            <select name="type" defaultValue="" required>
               <option value="" disabled>Select one</option>
               <option>Business advisory</option>
               <option>Angel investment</option>
@@ -2861,8 +2906,25 @@ function Contact() {
             </select>
           </label>
           <label>Message<textarea name="message" rows="7" required /></label>
-          <button className="button button-dark" type="submit">Send inquiry <ArrowRight size={18} /></button>
-          <p className="form-note">Form submission will be connected before launch.</p>
+          <label className="contact-honeypot" aria-hidden="true">
+            Website
+            <input name="website" tabIndex="-1" autoComplete="off" />
+          </label>
+          <button
+            className="button button-dark"
+            type="submit"
+            disabled={formStatus === 'submitting'}
+          >
+            {formStatus === 'submitting' ? 'Sending…' : 'Send inquiry'}
+            <ArrowRight size={18} />
+          </button>
+          <p
+            className={`form-note form-note-${formStatus}`}
+            role={formStatus === 'error' ? 'alert' : 'status'}
+            aria-live="polite"
+          >
+            {formMessage || 'Your information is sent securely and is used only to respond to your inquiry.'}
+          </p>
         </form>
       </section>
     </PageTransition>

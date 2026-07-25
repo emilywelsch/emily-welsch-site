@@ -4891,3 +4891,178 @@ a.venture-portfolio-card {
     max-height: 40px;
   }
 }
+
+
+/* Release v21: editorial homepage, marquee, customer obsession, contact form */
+.home-hero {
+  position: relative;
+  grid-template-columns: minmax(370px, .68fr) minmax(620px, 1.32fr);
+  isolation: isolate;
+}
+
+.home-hero .hero-copy {
+  position: relative;
+  z-index: 4;
+  padding-right: 0;
+}
+
+.home-hero .hero-copy h1 {
+  width: min(1020px, 158%);
+  max-width: none;
+  position: relative;
+  z-index: 5;
+  font-size: clamp(3.8rem, 6.9vw, 7.25rem);
+  text-wrap: balance;
+  text-shadow:
+    0 0 2px rgba(231,230,226,.9),
+    0 8px 28px rgba(231,230,226,.72);
+}
+
+.home-hero .hero-copy > p,
+.home-hero .hero-actions {
+  max-width: 530px;
+}
+
+.home-hero .hero-image-wrap {
+  margin-left: -4vw;
+}
+
+.home-hero .hero-image-wrap img {
+  object-position: 51% center;
+}
+
+.statement-band {
+  padding: 0;
+}
+
+.statement-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.statement-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  animation: statement-loop 20s linear infinite;
+  will-change: transform;
+}
+
+.statement-track span {
+  flex: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 34px .55em 38px 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 5.4vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+@keyframes statement-loop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: .7;
+  transform: none;
+}
+
+.contact-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
+
+.form-note-success {
+  color: #31583a;
+}
+
+.form-note-error {
+  color: var(--red);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .statement-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-hero {
+    grid-template-columns: minmax(330px, .78fr) minmax(540px, 1.22fr);
+  }
+
+  .home-hero .hero-copy h1 {
+    width: min(900px, 150%);
+  }
+}
+
+@media (max-width: 980px) {
+  .home-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-hero .hero-image-wrap {
+    width: 100%;
+    min-height: 72vw;
+    margin-left: 0;
+    order: 0;
+  }
+
+  .home-hero .hero-copy {
+    order: 1;
+    padding-top: 55px;
+  }
+
+  .home-hero .hero-copy h1 {
+    width: auto;
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .statement-track span {
+    padding-block: 25px 28px;
+  }
+}
+
+
+/* Release v22: homepage overlap and marquee spacing polish */
+.home-hero .hero-copy {
+  overflow: visible;
+  padding-right: clamp(34px, 6vw, 100px);
+}
+
+.home-hero .hero-copy h1 {
+  z-index: 7;
+}
+
+.home-hero .hero-copy > p,
+.home-hero .hero-actions {
+  width: 100%;
+  max-width: min(530px, 100%);
+  position: relative;
+  z-index: 6;
+}
+
+.home-hero .hero-image-wrap {
+  margin-left: 0;
+  z-index: 1;
+}
+
+.statement-track span {
+  padding-right: .16em;
+}
+
+@media (max-width: 980px) {
+  .home-hero .hero-copy {
+    padding-right: 26px;
+  }
+}
