@@ -226,6 +226,7 @@ const builtPortfolio = [
     logoShape: 'wide',
     logoClass: 'built-logo-clinbook',
     period: '2023–present',
+    current: true,
     summary: 'Clinical-trial intelligence SaaS for sponsor, site, investigator, and patient-partner decisions.',
     tags: ['Company', 'Digital Product', 'Healthcare', 'Data'],
   },
@@ -633,18 +634,18 @@ function Home() {
     <PageTransition>
       <section className="home-hero">
         <motion.div className="hero-copy" initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.12 } } }}>
-          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}><Eyebrow>Founder · Angel Investor · Advisor</Eyebrow></motion.div>
+          <motion.div className="hero-eyebrow-wrap" variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}><Eyebrow>Founder · Angel Investor · Advisor</Eyebrow></motion.div>
           <motion.h1 variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0 } }}>
             <span className="hero-headline-line">I build, back,</span>
             <span className="hero-headline-line">and advise ambitious</span>
             <span className="hero-headline-line">businesses.</span>
           </motion.h1>
           <motion.p variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}>
-            I’m Emily Welsch, an operator and entrepreneur working across healthcare, technology, and consumer ventures.
+            I’m Emily Welsch, an operator and entrepreneur working across healthcare, technology, and consumer ventures. Currently exclusively focused on building Clinbook, a clinical-trial intelligence platform for selecting research sites and investigators.
           </motion.p>
           <motion.div className="hero-actions" variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }}>
             <Link className="button button-dark" to="/ventures">Explore my ventures <ArrowRight size={18} /></Link>
-            <Link className="button button-light" to="/advisory">Advisory services</Link>
+            <Link className="button button-light" to="/advisory">Advisory Portfolio</Link>
           </motion.div>
         </motion.div>
         <motion.div className="hero-image-wrap" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.12 }}>
@@ -716,6 +717,40 @@ function Ventures() {
         </p>
       </section>
 
+      <section className="ventures-focus-banner section-shell" aria-label="Current full-time focus: Clinbook">
+        <motion.div
+          className="ventures-focus-copy"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: .25 }}
+        >
+          <Eyebrow>Current full-time focus</Eyebrow>
+          <h2>Building Clinbook.</h2>
+          <p>
+            Since 2023, I have focused full time on Clinbook, a clinical-trial intelligence
+            platform helping sponsors, CROs, research sites, and investigators make better
+            partner-selection and enrollment decisions.
+          </p>
+          <div className="ventures-focus-links">
+            <ArrowLink to="/ventures/clinbook">View the case study</ArrowLink>
+            <ArrowLink to="https://clinbook.co" external>Visit Clinbook</ArrowLink>
+          </div>
+        </motion.div>
+        <motion.div
+          className="ventures-focus-panel"
+          initial={{ opacity: 0, x: 18 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: .25 }}
+        >
+          <img src="/ventures/clinbook/clinbook-logo-purple.svg" alt="Clinbook" />
+          <div>
+            <span>Founder & CEO</span>
+            <strong>2023–present</strong>
+            <small>Current full-time company</small>
+          </div>
+        </motion.div>
+      </section>
+
       <section className="venture-portfolio-section section-shell" id="built">
         <div className="venture-portfolio-heading">
           <div>
@@ -745,13 +780,18 @@ function Ventures() {
             {visibleBuiltPortfolio.map((item, index) => (
               <motion.article
                 layout
-                className="venture-portfolio-card"
+                className={`venture-portfolio-card${item.current ? ' venture-portfolio-card-current' : ''}`}
                 key={item.slug}
                 initial={{ opacity: 0, scale: .97, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: .97, y: -8 }}
                 transition={{ duration: .22, delay: index * .018 }}
               >
+                {item.current && (
+                  <div className="venture-current-corner" aria-label="Current full-time company">
+                    <span>CURRENT</span>
+                  </div>
+                )}
                 <Link to={`/ventures/${item.slug}`}>
                   <div className={`venture-card-logo ${item.logoShape} ${item.logoClass || ''}`}>
                     {item.logo
@@ -2591,7 +2631,9 @@ function Advisory() {
             I work with founders and small-business leaders on growth, positioning, customer insight, marketing, operations, and the decisions that unlock the next stage.
           </motion.p>
           <motion.div variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }}>
-            <Link className="button button-dark" to="/contact">Inquire about advisory <ArrowRight size={18} /></Link>
+            <div className="advisory-availability-note" role="note">
+              Not currently taking on advisory engagements
+            </div>
           </motion.div>
         </motion.div>
         <motion.div
@@ -2762,9 +2804,7 @@ function Media() {
           <h1>Ideas shared in public.</h1>
           <p>
             Emily welcomes speaking engagements, workshops, podcast and video interviews,
-            and press conversations on entrepreneurship, business strategy, company building,
-            and clinical research. Her experience spans 75+ industry events and founder programs
-            at leading universities and accelerators.
+            and press conversations on clinical research, business strategy, and company building.
           </p>
           <Link className="button button-dark media-inquiry-button" to="/contact">
             Media & speaking inquiries <ArrowRight size={18} />
@@ -2881,12 +2921,12 @@ function Contact() {
       <section className="contact-layout section-shell">
         <div className="contact-copy">
           <Eyebrow>Contact</Eyebrow>
-          <h1>Let’s start with what you’re building.</h1>
-          <p>Use the form for advisory, investment, speaking, podcast, press, or general inquiries.</p>
+          <h1>Let’s connect.</h1>
+          <p>Use the form for partnership inquiries, speaking, podcast, press, advisory, investment, or general correspondence.</p>
           <a className="contact-email" href="mailto:emily@emilywelsch.co"><Mail size={19} /><span>emily@emilywelsch.co</span></a>
           <div className="contact-note">
             <span>Typical inquiries</span>
-            <p>Founder advisory, growth strategy, angel investment opportunities, partnerships, speaking engagements, and media conversations.</p>
+            <p>Partnerships, speaking engagements, media conversations, founder advisory, growth strategy, and angel investment opportunities.</p>
           </div>
         </div>
         <form
