@@ -1,12 +1,13 @@
 {
-  "release": "v20-ventures-filters",
-  "generated_at": "2026-07-24T19:21:41.325465+00:00",
+  "release": "v22-home-hero-polish",
+  "generated_at": "2026-07-25T03:49:29.810448+00:00",
   "includes": [
-    "All cumulative V19 site changes",
-    "Smaller Pixi Cycling logo on the Ventures page",
-    "Clickable Built portfolio filters for Company, SaaS Product, Physical Product, Digital Product, and Coding Project",
-    "Filtered results retain the existing chronological portfolio order",
-    "Pixi Cycling Instagram button no longer displays follower counts",
+    "All cumulative V21 site changes",
+    "Only the homepage headline extends over the hero image",
+    "Supporting paragraph and action buttons remain fully within the solid text column",
+    "Reduced spacing between repeated marquee statements",
+    "Upload-ready package excludes the 27 MB Pixi pitch deck",
+    "Pixi deck remains configurable through VITE_PIXI_DECK_URL",
     "DOTS remains exclusively the 12th advisory client"
   ]
 }
