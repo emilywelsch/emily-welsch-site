@@ -1,9 +1,10 @@
 {
-  "release": "v35-advisory-copy",
-  "generated_at": "2026-07-26T06:36:54.472777+00:00",
+  "release": "v36-advisory-box-fix",
+  "generated_at": "2026-07-26T06:52:19.406950+00:00",
   "includes": [
-    "Updated the advisory availability message inside the existing bordered gray box",
-    "No layout or styling changes",
-    "This archive contains only files changed since V34"
+    "Ensured the full advisory availability message appears inside the bordered gray box",
+    "Placed the gray box beneath the red Inquire about advisory button",
+    "Included styles.css so the box styling is applied when this patch is uploaded",
+    "This archive contains only files needed for this correction"
   ]
 }
