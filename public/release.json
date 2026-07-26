@@ -1,10 +1,11 @@
 {
-  "release": "v36-advisory-box-fix",
-  "generated_at": "2026-07-26T06:52:19.406950+00:00",
+  "release": "v38-favicon-title",
+  "generated_at": "2026-07-26T07:06:15.315792+00:00",
   "includes": [
-    "Ensured the full advisory availability message appears inside the bordered gray box",
-    "Placed the gray box beneath the red Inquire about advisory button",
-    "Included styles.css so the box styling is applied when this patch is uploaded",
-    "This archive contains only files needed for this correction"
-  ]
+    "Uses the supplied Favicon.png as the browser favicon",
+    "Browser tab title is exactly Emily Welsch",
+    "Site meta description is exactly Emily Welsch",
+    "This archive contains only the files needed for the favicon and metadata update"
+  ],
+  "previous_release": "v37-favicon"
 }
