@@ -1,11 +1,11 @@
 {
-  "release": "v40-paper-plane-favicon-cache-bust",
-  "generated_at": "2026-07-26T21:23:33.807067+00:00",
+  "release": "v41-red-plane-favicon",
+  "generated_at": "2026-07-26T21:31:16.494333+00:00",
   "includes": [
-    "Changed the favicon URL to new paper-plane filenames to bypass browser cache",
-    "Added 16px, 32px, Apple touch, and multi-resolution ICO favicon assets",
-    "Browser title and meta description remain Emily Welsch",
-    "This archive contains only files needed for the favicon correction"
+    "Replaced the browser favicon with the supplied red paper-plane icon",
+    "Changed favicon filenames and cache version to force browsers to load the new icon",
+    "Added 16px, 32px, Apple touch, and multi-resolution ICO assets",
+    "Browser title and meta description remain Emily Welsch"
   ],
-  "previous_release": "v37-favicon"
+  "previous_release": "v40-paper-plane-favicon-cache-bust"
 }
