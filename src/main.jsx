@@ -2636,10 +2636,10 @@ function Advisory() {
             <Link className="button button-dark" to="/contact">
               Inquire about advisory <ArrowRight size={18} />
             </Link>
-            <p className="advisory-availability-copy">
-              Not currently taking on ongoing advisory packages. Available for paid one-off
-              calls and select defined-scope projects or short-term sprints.
-            </p>
+            <div className="advisory-availability-box" role="note">
+              Not currently accepting ongoing advisory engagements. Available selectively for
+              one-time strategy sessions and short, defined-scope projects.
+            </div>
           </motion.div>
         </motion.div>
         <motion.div

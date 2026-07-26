@@ -1,12 +1,9 @@
 {
-  "release": "v33-final-prelaunch-edits",
-  "generated_at": "2026-07-26T06:21:49.144517+00:00",
+  "release": "v35-advisory-copy",
+  "generated_at": "2026-07-26T06:36:54.472777+00:00",
   "includes": [
-    "Removed the duplicate divider below the Ventures Clinbook focus banner",
-    "Homepage button now reads Advisory portfolio",
-    "Homepage How I work link now reads Explore advisory portfolio",
-    "Restored the red Inquire about advisory button",
-    "Added availability language for paid one-off calls and select defined-scope projects or short-term sprints",
-    "This archive contains only files changed for the final pre-launch edits"
+    "Updated the advisory availability message inside the existing bordered gray box",
+    "No layout or styling changes",
+    "This archive contains only files changed since V34"
   ]
 }
