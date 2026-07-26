@@ -1,11 +1,11 @@
 {
-  "release": "v38-favicon-title",
-  "generated_at": "2026-07-26T07:06:15.315792+00:00",
+  "release": "v40-paper-plane-favicon-cache-bust",
+  "generated_at": "2026-07-26T21:23:33.807067+00:00",
   "includes": [
-    "Uses the supplied Favicon.png as the browser favicon",
-    "Browser tab title is exactly Emily Welsch",
-    "Site meta description is exactly Emily Welsch",
-    "This archive contains only the files needed for the favicon and metadata update"
+    "Changed the favicon URL to new paper-plane filenames to bypass browser cache",
+    "Added 16px, 32px, Apple touch, and multi-resolution ICO favicon assets",
+    "Browser title and meta description remain Emily Welsch",
+    "This archive contains only files needed for the favicon correction"
   ],
   "previous_release": "v37-favicon"
 }
