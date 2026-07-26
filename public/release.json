@@ -1,10 +1,12 @@
 {
-  "release": "v32-contact-form-resend",
-  "generated_at": "2026-07-26T04:35:26.503878+00:00",
+  "release": "v33-final-prelaunch-edits",
+  "generated_at": "2026-07-26T06:21:49.144517+00:00",
   "includes": [
-    "Contact endpoint safely rejects malformed JSON requests",
-    "Resend REST request includes an explicit User-Agent header",
-    "Environment-variable example documents only the active contact-form configuration",
-    "This archive contains only files changed for contact-form setup"
+    "Removed the duplicate divider below the Ventures Clinbook focus banner",
+    "Homepage button now reads Advisory portfolio",
+    "Homepage How I work link now reads Explore advisory portfolio",
+    "Restored the red Inquire about advisory button",
+    "Added availability language for paid one-off calls and select defined-scope projects or short-term sprints",
+    "This archive contains only files changed for the final pre-launch edits"
   ]
 }

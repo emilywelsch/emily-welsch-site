@@ -644,7 +644,7 @@ function Home() {
           </motion.p>
           <motion.div className="hero-actions" variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }}>
             <Link className="button button-dark" to="/ventures">Explore my ventures <ArrowRight size={18} /></Link>
-            <Link className="button button-light" to="/advisory">Advisory Portfolio</Link>
+            <Link className="button button-light" to="/advisory">Advisory portfolio</Link>
           </motion.div>
         </motion.div>
         <motion.div className="hero-image-wrap" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.12 }}>
@@ -691,7 +691,7 @@ function Home() {
           <Eyebrow>How I work</Eyebrow>
           <h2>Customer obsession, clear thinking, and pragmatic execution.</h2>
           <p>I start with the customer: what they need, where they get stuck, and what will earn their trust. From there, I clarify the opportunity, shape the strategy and story, and build an execution plan grounded in real behavior and measurable outcomes.</p>
-          <ArrowLink to="/advisory">Explore advisory services</ArrowLink>
+          <ArrowLink to="/advisory">Explore advisory portfolio</ArrowLink>
         </motion.div>
       </section>
     </PageTransition>
@@ -2629,10 +2629,17 @@ function Advisory() {
           <motion.p variants={{ hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } }}>
             I work with founders and small-business leaders on growth, positioning, customer insight, marketing, operations, and the decisions that unlock the next stage.
           </motion.p>
-          <motion.div variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }}>
-            <div className="advisory-availability-note" role="note">
-              Not currently taking on advisory engagements
-            </div>
+          <motion.div
+            className="advisory-cta-row"
+            variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }}
+          >
+            <Link className="button button-dark" to="/contact">
+              Inquire about advisory <ArrowRight size={18} />
+            </Link>
+            <p className="advisory-availability-copy">
+              Not currently taking on ongoing advisory packages. Available for paid one-off
+              calls and select defined-scope projects or short-term sprints.
+            </p>
           </motion.div>
         </motion.div>
         <motion.div

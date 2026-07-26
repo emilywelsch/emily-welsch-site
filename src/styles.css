@@ -5425,3 +5425,35 @@ a.venture-portfolio-card {
     font-size: .5rem;
   }
 }
+
+
+/* Release v33: final pre-launch refinements */
+.ventures-focus-banner + .venture-portfolio-section {
+  border-top: 0;
+}
+
+.advisory-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 22px;
+}
+
+.advisory-availability-copy {
+  max-width: 480px;
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .advisory-cta-row {
+    display: grid;
+    justify-items: start;
+  }
+
+  .advisory-availability-copy {
+    max-width: 100%;
+  }
+}
