@@ -1,9 +1,10 @@
 {
-  "release": "v31-pixi-download-url",
-  "generated_at": "2026-07-25T23:29:11.851408+00:00",
+  "release": "v32-contact-form-resend",
+  "generated_at": "2026-07-26T04:35:26.503878+00:00",
   "includes": [
-    "Pixi Cycling pitch-deck button now uses the verified public GitHub release asset URL",
-    "Removed the VITE_PIXI_DECK_URL runtime dependency from the website code",
-    "This archive contains only files changed since V30"
+    "Contact endpoint safely rejects malformed JSON requests",
+    "Resend REST request includes an explicit User-Agent header",
+    "Environment-variable example documents only the active contact-form configuration",
+    "This archive contains only files changed for contact-form setup"
   ]
 }

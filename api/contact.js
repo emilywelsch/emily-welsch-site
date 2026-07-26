@@ -23,10 +23,16 @@ export default async function handler(request, response) {
     return response.status(405).json({ error: 'Method not allowed.' })
   }
 
-  const body =
-    typeof request.body === 'string'
-      ? JSON.parse(request.body || '{}')
-      : request.body || {}
+  let body = {}
+
+  try {
+    body =
+      typeof request.body === 'string'
+        ? JSON.parse(request.body || '{}')
+        : request.body || {}
+  } catch {
+    return response.status(400).json({ error: 'Invalid request body.' })
+  }
 
   // Honeypot: bots commonly fill hidden fields.
   if (clean(body.website, 200)) {
@@ -88,6 +94,7 @@ export default async function handler(request, response) {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
+        'User-Agent': 'emily-welsch-site/1.0',
       },
       body: JSON.stringify({
         from: fromEmail,
