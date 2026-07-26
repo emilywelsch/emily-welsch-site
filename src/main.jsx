@@ -2809,7 +2809,7 @@ function Media() {
           <Eyebrow>Speaking · Podcasts · Video · Press</Eyebrow>
           <h1>Ideas shared in public.</h1>
           <p>
-            Emily welcomes speaking engagements, workshops, podcast and video interviews,
+            I welcome speaking engagements, workshops, podcast and video interviews,
             and press conversations on clinical research, business strategy, and company building.
           </p>
           <Link className="button button-dark media-inquiry-button" to="/contact">

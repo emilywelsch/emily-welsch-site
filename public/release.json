@@ -1,11 +1,12 @@
 {
-  "release": "v41-red-plane-favicon",
-  "generated_at": "2026-07-26T21:31:16.494333+00:00",
+  "release": "v42-card-spacing-media-copy",
+  "generated_at": "2026-07-26T21:48:03.777138+00:00",
   "includes": [
-    "Replaced the browser favicon with the supplied red paper-plane icon",
-    "Changed favicon filenames and cache version to force browsers to load the new icon",
-    "Added 16px, 32px, Apple touch, and multi-resolution ICO assets",
-    "Browser title and meta description remain Emily Welsch"
+    "Changed the Media introduction from third person to first person",
+    "Removed auto top margins that created inconsistent title-to-description gaps in Built cards",
+    "Applied the same natural content flow to Backed investment cards",
+    "Applied the same natural content flow to Advisory client cards",
+    "Extra responsive card height now remains below the content instead of between the title and description"
   ],
-  "previous_release": "v40-paper-plane-favicon-cache-bust"
+  "previous_release": "v41-red-plane-favicon"
 }

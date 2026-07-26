@@ -5510,3 +5510,15 @@ a.venture-portfolio-card {
     padding: 19px 21px;
   }
 }
+
+
+/* Release v42: natural card content flow across Ventures and Advisory */
+.venture-portfolio-card p {
+  margin: 16px 0 0;
+  padding-top: 0;
+}
+
+.advisory-client-card > p {
+  margin: 16px 0 0;
+  padding-top: 0;
+}
