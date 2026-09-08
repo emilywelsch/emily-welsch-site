@@ -3006,17 +3006,15 @@ function App() {
     <>
       <ScrollToTop />
       <Header />
-      <AnimatePresence mode="wait" initial={false}>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/ventures" element={<Ventures />} />
-          <Route path="/ventures/:slug" element={<ProjectDetail />} />
-          <Route path="/advisory" element={<Advisory />} />
-          <Route path="/media" element={<Media />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/ventures" element={<Ventures />} />
+        <Route path="/ventures/:slug" element={<ProjectDetail />} />
+        <Route path="/advisory" element={<Advisory />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
     </>
   )
