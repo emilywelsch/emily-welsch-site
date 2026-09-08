@@ -2860,7 +2860,6 @@ function Media() {
                   target="_blank"
                   rel="noreferrer"
                   key={item.title}
-                  layout
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
