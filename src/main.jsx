@@ -774,11 +774,10 @@ function Ventures() {
           </div>
         </div>
 
-        <motion.div layout className="venture-card-grid venture-built-grid">
-          <AnimatePresence mode="popLayout" initial={false}>
+        <div className="venture-card-grid venture-built-grid">
+          <AnimatePresence>
             {visibleBuiltPortfolio.map((item, index) => (
               <motion.article
-                layout
                 className={`venture-portfolio-card${item.current ? ' venture-portfolio-card-current' : ''}`}
                 key={item.slug}
                 initial={{ opacity: 0, scale: .97, y: 10 }}
@@ -810,9 +809,10 @@ function Ventures() {
                   </div>
                 </Link>
               </motion.article>
+
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </section>
 
       <section className="venture-portfolio-section venture-backed-section section-shell" id="backed">
@@ -2709,11 +2709,10 @@ function Advisory() {
           </div>
         </div>
 
-        <motion.div layout className="advisory-client-grid">
-          <AnimatePresence mode="popLayout">
+        <div className="advisory-client-grid">
+          <AnimatePresence>
             {filteredClients.map(client => (
               <motion.a
-                layout
                 className="advisory-client-card"
                 href={client.url}
                 target="_blank"
@@ -2740,7 +2739,7 @@ function Advisory() {
               </motion.a>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </section>
 
       <section className="advisory-testimonials">
@@ -2851,7 +2850,7 @@ function Media() {
         </div>
 
         <div className="media-list">
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence>
             {visibleMediaItems.map((item, index) => {
               const Icon = item.icon
               return (
