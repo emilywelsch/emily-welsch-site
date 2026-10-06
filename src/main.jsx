@@ -41,7 +41,7 @@ const projects = [
     summary: 'A search-led directory that made high-quality, free at-home workouts easier to discover.',
     role: 'Founder & CEO',
     status: 'Archived company',
-    year: 'Apr 2020–May 2023',
+    year: '2020–2023',
     url: 'https://sweatvida.com',
     accent: 'sweatvida',
     logo: '/ventures/sweatvida/sweatvida-logo.png',
@@ -100,7 +100,7 @@ const projects = [
     summary: 'Women’s cycling apparel designed to move seamlessly from bike to brunch.',
     role: 'Founder & CEO',
     status: 'Archived company',
-    year: 'Mar 2016–Feb 2022',
+    year: '2016–2022',
     url: '#',
     accent: 'pixi',
     overview:
@@ -266,7 +266,7 @@ const builtPortfolio = [
     logo: '/ventures/sweatvida/sweatvida-logo.png',
     logoShape: 'wide',
     logoClass: 'built-logo-sweatvida',
-    period: 'Apr 2020–May 2023',
+    period: '2020–2023',
     summary: 'A search-led directory that made high-quality, free at-home workouts easier to discover.',
     tags: ['Company', 'Digital Product', 'Fitness', 'SEO'],
   },
@@ -276,7 +276,7 @@ const builtPortfolio = [
     logo: '/ventures/pixi-cycling/pixi-logo.png',
     logoShape: 'wide',
     logoClass: 'built-logo-pixi',
-    period: 'Mar 2016–Feb 2022',
+    period: '2016–2022',
     summary: 'Patented women’s cycling apparel designed to transition seamlessly from bike to brunch.',
     tags: ['Company', 'Physical Product', 'Consumer', 'Apparel'],
   },
@@ -1601,7 +1601,7 @@ function SweatVidaCaseStudy({ project }) {
             transition={{ duration: .55, delay: .08 }}
           >
             <div><span>Role</span><strong>Founder & CEO</strong></div>
-            <div><span>Timeline</span><strong>Apr 2020–May 2023</strong></div>
+            <div><span>Timeline</span><strong>2020–2023</strong></div>
             <div><span>Model</span><strong>Non-monetized digital product</strong></div>
             <div><span>Growth</span><strong>Organic search</strong></div>
           </motion.aside>
@@ -2305,7 +2305,7 @@ function PixiCyclingCaseStudy({ project }) {
 
         <div className="section-shell pixi-facts">
           <div><strong>Founder & CEO</strong><span>Role</span></div>
-          <div><strong>Mar 2016–Feb 2022</strong><span>Timeline</span></div>
+          <div><strong>2016–2022</strong><span>Timeline</span></div>
           <div><strong>1,000+</strong><span>Units sold</span></div>
           <div><strong>2 categories</strong><span>Amazon’s Choice</span></div>
         </div>
