@@ -132,3 +132,8 @@ Vercel should detect Vite automatically. The included `vercel.json` supports cli
 - Kept the supporting paragraph and buttons inside the solid text column
 - Tightened the space where the positioning marquee repeats
 - Removed the 27 MB Pixi deck from this upload-ready package
+
+## Revision 23
+
+- Added Pangram (Series A, via ScOp VC SPV) to the Backed grid with the supplied SVG logo
+- Backed grid now shows three columns on desktop
